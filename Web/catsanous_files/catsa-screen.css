@@ -1,0 +1,133 @@
+body{
+	background-color:#fff;overflow-x:hidden;}
+	
+	body, html {padding:0;margin:0;}
+	
+/*Simon*/
+
+img{border:none;}
+
+a.fancybox{padding-left:7px;}
+
+b {font-weigh:700;}
+
+div, span, p {font-family:"myriad-pro";font-size:17px;}
+
+a{text-decoration:none;color:#333;}
+a:hover{color:#f06;}
+
+p{font-size:17px;text-align:justify;color:#333;font-weight:100;line-height:1.5em;padding:0 10px 0 10px;}
+
+
+/*
+	Tabs CSS code starts here
+*/
+
+.tabs_wrapper {
+	width: 850px;
+	margin-top: 50px;}
+
+.tab_content {
+	display: none;}
+
+/* Original tabs */
+#original_tabs {
+	border-bottom: 1px solid #ffffff;}
+	
+#original_tabs ul {
+	list-style: none;
+	padding: 5px 0 4px 0;
+	margin: 0 0 0 10px;
+	font-size: 1em;
+	font-family:"myriad-pro"}
+	
+#original_tabs ul li {
+	display: inline;}
+	
+#original_tabs ul li a {
+	border: 1px solid #ffffff;
+	padding: 4px 6px;
+	text-decoration: none;
+	background-color: #eeeeee;
+	border-bottom: none;
+	outline: none;
+	border-radius: 5px 5px 0 0;}
+	
+#original_tabs ul li a:hover {
+	background-color: #dddddd;}
+	
+#original_tabs ul li.active a {
+	border-bottom: 1px solid #ffffff;
+	background-color: #fff;
+	padding: 4px 6px 5px;
+	border-bottom: none;}
+	
+#original_tabs ul li.active a:hover {
+	background-color: #eeeeee;}
+
+#original_tabs ul li a.icon_accept {
+	background-image: url(accept.png);
+	background-position: 5px 3px;
+	background-repeat: no-repeat;
+	padding-left: 24px;}
+	
+#original_tabs_content {
+	border: 1px solid #ffffff;
+	border-top: none;
+	padding: 10px;
+	width: 850px;
+}
+
+
+/* tabs */
+#new2_tabs {
+	border-bottom: 1px solid #fff;}
+	
+#new2_tabs ul {
+	list-style: none;
+	padding: 11px 0 10px 0;
+	margin: 0;
+	font-size: 1em;
+	font-family:"myriad-pro";
+	border-left: 1px solid #ffffff;}
+	
+#new2_tabs ul li {
+	display: inline;}
+	
+#new2_tabs ul li a {
+	border-top: 1px solid #ffffff;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ffffff;
+	padding: 10px 25px 10px;
+	text-decoration: none;
+	background-color: #ffffff;
+	border-bottom: none;
+	outline: none;
+	color: #444444;}
+	
+#new2_tabs ul li a:hover {
+	color: #f06;}
+	
+#new2_tabs ul li.active a {
+	border-bottom: none;
+	font-weight:bold;
+	color: #333;
+	padding-bottom: 11px;}
+	
+#new2_tabs ul li.active a:hover {
+	color: #f03;}
+	
+
+#new2_tabs ul li a.icon {
+	background-position: 13px 9px;
+	background-repeat: no-repeat;
+	padding-left: 36px;}
+
+#new2_tabs_content {
+	border: 1px solid #ffffff;
+	border-top: none;
+	padding: 10px;
+	width: 828px;}
+
+
+
