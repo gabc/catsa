@@ -1,0 +1,12 @@
+.fancybox img {
+    box-shadow: 0px 1px 1px #ccc;
+    margin-bottom:7px;
+    width:196px;
+    height:196px;
+    border-radius:3px;
+}
+
+.caption{
+	display: block; 
+	opacity: 1;
+}
