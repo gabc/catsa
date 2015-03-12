@@ -1,6 +1,8 @@
 <?php 
 	session_start();	
-
+	require_once("action/constant.php");
+	require_once("action/DAO/Connection.php");
+	
 	abstract class CommonAction {
 		public static $VISIBILITY_PUBLIC = 0;
 		public static $VISIBILITY_MEMBER = 1;
