@@ -1,5 +1,9 @@
 $(function (){
-	$("#pikame").PikaChoose({bindsFinished: preventStageHoverEffect, carousel:true});
+	var images = [{"image":"./img/grenouilles.jpg","caption":"Murale des Grenouilles - Chambre de Louis","link":"javascript:void($(\"#pikame\").data(\"pikachoose\").Next())","title":"Grenouille"},
+					{"image":"./img/marin.jpg","caption":"Murale du Fond Marin","link":"javascript:void($(\"#pikame\").data(\"pikachoose\").Next())","title":"Marin"},
+					{"image":"./img/terre.jpg","caption":"Murale Autour de la Terre - Garderie","link":"javascript:void($(\"#pikame\").data(\"pikachoose\").Next())","title":"Terre"}];
+
+	$("#pikame").PikaChoose({bindsFinished: preventStageHoverEffect, data:images, carousel:true});
 	
 	$(".fancybox").fancybox({
 	    openEffect      : 'elastic',
@@ -13,37 +17,36 @@ $(function (){
 })
 
 function preventStageHoverEffect(self){
-		self.wrap.unbind('mouseenter').unbind('mouseleave');
-      self.imgNav.append('<a class="tray"></a>');
-      self.imgNav.show();
-      self.hiddenTray = true;
-      self.imgNav.find('.tray').bind('click',function(){
-      if(self.hiddenTray){
-      self.list.parents('.jcarousel-container').animate({height:"80px"});
-      }else{
-      self.list.parents('.jcarousel-container').animate({height:"1px"});
-      }
-      self.hiddenTray = !self.hiddenTray;
-      });
+	self.wrap.unbind('mouseenter').unbind('mouseleave');
+    self.imgNav.append('<a class="tray"></a>');
+    self.imgNav.show();
+    self.hiddenTray = true;
+    self.imgNav.find('.tray').bind('click',function(){
+	    if(self.hiddenTray){
+	    	self.list.parents('.jcarousel-container').animate({height:"80px"});
+	    }
+	    else{
+	    	self.list.parents('.jcarousel-container').animate({height:"1px"});
+	  	}
+	     self.hiddenTray = !self.hiddenTray;
+	});
 	
-		//      Called when page is first loaded or refreshed
+	//      Called when page is first loaded or refreshed
+	get_hash();
+
+	//      Looks for changes in the URL hash
+	$(window).bind('hashchange', function() {
 		get_hash();
+	});
 
-		//      Looks for changes in the URL hash
-		$(window).bind('hashchange', function() {
-		    get_hash();
-		});
-
-		//      Called when we click on the tab itself
-		$('.tabs_wrapper ul li').click(function() {
-		    var tab_id = $(this).children('a').attr('rel');
-
-		    //      Update the hash in the url
-		    window.location.hash = tab_id;
-
-		    //      Do nothing when tab is clicked
-		    return false;
-		});	 
+	//      Called when we click on the tab itself
+	$('.tabs_wrapper ul li').click(function() {
+		var tab_id = $(this).children('a').attr('rel');
+		//      Update the hash in the url
+		window.location.hash = tab_id;
+		//      Do nothing when tab is clicked
+		return false;
+	});	 
 }
 
 function get_hash(){

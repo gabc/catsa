@@ -8,7 +8,7 @@
     <meta property="og:image" content="/tableaux/survol/noir_et_blanc.jpg">
     <title>Murales Catsa, Chambres et commerces à Montréal, Laval, Rive-Sud et les environs</title>
 
-    <<link type="text/css" href="./catsa_files/pikachoose-classic-theme.css" rel="stylesheet">
+    <link type="text/css" href="./catsa_files/pikachoose-classic-theme.css" rel="stylesheet">
     <script type="text/javascript" async="" src="./catsa_files/ga.js"></script>
     <script src="./catsa_files/krk5ozc.js" type="text/javascript" async=""></script>
     <script type="text/javascript" src="./catsa_files/jquery.min.js"></script>
@@ -44,12 +44,7 @@
         <div style="padding-top:70px;float:right;font-family:&#39;myriad-pro&#39;;font-weight:100;font-size:68px;z-index:10;color:#555;">catsa</div>
       </div>
       <div class = "pikachoose-classic">
-        <ul id="pikame">
-          <!-- TODO: Mettre dans le javascript ! -->
-          <li><a href="javascript:void($('#pikame').data('pikachoose').Next())"><img src="./img/grenouilles.jpg" title="Grenouille"><span>Murale des Grenouilles - Chambre de Louis</span></a></li>
-          <li><a href="javascript:void($('#pikame').data('pikachoose').Next())"><img src="./img/marin.jpg"><span>Murale du Fond Marin</span></a></li>
-          <li><a href="javascript:void($('#pikame').data('pikachoose').Next())"><img src="./img/terre.jpg"><span>Murale Autour de la Terre - Garderie</span></a></li>
-        </ul>
+        <ul id="pikame"></ul>
       </div>
       <div style="position:absolute;z-index:-100;">
         <img src="./img/cocinelles.jpg" id="coc" style="position:relative;left:790px;top:-100px;z-index:-10;">
