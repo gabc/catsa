@@ -1,6 +1,6 @@
 $(function (){
 	$("#pikame").PikaChoose({bindsFinished: preventStageHoverEffect, carousel:true});
-
+	
 	$(".fancybox").fancybox({
 	    openEffect      : 'elastic',
 	    closeEffect     : 'elastic',
@@ -12,19 +12,19 @@ $(function (){
 	googleAnalytic();
 })
 
-function preventStageHoverEffect(){
-	 self.wrap.unbind('mouseenter').unbind('mouseleave');
-	    self.imgNav.append('<a class="tray"></a>');
-	    self.imgNav.show();
-	    self.hiddenTray = true;
-	    self.imgNav.find('.tray').bind('click',function(){
-		if(self.hiddenTray){
-		    self.list.parents('.jcarousel-container').animate({height:"80px"});
-		}else{
-		    self.list.parents('.jcarousel-container').animate({height:"1px"});
-		}
-		self.hiddenTray = !self.hiddenTray;
-	    });
+function preventStageHoverEffect(self){
+		self.wrap.unbind('mouseenter').unbind('mouseleave');
+      self.imgNav.append('<a class="tray"></a>');
+      self.imgNav.show();
+      self.hiddenTray = true;
+      self.imgNav.find('.tray').bind('click',function(){
+      if(self.hiddenTray){
+      self.list.parents('.jcarousel-container').animate({height:"80px"});
+      }else{
+      self.list.parents('.jcarousel-container').animate({height:"1px"});
+      }
+      self.hiddenTray = !self.hiddenTray;
+      });
 	
 		//      Called when page is first loaded or refreshed
 		get_hash();
