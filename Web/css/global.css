@@ -10,3 +10,60 @@
 	display: block; 
 	opacity: 1;
 }
+
+header{
+	height:100px;
+	font-size:18px;"
+}
+
+nav{
+	padding-top:125px;
+	float:left;
+	color:#333;"
+}
+
+nav ul{
+	padding: 0px;
+	margin-top: -10px;
+}
+
+nav ul li{
+	display: inline;
+	list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav ul li a{
+	color: #000000;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #FF0000;
+}
+
+nav ul li a::after { 
+	color: #000000;
+    content: " | ";
+}
+
+nav ul li:last-child a::after { 
+    content: "";
+}
+
+h1{
+	display: inline;
+	padding-top:30px;
+	float:right;
+	font-weight:100;
+	font-size:68px;
+	z-index:10;
+	color:#555;
+}
+
+#ombre{
+	position:absolute;
+	margin-top:-27px;
+	z-index:-20;
+}

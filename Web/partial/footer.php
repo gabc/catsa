@@ -37,7 +37,6 @@
   </div>
 
 </div>
-</div>
 
 <div style="margin-top:50px;margin-left:10px;padding-bottom:100px;color:#333;border-top:1px solid #ccc;clear:both;">
 
