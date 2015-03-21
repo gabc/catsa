@@ -1,6 +1,10 @@
+.fancyboxGroup{
+	margin-top:40px;
+}
+
 .fancybox img {
     box-shadow: 0px 1px 1px #ccc;
-    margin-bottom:7px;
+    margin: 0px 8px 7px 5px;
     width:196px;
     height:196px;
     border-radius:3px;
