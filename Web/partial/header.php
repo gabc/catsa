@@ -8,13 +8,13 @@
     <meta property="og:image" content="/tableaux/survol/noir_et_blanc.jpg">
     <title>Murales Catsa, Chambres et commerces à Montréal, Laval, Rive-Sud et les environs</title>
 
-    <link type="text/css" href="./catsa_files/pikachoose-classic-theme.css" rel="stylesheet">
+    <link type="text/css" href="./css/pikachoose-classic-theme.css" rel="stylesheet">
     <link type="text/css" href="./css/global.css" rel="stylesheet">
     <script type="text/javascript" async="" src="./catsa_files/ga.js"></script>
     <script src="./catsa_files/krk5ozc.js" type="text/javascript" async=""></script>
-    <script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script type="text/javascript" src="./catsa_files/jquery.pikachoose.full.js"></script>
-    <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.pikachoose.full.js"></script>
+    <script type="text/javascript" src="./js/javascript.js"></script>
 
     <!-- Add mousewheel plugin (this is optional) -->
     <script type="text/javascript" src="./js/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>

@@ -69,7 +69,7 @@
 	width: 35px;
 	display: block;
 	z-index:11;
-	background:url(controls.png) 0 0 no-repeat;
+	background:url(../img/controls.png) 0 0 no-repeat;
 	cursor:pointer;
 	top:0px;
 	right:10px;
@@ -146,7 +146,7 @@
 .jcarousel-prev,.jcarousel-next{
 	width:35px;
 	height:18px;
-	background:url(controls.png) top left no-repeat;
+	background:url(../img/controls.png) top left no-repeat;
 	display:block;
 	position:absolute;
 	right:5px;
