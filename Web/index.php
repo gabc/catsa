@@ -20,4 +20,10 @@
 		<a class="fancybox" rel="gallery1" href="http://muralecatsa.com/murales/chambres/full/chevaux.jpg" title="Murale de Chambre - Le Chateau de Matisse">
 			<img src="./img/chevaux.t.jpg" alt="Murale de Chambre - Les Chevaux"></a>
 	</div>
+
+	<ul>
+		<?php foreach ($action->getMess() as $text) { ?>
+			<li><?= $text ?></li>
+		<?php } ?>
+	</ul>
 <?php require_once("partial/footer.php");

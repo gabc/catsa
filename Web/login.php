@@ -16,8 +16,8 @@
 	?>
 
 	<form method="post" action="login.php">
-    	<p><input type="text" name="username" value="" placeholder="Nom d'utilisateur"></p>
-    	<p><input type="password" name="pwd" value="" placeholder="Mot de passe"></p>
-		<button type="submit">Login</button>
-    </form>
+	    	<p><input type="text" name="username" value="" placeholder="Nom d'utilisateur"></p>
+	    	<p><input type="password" name="pwd" value="" placeholder="Mot de passe"></p>
+			<button type="submit">Login</button>
+	</form>
 <?php require_once("partial/footer.php");

@@ -1,5 +1,6 @@
 <?php
 	require_once("action/CommonAction.php");
+	require_once("action/DAO/TexteDAO.php");
 
 	class IndexAction extends CommonAction {
 
@@ -9,5 +10,9 @@
 
 		protected function executeAction() {
             ;
+		}
+
+		public function getMess() {
+			return TexteDAO::getMessage();
 		}
 	}
