@@ -4,7 +4,7 @@
 	$action = new LoginAction();
 	$action->execute();
 
-	require_once("partial/header.php")
+	require_once("partial/header_admin.php")
 ?>
 
 	<?php 
@@ -20,4 +20,4 @@
 	    	<p><input type="password" name="pwd" value="" placeholder="Mot de passe"></p>
 			<button type="submit">Login</button>
 	</form>
-<?php require_once("partial/footer.php");
+<?php require_once("partial/footer_admin.php");
