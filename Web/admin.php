@@ -4,7 +4,7 @@
 	$action = new AdminAction();
 	$action->execute();
 
-	require_once("partial/header.php")
+	require_once("partial/header_admin.php")
 ?>
 
         <form method="post" action="admin.php">
@@ -20,4 +20,4 @@
         	<button type="submit">Nouveau texte</button>
         </form>
 
-<?php require_once("partial/footer.php");
+<?php require_once("partial/footer_admin.php");
