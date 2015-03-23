@@ -17,4 +17,8 @@
 		public static function closeConnection() {
 			Connection::$connection = null;
 		}
+
+		public static function ajouteMessage($msg) {
+			;
+		}
 	}
