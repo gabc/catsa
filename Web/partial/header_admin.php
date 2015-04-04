@@ -9,6 +9,7 @@
     <title>Murales Catsa, Chambres et commerces à Montréal, Laval, Rive-Sud et les environs</title>
 
     <link type="text/css" href="./css/global.css" rel="stylesheet">
+    <link type="text/css" href="./css/ckedit.css" rel="stylesheet">
     <script type="text/javascript" src="js/jquery.min.js"></script>
   </head>
   <body class="" style="margin-right: 0px;">
