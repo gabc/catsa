@@ -9,7 +9,7 @@
 		}
 
 		protected function executeAction() {
-            ;
+            $_SESSION["menuActive"] = "index.php";
 		}
 
 		public function getMess() {

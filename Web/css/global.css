@@ -71,3 +71,13 @@ h1{
 	margin-top:-27px;
 	z-index:-20;
 }
+
+.active{ /*menu*/
+	font-weight: bold;
+}
+
+.active-image{
+	position:absolute;
+	margin-top:-90px;
+	z-index:-5;
+}

@@ -37,11 +37,19 @@
       <header>
         <nav>
         	<ul>
-	          <img style="position:absolute;margin-top:-90px;z-index:-5;" src="./img/coc1.jpg"><li><a href=""><b>murales</b></a></li>
-	          <li><a href="catsatableau.html">tableaux</a></li>
-	          <li><a href="catsanous.html">nous</a></li>
-		  <li><a href="admin.php">admin</a></li>
-          	</ul>
+            <li <?php if($_SESSION["menuActive"] == 'index.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+              <a href="index.php">Accueil</a>
+            </li>
+            <li <?php if($_SESSION["menuActive"] == 'catsamurales.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+              <a href="catsamurales.php">Murales</a>
+            </li>
+	          <li <?php if($_SESSION["menuActive"] == 'catsatableau.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+              <a href="catsatableau.html">Tableaux</a>
+            </li>
+	          <li <?php if($_SESSION["menuActive"] == 'catsanous.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+              <a href="catsanous.html">Contact</a>
+            </li>
+          </ul>
         </nav>
           <h1>catsa</h1>
       </header>

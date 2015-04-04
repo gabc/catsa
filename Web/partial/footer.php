@@ -50,7 +50,9 @@
     <span style="font-size:17px;">Catherine ou Sarah</span>
     <br />514·385·3530</div>
   <span style="font-size:17px;color:#999;font-weight:100;">À Montréal, Longueuil, Laval  (et quelques fois ailleurs!)</span>
-
+  <div>
+    <a style="float:right;font-size:17px;font-weight:100;" href="admin.php">Admin</a>
+  </div>
 </div>
 </body>
 </html>
