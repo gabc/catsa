@@ -20,6 +20,7 @@
 	          <img style="position:absolute;margin-top:-90px;z-index:-5;" src="./img/coc1.jpg"><li><a href=""><b>murales</b></a></li>
 	          <li><a href="catsatableau.html">tableaux</a></li>
 	          <li><a href="catsanous.html">nous</a></li>
+		  <li><a href="admin.php">admin</a></li>
           	</ul>
         </nav>
           <h1>catsa</h1>
