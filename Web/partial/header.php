@@ -40,11 +40,11 @@
             <li <?php if($_SESSION["menuActive"] == 'index.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="index.php">Accueil</a>
             </li>
-            <li <?php if($_SESSION["menuActive"] == 'catsamurales.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-              <a href="catsamurales.php">Murales</a>
+            <li <?php if($_SESSION["menuActive"] == 'murales.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+              <a href="murales.php">Murales</a>
             </li>
-	          <li <?php if($_SESSION["menuActive"] == 'catsatableau.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-              <a href="catsatableau.html">Tableaux</a>
+	          <li <?php if($_SESSION["menuActive"] == 'tableaux.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+              <a href="tableaux.php">Tableaux</a>
             </li>
 	          <li <?php if($_SESSION["menuActive"] == 'catsanous.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="catsanous.html">Contact</a>

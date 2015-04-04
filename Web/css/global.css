@@ -3,11 +3,14 @@
 }
 
 .fancybox img {
-    box-shadow: 0px 1px 1px #ccc;
     margin: 0px 8px 7px 5px;
     width:196px;
     height:196px;
     border-radius:3px;
+}
+
+.shadow img{
+	box-shadow: 0px 1px 1px #ccc;
 }
 
 .caption{
