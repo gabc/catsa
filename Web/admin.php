@@ -8,7 +8,9 @@
 ?>
 
         <form method="post" action="admin.php">
-		<script src="js/ckeditor/ckeditor.js"></script>
+	        <input class="chosse" type="radio" name="where" value="stuff">Stuff
+		<input class="chosse" type="radio" name="where" value="machin">Machin
+	  	<script src="js/ckeditor/ckeditor.js"></script>
 		<textarea cols="80" id="editor1" name="editor1" rows="10" >
 		</textarea>
 
