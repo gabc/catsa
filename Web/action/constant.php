@@ -1,4 +1,4 @@
 <?php 
-	define("DB_ALIAS", "DECINFO");
-	define("DB_USER", "e1136655");
-	define("DB_PASS", "AAAaaa111");
+	define("DB_ALIAS", "CatsaDB");
+	define("DB_USER", "root");
+	define("DB_PASS", "");
