@@ -46,8 +46,8 @@
 	          <li <?php if($_SESSION["menuActive"] == 'tableaux.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="tableaux.php">Tableaux</a>
             </li>
-	          <li <?php if($_SESSION["menuActive"] == 'catsanous.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-              <a href="catsanous.html">Contact</a>
+	          <li <?php if($_SESSION["menuActive"] == 'contact.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+              <a href="contact.php">Contact</a>
             </li>
           </ul>
         </nav>
