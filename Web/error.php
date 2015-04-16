@@ -1,8 +1,8 @@
 <?php
-	// require_once("action/AdminAction.php");
+	require_once("action/ErrorAction.php");
 
-	// $action = new AdminAction();
-	// $action->execute();
+	$action = new ErrorAction();
+	$action->execute();
 
 	 require_once("partial/header_admin.php")
 ?>
