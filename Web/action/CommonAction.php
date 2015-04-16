@@ -52,8 +52,8 @@
 
 		public static function getFacebookLikes(){
 			$url = "https://www.facebook.com/pages/Murale-Catsa/142348105922701";
-			
-			$data = json_decode(file_get_contents("http://api.facebook.com/method/fql.query?query=select%20like_count%20from%20link_stat%20where%20url='$url'&format=json"));
-			return $data[0]->like_count;
+			$file_data = @(file_get_contents("http://api.facebook.com/method/fql.query?query=select%20like_count%20from%20link_stat%20where%20url='$url'&format=json"));
+			$data = json_decode($file_data);
+			return @($data[0]->like_count);
 		}
 	}

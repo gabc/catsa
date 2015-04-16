@@ -14,7 +14,7 @@ $(function (){
 		    type : 'inside'}}});
 
 	googleAnalytic();
-	facebookStart();
+	//facebookStart();
 })
 
 function facebookStart(){
