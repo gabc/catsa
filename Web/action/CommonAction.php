@@ -36,7 +36,7 @@
 
 		protected abstract function  executeAction();
 
-		public function isLoggedIn() {
+		public static function isLoggedIn() {
 			return $_SESSION["visibility"] > CommonAction::$VISIBILITY_PUBLIC;
 		}
 

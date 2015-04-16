@@ -10,6 +10,7 @@
 		}
 
 		protected function executeAction() {
+			$_SESSION["menuActive"] = "login.php";
 			$this->wrongLogin = false;
 
 			if (isset($_POST["username"])) {
