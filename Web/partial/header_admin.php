@@ -59,6 +59,9 @@
               <li <?php if($_SESSION["menuActive"] == 'admin.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
                 <a href="admin.php">Admin</a>
               </li>
+              <li>
+                <a href="?logout=true">Déconnexion</a>
+              </li>
             <?php 
               }
             ?>
