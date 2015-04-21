@@ -1,4 +1,4 @@
 /*INSERT TEST*/
 
-INSERT INTO CS_User(username, motDePasse, visibility)
-VALUES("admin", "a", "2");
+INSERT INTO CS_User(USERNAME, MOTDEPASSE, VISIBILITY)
+VALUES('admin', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', '2');
