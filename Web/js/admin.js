@@ -10,6 +10,7 @@ function init () {
     $("#acceuil").click(getAcceuilText);
     $("#contact").click(getContactText);
     $("#presentation").click(getPresentationText);
+    getAcceuilText();
 }
 
 function getAcceuilText () {
