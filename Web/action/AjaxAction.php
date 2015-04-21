@@ -1,5 +1,6 @@
 <?php
 	require_once("action/CommonAction.php");
+	require_once("action/DAO/TexteDAO.php");
 
 	class AjaxAction extends CommonAction {
         public $result;
@@ -9,12 +10,6 @@
 		}
 
 		protected function executeAction() {
-            if ($_POST["action"] === "acceuil"){
-                $this->result = "Acceuil";
-            } else if ($_POST["action"] == "contact"){
-                $this->result = "Contact";
-            } else if ($_POST["action"] == "presentation"){
-                $this->result = "Presentation";
-            }
+            $this->result = TexteDAO::getTexte($_POST["action"]);
 		}
 	}
