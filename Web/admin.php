@@ -9,26 +9,24 @@
   
   <div class="center">
     <form method="post" action="admin.php">
-  	<script src="js/ckeditor/ckeditor.js"></script>
+    	<script src="js/ckeditor/ckeditor.js"></script>
 
-    <div id="tabs">
-      <ul>
-        <li><a href="#tabs-1" id="acceuil">Acceuil</a></li>
-        <li><a href="#tabs-2" id="contact">Contact</a></li>
-        <li><a href="#tabs-3" id="presentation">Presentation</a></li>
-      </ul>
-      <textarea cols="80" id="editor1" name="editor1" rows="10" >
-        </textarea>
-      <button type="submit">Nouveau texte</button>
-      <div id="tabs-1">
-       </div>
-      <div id="tabs-2">
-      </div>
-      <div id="tabs-3">
-      </div>
-    </div>
-    		
-        
+      <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1" id="acceuil">Acceuil</a></li>
+          <li><a href="#tabs-2" id="contact">Contact</a></li>
+          <li><a href="#tabs-3" id="presentation">Presentation</a></li>
+        </ul>
+        <textarea cols="80" id="editor1" name="editor1" rows="10" >
+          </textarea>
+        <button type="submit">Sauvegarder</button>
+        <div id="tabs-1">
+        </div>
+        <div id="tabs-2">
+        </div>
+        <div id="tabs-3">
+        </div>
+      </div>        
     </form>
   </div>
 

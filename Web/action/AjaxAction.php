@@ -10,6 +10,7 @@
 		}
 
 		protected function executeAction() {
+			$_SESSION["currentTab"] = $_POST["action"];
             $this->result = TexteDAO::getTexte($_POST["action"]);
 		}
 	}

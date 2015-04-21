@@ -6,7 +6,13 @@
 		}
 
 		public static function nouveauMessage($message) {
-			// Do stuff with it
+			$connection = Connection::getConnection();
+			
+			$statement = $connection->prepare("UPDATE CS_TEXTE SET CONTENU = ? WHERE IDEMPLACEMENT = (
+												SELECT ID FROM CS_EMPLACEMENT WHERE place = ?)");
+			$statement->bindParam(1, $message);
+			$statement->bindParam(2, $_SESSION["currentTab"]);
+			$statement->execute();
 		}
 
 		public static function getTexte($emplacement){

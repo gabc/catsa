@@ -12,5 +12,5 @@
 			<li><?= $text ?></li>
 		<?php } ?>
 	</ul>
-	<?= TexteDAO::getTexte("acceuil") ?>
+	<p><?= TexteDAO::getTexte("acceuil") ?></p>
 <?php require_once("partial/footer.php");
