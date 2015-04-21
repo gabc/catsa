@@ -8,17 +8,24 @@
 ?>
 
         <form method="post" action="admin.php">
-	        <input class="chosse" type="radio" name="where" value="stuff">Stuff
-		<input class="chosse" type="radio" name="where" value="machin">Machin
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 	  	<script src="js/ckeditor/ckeditor.js"></script>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tab" id="acceuil">Acceuil</a></li>
+    <li><a href="#tabs-2" id="contact">Contact</a></li>
+    <li><a href="#tabs-3" id="presentation">Presentation</a></li>
+  </ul>
+  <div id="tabs-1">
+   </div>
+  <div id="tabs-2">
+  </div>
+  <div id="tabs-3">
+  </div>
+</div>
 		<textarea cols="80" id="editor1" name="editor1" rows="10" >
 		</textarea>
-
-		<script>
-			CKEDITOR.replace( 'editor1', {
-				height: 260
-			} );
-		</script>
         	<button type="submit">Nouveau texte</button>
         </form>
 
