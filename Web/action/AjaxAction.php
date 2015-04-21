@@ -10,7 +10,11 @@
 
 		protected function executeAction() {
             if ($_POST["action"] === "acceuil"){
-                $this->result = "FOFOFABABA";
+                $this->result = "Acceuil";
+            } else if ($_POST["action"] == "contact"){
+                $this->result = "Contact";
+            } else if ($_POST["action"] == "presentation"){
+                $this->result = "Presentation";
             }
 		}
 	}
