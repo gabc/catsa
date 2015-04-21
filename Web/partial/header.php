@@ -1,5 +1,5 @@
 <?php
-   require_once("partial/header_admin.php")
+   require_once("partial/header_base.php")
 ?>
       <div class = "pikachoose-classic">
         <ul id="pikame"></ul>
