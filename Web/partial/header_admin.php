@@ -12,10 +12,14 @@
     <link type="text/css" href="./css/pikachoose-classic-theme.css" rel="stylesheet">
     <link type="text/css" href="./css/global.css" rel="stylesheet">
     <link type="text/css" href="./css/ckedit.css" rel="stylesheet">
+    <link type="text/css" href="./css/jquery-ui.min.css" rel="stylesheet">
+    <link type="text/css" href="./css/jquery-ui.theme.min.css" rel="stylesheet">
+    <link type="text/css" href="./css/jquery-ui.structure.min.css" rel="stylesheet">
 
     <script type="text/javascript" async="" src="./catsa_files/ga.js"></script>
     <script src="./catsa_files/krk5ozc.js" type="text/javascript" async=""></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./js/jquery.pikachoose.full.js"></script>
     <script type="text/javascript" src="./js/javascript.js"></script>
 
