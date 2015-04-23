@@ -1,4 +1,5 @@
 /*DROP TABLE*/
+DROP TABLE CS_News;
 DROP TABLE CS_Creation;
 DROP TABLE CS_Texte;
 DROP TABLE CS_Emplacement;
@@ -63,4 +64,15 @@ CREATE TABLE CS_Texte(
   contenu VARCHAR2(800) NOT NULL,
   CONSTRAINT CS_Texte_pk PRIMARY KEY(id),
   CONSTRAINT emplacement_texte_fk FOREIGN KEY(idEmplacement) REFERENCES CS_Emplacement(id)
+);
+
+CREATE TABLE CS_News(
+  id NUMBER,
+  idTitre NUMBER NOT NULL,
+  idTexte NUMBER NOT NULL,
+  created DATE NOT NULL,
+  lastModified DATE NOT NULL,
+  CONSTRAINT CS_News_pk PRIMARY KEY(id),
+  CONSTRAINT titre_news_fk FOREIGN KEY(idTitre) REFERENCES CS_Texte(id),
+  CONSTRAINT texte_news_fk FOREIGN KEY(idTexte) REFERENCES CS_Texte(id)
 );
