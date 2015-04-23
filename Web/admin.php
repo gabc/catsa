@@ -6,9 +6,9 @@
 
 	require_once("partial/header_admin.php")
 ?>
-    <form method="post" action="admin.php">
-    	<script src="js/ckeditor/ckeditor.js"></script>
-      
+    <script type="text/javascript" src="./js/adminTexte.js"></script>
+    <script src="js/ckeditor/ckeditor.js"></script>
+    <form method="post" action="admin.php">    
       <div id="tabs">
         <ul>
           <li><a href="#tabs-1" id="acceuil">Acceuil</a></li>
