@@ -1,3 +1,8 @@
+*{
+	font-family: 'Times New Roman';
+	line-height: normal;
+}
+
 .fancyboxGroup{
 	margin-top:40px;
 }
@@ -25,6 +30,7 @@ a{
 
 a:hover {
 	color: #FF0000;
+	text-decoration: none;
 }
 
 header{
@@ -35,7 +41,11 @@ header{
 nav{
 	padding-top:125px;
 	float:left;
-	color:#333;"
+	color:#333;
+}
+
+nav > ul{
+	margin-bottom: -10px;
 }
 
 nav ul{
@@ -67,6 +77,11 @@ h1{
 	font-size:68px;
 	z-index:10;
 	color:#555;
+	margin: 0px;
+}
+
+header > h1{
+	margin-top: 50px;
 }
 
 textarea {

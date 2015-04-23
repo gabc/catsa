@@ -1,4 +1,13 @@
-#sideMenuAdmin{float:left;}
-.ui-menu { width: 200px; }
-.ui-widget-header { padding: 0.2em;}
-#tabs{float:right;}
+/*sideMenu*/
+#sideMenuAdmin{
+	float:left;
+}
+.ui-menu { 
+	width: 200px; 
+}
+.ui-widget-header { 
+	padding: 0.2em;
+}
+#tabs{
+	float:right;
+}

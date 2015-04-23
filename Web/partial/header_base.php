@@ -8,9 +8,9 @@
     <meta property="og:image" content="/tableaux/survol/noir_et_blanc.jpg">
     <title>Murales Catsa, Chambres et commerces à Montréal, Laval, Rive-Sud et les environs</title>
 
-    <link type="text/css" href="./css/jquery-ui.min.css" rel="stylesheet">
-    <link type="text/css" href="./css/jquery-ui.theme.min.css" rel="stylesheet">
-    <link type="text/css" href="./css/jquery-ui.structure.min.css" rel="stylesheet">
+    <link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
+    <link type="text/css" href="css/jquery-ui.theme.min.css" rel="stylesheet">
+    <link type="text/css" href="css/jquery-ui.structure.min.css" rel="stylesheet">
   </head>
   <body class="" style="margin-right: 0px;">
 
