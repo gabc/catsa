@@ -2,8 +2,12 @@ $(init);
 
 function init () {
     activationMenu();
-    var href = window.location.href.match(/.*\/(.*\.php)$/)[1];
-    $("a[href='"+ href +"']").css("background-color", "black");
+    try{
+	    var href = window.location.href.match(/.*\/(?!.*admin.php)(.*\.php)$/)[1];
+	    $("a[href='"+ href +"']").css("background-color", "black");
+	}catch (e){
+		// Gotta catch 'em all!
+	}
 }
 
 function activationMenu(){
