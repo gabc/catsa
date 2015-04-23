@@ -69,6 +69,10 @@ h1{
 	color:#555;
 }
 
+textarea {
+    resize: none;
+}
+
 #ombre{
 	position:absolute;
 	margin-top:-27px;
