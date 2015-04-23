@@ -54,6 +54,9 @@
             <li <?php if($_SESSION["menuActive"] == 'contact.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="contact.php">Contact</a>
             </li>
+            <li <?php if($_SESSION["menuActive"] == 'news.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+              <a href="news.php">News</a>
+            </li>
             <?php  
               if(CommonAction::isLoggedIn())
               {
