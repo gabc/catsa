@@ -10,7 +10,16 @@ function init () {
     $("#acceuil").click(getAcceuilText);
     $("#contact").click(getContactText);
     $("#presentation").click(getPresentationText);
+    activationMenu();
     getAcceuilText();
+}
+
+function activationMenu(){
+	$(function() {
+	    $( "#sideMenuAdmin" ).menu({
+	      items: "> :not(.ui-widget-header)"
+	    });
+  	});
 }
 
 function getAcceuilText () {
