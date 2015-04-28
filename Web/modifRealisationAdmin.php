@@ -25,8 +25,8 @@
     <div class="col-md-8">
       <div class="row">
         <div class="col-xs-4">
-          <form method="POST" action="cartePubliqueForm.php">
-            <select id="selectSerie" class="form-control col-md-4" name="selectSerie" >
+          <form method="POST" action="modifRealisationAdmin.php">
+            <select id="selectType" class="form-control col-md-4" name="selectType" >
               <option>Chambre</option>
               <option>Tableaux</option>
             </select>
@@ -36,7 +36,7 @@
           <label class="control-label">Catégorie</label>
         </div>
         <div class="col-xs-4">
-          <input readonly id="compagnieReadOnly" class="form-control" type="text">
+          <input readonly id="categorieReadOnly" class="form-control" type="text">
         </div>
         <div class="col-xs-1">
           <a data-toggle="modal" data-target=".bs-modal-lg"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
@@ -61,7 +61,7 @@
       <div class="modal-dialog modal-lg">
 
         <div class="modal-content">
-          <form class="form-horizontal" action='cartePubliqueForm.php' method="POST">
+          <form class="form-horizontal" action='modifRealisationAdmin.php' method="POST">
             <fieldset>
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
