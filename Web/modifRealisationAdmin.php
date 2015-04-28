@@ -6,7 +6,7 @@
 
 	require_once("partial/header_admin.php")
 ?>
-<div class ="col-md-8">
+<div class ="col-md-9 col-sm-9 col-sx-9 col-right">
 <form class="form-horizontal " amethod="POST" action="modifRealisationAdmin.php">
   <fieldset>
 

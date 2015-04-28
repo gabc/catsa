@@ -1,18 +1,25 @@
 /*sideMenu*/
 #sideMenuAdmin{
-	float:left;
+	position:absolute;
+	top:170px;
+	min-height: 200px;
+	width:200px;
+	margin-left:-30px;
+	text-align: center;
+}
+.col-sm-3{
+	min-height: 200px;
+}
+
+.col-right{
+	float:right;
 }
 .ui-menu { 
-	/*width: 200px; */
+	width: 100%; 
 }
 .ui-widget-header { 
 	padding: 0.2em;
 }
 #tabs{
 	float:right;
-}
-
-.menuSide{
-/*	top:100px;
-	left: -66%;*/
 }

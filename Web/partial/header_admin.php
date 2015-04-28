@@ -12,22 +12,5 @@
 	<link type="text/css" href="./css/admin.css" rel="stylesheet">
 </head>
 <body>
-  <div class="center container">
-  	<?php 
-  		if($_SESSION["menuActive"] !== 'login.php' && 
-  			$_SESSION["menuActive"] !== 'error.php') {
-  	?>
-	  	<div class="row">
-	  		<div class="col-md-3 menuSide">
-			    <ul id="sideMenuAdmin">
-			      <li class="ui-widget-header">Gestionnaire de contenu</li>
-			      <li><a href="texteAdmin.php">Modifier le texte</a></li>
-			      <li><a href="realisationAdmin.php">Gérer les réalisations</a></li>
-			      <li class="ui-widget-header">Gestion admin</li>    
-			      <li>Changement mot de passe</li>
-			      <li>Création compte</li>
-			    </ul>
-			</div>
-	<?php 
-		}
-	?>
+  <div class="center container-fluid">
+  	<div>
