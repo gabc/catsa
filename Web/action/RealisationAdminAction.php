@@ -1,5 +1,6 @@
 <?php
 	require_once("action/CommonAction.php");
+	require_once("action/DAO/CreationDAO.php");
 
 	class RealisationAdminAction extends CommonAction {
 
@@ -9,5 +10,9 @@
 
 		protected function executeAction() {
 			$_SESSION["menuActive"] = "RealisationAdmin.php";
+		}
+
+		public function getCreations() {
+			return CreationDAO::getCreations();
 		}
 	}
