@@ -3,11 +3,16 @@
 	float:left;
 }
 .ui-menu { 
-	width: 200px; 
+	/*width: 200px; */
 }
 .ui-widget-header { 
 	padding: 0.2em;
 }
 #tabs{
 	float:right;
+}
+
+.menuSide{
+/*	top:100px;
+	left: -66%;*/
 }
