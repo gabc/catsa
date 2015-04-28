@@ -1,6 +1,5 @@
 <?php
 	require_once("action/IndexAction.php");
-	require_once("action/DAO/TexteDAO.php");
 
 	$action = new IndexAction();
 	$action->execute();
@@ -12,5 +11,5 @@
 			<li><?= $text ?></li>
 		<?php } ?>
 	</ul>
-	<p><?= TexteDAO::getTexte("acceuil") ?></p>
+	<p><?= $action->getTexte("acceuil") ?></p>
 <?php require_once("partial/footer.php");

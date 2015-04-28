@@ -15,4 +15,8 @@
 		public function getMess() {
 			return TexteDAO::getMessage();
 		}
+
+		public function getTexte($emplacement) {
+			return TexteDAO::getTexte($emplacement);
+		}
 	}
