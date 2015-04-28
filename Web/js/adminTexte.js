@@ -11,7 +11,9 @@ function init () {
     $("#contact").click(getContactText);
     $("#presentation").click(getPresentationText);
     
-    getAcceuilText();
+    CKEDITOR.on("instanceReady", function(event) {
+    	getAcceuilText();
+	});
 }
 
 function getAcceuilText () {

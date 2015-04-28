@@ -16,8 +16,7 @@
           <li><a href="#tabs-3" id="presentation">Presentation</a></li>
         </ul>
 
-        <textarea cols="80" id="editor1" name="editor1" rows="10" >
-          </textarea>
+        <textarea cols="80" id="editor1" name="editor1" rows="10" ></textarea>
         <button type="submit">Sauvegarder</button>
         <div id="tabs-1">
         </div>
@@ -28,5 +27,4 @@
       </div>        
     </form>
   </div>
-
 <?php require_once("partial/footer_admin.php");
