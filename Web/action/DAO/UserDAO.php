@@ -1,6 +1,6 @@
 <?php 
 	class UserDAO {
-
+		require_once("lib/password.php");
 		public static function authenticate($username, $pwd) {
 			// connexion à la BD, fichier texte, serveur externe, ...
 			$visibility = CommonAction::$VISIBILITY_PUBLIC;
@@ -12,10 +12,9 @@
 			// return $visibility;
 			$connection = Connection::getConnection();
 			
-			$pwd = sha1($pwd);
-			$statement = $connection->prepare("SELECT * FROM CS_USER WHERE USERNAME = ? AND motDePasse = ?");
+			$pwd = password_hash($pwd, PASSWORD_DEFAULT);
+			$statement = $connection->prepare("SELECT * FROM CS_USER WHERE USERNAME = ?");
 			$statement->bindParam(1, $username);
-			$statement->bindParam(2, $pwd);
 
 			$statement->setFetchMode(PDO::FETCH_ASSOC);
 			$statement->execute();
@@ -24,8 +23,10 @@
 			$user = null;
 
 			if ($row = $statement->fetch()) {
-				$user = $row;
-				unset($user["PASSWORD"]);
+				if (password_verify($pwd, $row["PASSWORD"])) {
+					$user = $row;
+					unset($user["PASSWORD"]);
+				}
 			}
 
 			return $user;
