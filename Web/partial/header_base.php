@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0023)http://muralecatsa.com/ -->
 <html class="wf-myriadpro-n3-active wf-myriadpro-n4-active wf-myriadpro-n6-active wf-myriadpro-n7-active wf-myriadpro-n9-active wf-active">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -23,9 +22,19 @@
             </li>
             <li <?php if($_SESSION["menuActive"] == 'murales.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="murales.php">Murales</a>
+              <ul id="muralesMenu">
+                <li class="ui-state-disabled">Aberdeen</li>
+                <li>Ada</li>
+                <li>Adamsville</li>
+              </ul>
             </li>
             <li <?php if($_SESSION["menuActive"] == 'tableaux.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="tableaux.php">Tableaux</a>
+              <ul id="tableauxMenu">
+                <li class="ui-state-disabled">Aberdeen</li>
+                <li>Ada</li>
+                <li>Adamsville</li>
+              </ul>
             </li>
             <li <?php if($_SESSION["menuActive"] == 'contact.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="contact.php">Contact</a>

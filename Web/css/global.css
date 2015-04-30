@@ -60,6 +60,15 @@ nav ul li{
     margin: 0px;
 }
 
+nav ul > li {
+	display: inline;
+	float: left;
+}
+
+nav ul li a {
+	padding-right: 5px;
+}
+
 nav ul li a::after { 
 	color: #000000;
     content: " | ";
@@ -201,4 +210,12 @@ textarea {
 
 .infoBox small{
 	display:block;
+}
+
+nav ul li > ul {
+	visibility: hidden;
+	display: block;
+	width: 130px;
+	position: absolute;
+	z-index: 42;
 }
