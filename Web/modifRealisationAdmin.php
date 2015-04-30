@@ -6,6 +6,8 @@
 
 	require_once("partial/header_admin.php")
 ?>
+<script type="text/javascript" src="js/adminRealisation.js"></script>
+
 <div class ="col-md-9 col-sm-9 col-sx-9 col-right">
 <form class="form-horizontal " amethod="POST" action="modifRealisationAdmin.php">
   <fieldset>
@@ -50,6 +52,14 @@
      <textarea class="form-control" maxlength="200" rows="4" cols="50"></textarea>
     </div>
   </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label" >Image</label>
+      <input id="imageFrontUp" name="imageReal" class="col-md-4" type="file" accept="image/*" onchange="loadFile(event)">
+      <div class="thumbnail-lg col-md-6">
+        <img class="img-thumbnail" src="img/sans_photo.jpg" id="previewImage"/>
+      </div>
+   </div>
+
   <div class="checkbox">
     <label>
       <input type="checkbox" value="">Slideshow
