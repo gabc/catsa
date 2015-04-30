@@ -17,7 +17,6 @@
 		}
 
 		private function upload($file){
-			echo "UPLOAD !!!";
 			$target_path = "photos/";
 
 			$target_path = $target_path . basename( $file['name']); 
@@ -26,6 +25,5 @@
 			} else{
 	    		echo "There was an error uploading the file, please try again!";
 			}
-			echo "lOL";
 		}
 	}

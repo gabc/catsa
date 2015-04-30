@@ -12,4 +12,8 @@
 							 ,"slideshow" => 1
 							 ,"image" => "img\manege.t.jpg"));
 		}
+
+		public static function insertCreation($path, $type, $nom, $slideshow, $desc){
+
+		}
 	}

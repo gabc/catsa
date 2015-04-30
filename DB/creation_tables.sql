@@ -34,21 +34,21 @@ CREATE TABLE CS_Categorie(
 
 CREATE TABLE CS_Type(
   id NUMBER,
-  idCategorie NUMBER,
   nom VARCHAR2(80) NOT NULL,
-  CONSTRAINT CS_type_pk PRIMARY KEY(id),
-  CONSTRAINT categorie_type_fk FOREIGN KEY(idCategorie) REFERENCES CS_Categorie(id)
+  CONSTRAINT CS_type_pk PRIMARY KEY(id)
 );
 
 CREATE TABLE CS_Creation(
   id NUMBER,
   idImage NUMBER,
   idType NUMBER,
+  idCategorie NUMBER,
   nom VARCHAR2(100) NOT NULL,
   slideshow NUMBER(1),
   description VARCHAR2(200),
   CONSTRAINT CS_Creation_pk PRIMARY KEY(id),
   CONSTRAINT image_creation_fk FOREIGN KEY(idImage) REFERENCES CS_Image(id),
+  CONSTRAINT categorie_type_fk FOREIGN KEY(idCategorie) REFERENCES CS_Categorie(id),
   CONSTRAINT slideshow CHECK (slideshow = 0 OR slideshow = 1)
 );
 
@@ -73,6 +73,6 @@ CREATE TABLE CS_News(
   created DATE NOT NULL,
   lastModified DATE NOT NULL,
   CONSTRAINT CS_News_pk PRIMARY KEY(id),
-  CONSTRAINT titre_news_fk FOREIGN KEY(idTitre) REFERENCES CS_Texte(id),
-  CONSTRAINT texte_news_fk FOREIGN KEY(idTexte) REFERENCES CS_Texte(id)
+  CONSTRAINT titre_news_fk FOREIGN KEY(idTitre) REFERENCES CS_Texte(id) ON DELETE CASCADE,
+  CONSTRAINT texte_news_fk FOREIGN KEY(idTexte) REFERENCES CS_Texte(id) ON DELETE CASCADE
 );

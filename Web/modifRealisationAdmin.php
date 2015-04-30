@@ -9,7 +9,7 @@
 <script type="text/javascript" src="js/adminRealisation.js"></script>
 
 <div class ="col-md-9 col-sm-9 col-sx-9 col-right">
-<form class="form-horizontal " amethod="POST" action="modifRealisationAdmin.php">
+<form class="form-horizontal " method="POST" action="modifRealisationAdmin.php" enctype="multipart/form-data">
   <fieldset>
 
   <!-- Form Name -->
@@ -56,7 +56,7 @@
     <label class="col-md-2 control-label" >Image</label>
       <input id="imageFrontUp" name="imageReal" class="col-md-4" type="file" accept="image/*" onchange="loadFile(event)">
       <div class="thumbnail-lg col-md-6">
-        <img class="img-thumbnail" src="img/sans_photo.jpg" id="previewImage"/>
+        <img class="img-thumbnail" id="previewImage"/>
       </div>
    </div>
 
@@ -96,7 +96,7 @@
 
 
   </fieldset>
-  <button type="submit" class="btn btn-default btn-lg btn-block">Ajouter</button>
+  <button type="submit" class="btn btn-default btn-lg btn-block"  value="Upload File">Ajouter</button>
 </form>
 </div>
 
