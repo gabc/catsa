@@ -1,9 +1,10 @@
 $(function () {
-	$("#previewImage").change(loadFile);
+	$("#imageReal").change(loadFile);
 })
 
 
 function loadFile(event){
+	console.log("d");
 	if(event.target["value"] !== ""){
 		var outputId = 'previewImage';
 		
