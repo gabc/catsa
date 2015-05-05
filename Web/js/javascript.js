@@ -9,7 +9,8 @@ function genMenu (link, id) {
 	link = "a[href$='"+link+"']";
 	$(id).menu();
     $(id).css("left",$(link).position().left+"px");
-    
+    $(id).css("top",$(link).position().top +17 + "px");
+
     $(link).hover(function() {
     	isOnLink = true;
        	$(id).css("visibility", "visible");
