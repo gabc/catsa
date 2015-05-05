@@ -2,6 +2,7 @@
 	require_once("action/CommonAction.php");
 	require_once("action/DAO/CreationDAO.php");
 	require_once("action/DAO/TypeDAO.php");
+	require_once("action/DAO/CategorieDAO.php");
 
 	class ModifRealisationAdminAction extends CommonAction {
 
@@ -11,6 +12,11 @@
 
 		protected function executeAction() {
 			$_SESSION["menuActive"] = "ModifRealisationAdmin.php";
+
+			//Modal
+			if(!empty($_POST["nomCategorie"]))
+				CategorieDAO::insertCategorie($_POST["nomCategorie"]);
+
 		
 			if(isset($_FILES['imageReal']))
 			{
@@ -22,8 +28,12 @@
 				if(isset($_POST["slideshow"]))
 					$slideshow = 1;
 
+			$categorie = null;
+			if(!empty($_POST["selectCategorie"]))
+				$categorie = $_POST["selectCategorie"];
+
 				CreationDAO::insertCreation($_FILES['imageReal']['name'],
-											$_POST["selectType"],null,
+											$_POST["selectType"],$categorie,
 											$_POST["nomReal"],
 											$slideshow,
 											$_POST["desc"]);
@@ -32,6 +42,10 @@
 
 		public function getAllTypes(){
 			return TypeDAO::getAllTypes();
+		}
+
+		public function getAllCategories(){
+			return CategorieDAO::getAllCategories();
 		}
 
 		private function upload($file){

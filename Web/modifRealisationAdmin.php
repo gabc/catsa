@@ -42,7 +42,15 @@
           <label class="control-label">Catégorie</label>
         </div>
         <div class="col-xs-4">
-          <input readonly id="categorieReadOnly" class="form-control" name="" type="text">
+          <select disabled id="selectCategorie" class="form-control col-md-4" name="selectCategorie" >
+              <?php
+                foreach($action->getAllCategories() as $categorie){
+              ?>
+                <option><?= $categorie["NOM"] ?></option>
+                <?php
+                }
+              ?>
+            </select>
         </div>
         <div class="col-xs-1">
           <a data-toggle="modal" data-target=".bs-modal-lg"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>

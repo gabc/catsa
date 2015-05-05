@@ -1,6 +1,7 @@
 <?php
 	require_once("action/DAO/ImageDAO.php");
 	require_once("action/DAO/TypeDAO.php");
+	require_once("action/DAO/CategorieDAO.php");
 	
 	class CreationDAO {
 
@@ -19,16 +20,18 @@
 		public static function insertCreation($path, $type, $categorie, $nom, $slideshow, $desc){
 			$connection = Connection::getConnection();
 
-			$idImage = ImageDAO::insertImage($path);
-			$idType = TypeDAO::getType($type);
-			$idCategorie = null; //TODO: ALler chercher le id
+			$idImage = ImageDAO::insertImage($path)["ID"];
+			$idType = TypeDAO::getType($type)["ID"];
+			$idCategorie = null;
+			if($categorie !== null)
+				$idCategorie = CategorieDAO::getCategorie($categorie)["ID"];
 
 			 $statement = $connection->prepare("INSERT INTO CS_Creation(idImage, idType,idCategorie,
 			 															nom, slideshow, description)
 			 															VALUES(?,?,?,?,?,?)");
 				
-			$statement->bindParam(1, $idImage["ID"]);
-			$statement->bindParam(2, $idType["ID"]);
+			$statement->bindParam(1, $idImage);
+			$statement->bindParam(2, $idType);
 			$statement->bindParam(3, $idCategorie);
 			$statement->bindParam(4, $nom);
 			$statement->bindParam(5, $slideshow);
