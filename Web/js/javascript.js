@@ -28,7 +28,9 @@ function genMenu (link, id) {
     	if (!isOnLink && !isOnId)
     	    	$(id).slideUp(400, function () {$(id).css("visibility", "hidden");});
     });
-
+    $( id ).menu({
+    focus: function( event, ui ) {}
+    });
     /*$(link).mouseleave(function () {
     	if (!isOnLink && !isOnId)
     	    	$(id).slideUp(400, function () {$(id).css("visibility", "hidden");});

@@ -60,6 +60,18 @@ nav ul li{
     margin: 0px;
 }
 
+nav ul li:hover{
+	color: red;
+	outline-color: transparent;
+	outline-width: 0;
+}
+
+nav ul li.ui-state-focus{
+	outline-color: transparent;
+	color: red;
+	outline-width: 0;
+}
+
 nav ul > li {
 	display: inline;
 	float: left;
