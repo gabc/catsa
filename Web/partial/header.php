@@ -8,7 +8,8 @@
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./js/jquery.pikachoose.full.js"></script>
    	<script type="text/javascript" src="js/javascript.js"></script>
-   	
+   	<script type="text/javascript" src="js/client.js"></script>
+    
    	  <!-- Add mousewheel plugin (this is optional) -->
     <script type="text/javascript" src="./js/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 
