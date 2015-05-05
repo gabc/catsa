@@ -14,7 +14,7 @@
 			$_SESSION["menuActive"] = "ModifRealisationAdmin.php";
 
 			//Modal
-			if(!empty($_POST["nomCategorie"]))
+			if(isset($_POST["nomCategorie"]))
 				CategorieDAO::insertCategorie($_POST["nomCategorie"]);
 
 		

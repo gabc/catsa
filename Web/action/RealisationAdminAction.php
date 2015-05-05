@@ -13,6 +13,6 @@
 		}
 
 		public function getCreations() {
-			return CreationDAO::getCreations();
+			return CreationDAO::getAllCreations();
 		}
 	}

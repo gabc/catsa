@@ -17,6 +17,24 @@
 							 ,"image" => "img\manege.t.jpg"));
 		}
 
+		public static function getAllCreations() {
+			$connection = Connection::getConnection();
+
+			$statement = $connection->prepare("SELECT * FROM CS_Creation");
+
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$statement->execute();
+
+			$creations = [];
+
+			while ($row = $statement->fetch()) {
+				$row["IMAGE"] = ImageDAO::getImageById($row["IDIMAGE"])["PATH"];
+				$creations[] = $row;
+			}
+
+			return $creations;
+		}
+
 		public static function insertCreation($path, $type, $categorie, $nom, $slideshow, $desc){
 			$connection = Connection::getConnection();
 
