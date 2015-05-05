@@ -2,7 +2,6 @@
 DROP TABLE CS_News;
 DROP TABLE CS_Creation;
 DROP TABLE CS_Texte;
-DROP TABLE CS_Emplacement;
 DROP TABLE CS_User;
 DROP TABLE CS_Image;
 DROP TABLE CS_Type;
@@ -40,7 +39,8 @@ CREATE TABLE CS_Type(
 
 CREATE TABLE CS_Creation(
   id NUMBER,
-  idImage NUMBER,
+  idImage NUMBER NOT NULL,
+  idImageSlideshow NUMBER,
   idType NUMBER,
   idCategorie NUMBER,
   nom VARCHAR2(100) NOT NULL,
@@ -48,22 +48,16 @@ CREATE TABLE CS_Creation(
   description VARCHAR2(200),
   CONSTRAINT CS_Creation_pk PRIMARY KEY(id),
   CONSTRAINT image_creation_fk FOREIGN KEY(idImage) REFERENCES CS_Image(id),
+  CONSTRAINT image_slide_creation_fk FOREIGN KEY(idImageSlideshow) REFERENCES CS_Image(id),
   CONSTRAINT categorie_type_fk FOREIGN KEY(idCategorie) REFERENCES CS_Categorie(id),
   CONSTRAINT slideshow CHECK (slideshow = 0 OR slideshow = 1)
 );
 
-CREATE TABLE CS_Emplacement(
-  id NUMBER,
-  place VARCHAR2(80),
-  CONSTRAINT CS_Emplacement_pk PRIMARY KEY(id)
-);
-
 CREATE TABLE CS_Texte(
   id NUMBER,
-  idEmplacement NUMBER,
+  emplacement VARCHAR2(80),
   contenu VARCHAR2(800) NOT NULL,
-  CONSTRAINT CS_Texte_pk PRIMARY KEY(id),
-  CONSTRAINT emplacement_texte_fk FOREIGN KEY(idEmplacement) REFERENCES CS_Emplacement(id)
+  CONSTRAINT CS_Texte_pk PRIMARY KEY(id)
 );
 
 CREATE TABLE CS_News(
