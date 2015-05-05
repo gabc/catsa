@@ -56,7 +56,7 @@ CREATE TABLE CS_Creation(
 CREATE TABLE CS_Texte(
   id NUMBER,
   emplacement VARCHAR2(80),
-  contenu VARCHAR2(800) NOT NULL,
+  contenu VARCHAR2(4000) NOT NULL,
   CONSTRAINT CS_Texte_pk PRIMARY KEY(id)
 );
 
