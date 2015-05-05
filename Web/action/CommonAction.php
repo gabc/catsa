@@ -2,7 +2,9 @@
 	session_start();	
 	require_once("action/constant.php");
 	require_once("action/DAO/Connection.php");
-	
+	require_once("action/DAO/CategorieDAO.php");
+	require_once("action/DAO/TypeDAO.php");
+
 	abstract class CommonAction {
 		public static $VISIBILITY_PUBLIC = 0;
 		public static $VISIBILITY_MEMBER = 1;
@@ -55,5 +57,23 @@
 			$file_data = @(file_get_contents("http://api.facebook.com/method/fql.query?query=select%20like_count%20from%20link_stat%20where%20url='$url'&format=json"));
 			$data = json_decode($file_data);
 			return @($data[0]->like_count);
+		}
+
+		public static function getTypes() {
+			// Retourne les types qui sont dans la BD. Sauf 'Tableau' qui n'est pas necessaire.
+				$types = TypeDAO::getAllTypes();
+				$temp = 0;
+				
+				for($i = 1; $i < sizeof($types); $i++) {
+					if($types[$i]['NOM'] === 'Tableau')
+						$temp = $i;
+				}
+				unset($types[$temp]);
+				
+				return $types;
+		}
+
+		public static function getCategories() {
+				return CategorieDAO::getAllCategories();
 		}
 	}
