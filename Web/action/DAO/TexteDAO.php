@@ -5,12 +5,12 @@
 			return array("Ceci est un texte.", "Ceci en est un autre.");
 		}
 
-		public static function nouveauMessage($message) {
+		public static function nouveauMessage($message, $current) {
 			$connection = Connection::getConnection();
 			
 			$statement = $connection->prepare("UPDATE CS_TEXTE SET CONTENU = ? WHERE EMPLACEMENT = ?");
 			$statement->bindParam(1, $message);
-			$statement->bindParam(2, $_SESSION["currentTab"]);
+			$statement->bindParam(2, $current);
 			$statement->execute();
 		}
 

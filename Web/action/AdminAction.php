@@ -1,6 +1,5 @@
 <?php
 	require_once("action/CommonAction.php");
-	require_once("action/DAO/TexteDAO.php");
 
 	class AdminAction extends CommonAction {
 
@@ -9,8 +8,5 @@
 		}
 
 		protected function executeAction() {
-			if (isset($_POST["editor1"])) {
-				TexteDAO::nouveauMessage($_POST["editor1"]);
-			}
 		}
 	}

@@ -10,7 +10,11 @@
 		}
 
 		protected function executeAction() {
-			$_SESSION["currentTab"] = $_POST["action"];
-            $this->result = TexteDAO::getTexte($_POST["action"]);
+			if ($_POST["action"] === "changeTexte") {
+				TexteDAO::nouveauMessage($_POST["text"], $_POST["current"]);
+			} else {
+				$_SESSION["currentTab"] = $_POST["action"];
+	            $this->result = TexteDAO::getTexte($_POST["action"]);
+       		}
 		}
 	}
