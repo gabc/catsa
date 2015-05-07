@@ -11,7 +11,6 @@
 		}
 
 		protected function executeAction() {
-			$_SESSION["menuActive"] = "ModifRealisationAdmin.php";
 
 			//Modal
 			if(isset($_POST["nomCategorie"]))

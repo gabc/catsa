@@ -14,7 +14,6 @@
 		}
 
 		protected function executeAction() {
-			$_SESSION["menuActive"] = "RealisationAdmin.php";
 			$this->creations = $this->getCreations();
         	$this->nbPages = ceil(count($this->creations)/$this->nbResultPerPage);
 

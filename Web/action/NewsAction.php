@@ -9,7 +9,6 @@
 		}
 
 		protected function executeAction() {
-			$_SESSION["menuActive"] = "news.php";
 		}
 
 		public function getNews(){

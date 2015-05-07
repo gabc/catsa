@@ -9,7 +9,6 @@
 		}
 
 		protected function executeAction() {
-			$_SESSION["menuActive"] = "admin.php";
 			if (isset($_POST["editor1"])) {
 				TexteDAO::nouveauMessage($_POST["editor1"]);
 			}
