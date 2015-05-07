@@ -1,7 +1,7 @@
 
    	<?php 
-  		if($_SESSION["menuActive"] !== 'login.php' && 
-  			$_SESSION["menuActive"] !== 'error.php') {
+  		if(CommonAction::getPage() !== 'login.php' && 
+  			CommonAction::getPage() !== 'error.php') {
   	?>
   		<ul id="sideMenuAdmin">
 			<li class="ui-widget-header">Gestionnaire de contenu</li>
