@@ -22,6 +22,13 @@
 				$this->upload($_FILES['imageReal']);
 			}
 
+			$imageSlideshow = null;
+			if(isset($_FILES['imageSlideshow']))
+			{
+				$this->upload($_FILES['imageSlideshow']);
+				$imageSlideshow = $_FILES['imageSlideshow']['name'];
+			}
+
 			if(!empty($_POST["nomReal"])){
 				$slideshow = 0;
 				if(isset($_POST["slideshow"]))
@@ -32,7 +39,9 @@
 				$categorie = $_POST["selectCategorie"];
 
 				CreationDAO::insertCreation($_FILES['imageReal']['name'],
-											$_POST["selectType"],$categorie,
+											$imageSlideshow,
+											$_POST["selectType"],
+											$categorie,
 											$_POST["nomReal"],
 											$slideshow,
 											$_POST["desc"]);

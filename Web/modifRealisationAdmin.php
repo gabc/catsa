@@ -73,6 +73,15 @@
       <img class="img-thumbnail" id="previewImage"/>
     </div>
   </div>
+    <div class="form-group">
+    <label class="col-md-2 control-label" >Image slideshow</label>
+      <input id="imageSlideshow" name="imageSlideshow" class="col-md-10" type="file" accept="image/*" required>
+   </div>
+  <div class="form-group">
+   <div class="thumbnail-lg col-md-12">
+      <img class="img-thumbnail" id="previewImageSlideshow"/>
+    </div>
+  </div>
 
   <div class="checkbox">
     <label>
