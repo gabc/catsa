@@ -17,10 +17,10 @@
       <header>
         <nav>
           <ul>
-            <li <?php if($_SESSION["menuActive"] == 'index.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+            <li <?php if(CommonAction::getPage() == 'index.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="index.php">Accueil</a>
             </li>
-            <li <?php if($_SESSION["menuActive"] == 'murales.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+            <li <?php if(CommonAction::getPage() == 'murales.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="murales.php">Murales</a>
               <ul id="muralesMenu">
                 <?php $types = CommonAction::getTypes();
@@ -29,7 +29,7 @@
                 <?php } ?>
               </ul>
             </li>
-            <li <?php if($_SESSION["menuActive"] == 'tableaux.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+            <li <?php if(CommonAction::getPage() == 'tableaux.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="tableaux.php">Tableaux</a>
               <ul id="tableauxMenu">
                 <?php $types = CommonAction::getCategories();
@@ -38,17 +38,17 @@
                 <?php } ?>
               </ul>
             </li>
-            <li <?php if($_SESSION["menuActive"] == 'contact.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+            <li <?php if(CommonAction::getPage() == 'contact.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="contact.php">Contact</a>
             </li>
-            <li <?php if($_SESSION["menuActive"] == 'news.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+            <li <?php if(CommonAction::getPage() == 'news.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="news.php">News</a>
             </li>
             <?php  
               if(CommonAction::isLoggedIn())
               {
             ?>
-              <li <?php if(preg_match('/admin/i', $_SESSION["menuActive"])){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+              <li <?php if(preg_match('/admin/i', CommonAction::getPage())){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
                 <a href="admin.php">Admin</a>
               </li>
               <li>

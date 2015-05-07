@@ -42,6 +42,10 @@
 			return $_SESSION["visibility"] > CommonAction::$VISIBILITY_PUBLIC;
 		}
 
+		public static function getPage() {
+			return basename($_SERVER['PHP_SELF']);
+		}
+
 		public function getName() {
 			$name = "Invité";
 
