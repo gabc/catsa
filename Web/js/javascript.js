@@ -6,12 +6,16 @@ $(function (){
 function genMenu (link, id) {
 	var isOnLink = false;
 	var isOnId = false;
+    var done = true;
+
 	link = "a[href$='"+link+"']";
 	$(id).menu();
     $(id).css("left",$(link).position().left+"px");
     $(id).css("top",$(link).position().top +17 + "px");
 
     $(link).hover(function() {
+        if (!done)
+            return;
     	isOnLink = true;
        	$(id).css("visibility", "visible");
         $(id).slideDown(400);
@@ -26,8 +30,13 @@ function genMenu (link, id) {
     });
 
     $(document).mousemove(function () {
-    	if (!isOnLink && !isOnId)
-    	    	$(id).slideUp(400, function () {$(id).css("visibility", "hidden");});
+    	if (!isOnLink && !isOnId) {
+            done = false;
+   	    	$(id).slideUp(400, function () {
+                                    $(id).css("visibility", "hidden");
+                                    done = true;
+                               });
+        }
     });
     $( id ).menu({
     focus: function( event, ui ) {}
