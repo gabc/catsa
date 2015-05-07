@@ -43,9 +43,9 @@
 	    }
 	    ?>
 	    <?php 
-	    for($i=0; $i < $action->nbPages;$i++){
+	    for($i=$action->pageDebut; ($i >= $action->pageDebut) && ($i <= $action->pageMax) && $i <= $action->nbPages;$i++){
 	    ?>
-	    	<li <?php if($_GET["page"] ==  $i +1){echo 'class ="active"'; } ?>><a href="?page=<?= $i +1 ?>"><?= $i +1 ?></a></li>
+	    	<li <?php if($_GET["page"] ==  $i){echo 'class ="active"'; } ?>><a href="?page=<?= $i ?>"><?= $i ?></a></li>
 	    <?php 
 	    }
 	    if($_GET["page"] < $action->nbPages){
