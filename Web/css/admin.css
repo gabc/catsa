@@ -21,3 +21,7 @@
 #tabs{
 	float:right;
 }
+
+div > ul > a {
+	display: block;
+}
