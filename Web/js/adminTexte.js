@@ -58,7 +58,6 @@ function changeCkText(data) {
 }
 
 function envoieTexte() {
-	console.log("Asdf");
 	temp = CKEDITOR.instances['editor1'].getData();
 	$.ajax({
 	url: "ajax.php",
