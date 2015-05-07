@@ -5,7 +5,6 @@ $(function () {
 })
 
 function loadFile(event){
-	console.log(event.target);
 	if(event.target["value"] !== ""){ //Pour chrome
 		var outputId;
 		if(event.target.name === "imageReal")
@@ -14,9 +13,7 @@ function loadFile(event){
 			outputId = 'previewImageSlideshow';
 		
 		var output = document.getElementById(outputId);
-		console.log(output);
 	    output.src = URL.createObjectURL(event.target.files[0]);
-	    console.log(event.target.files[0]);
 	}
 }
 
