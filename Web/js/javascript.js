@@ -1,6 +1,6 @@
 $(function (){
-	genMenu('tableaux.php', '#tableauxMenu');
-    genMenu('murales.php', '#muralesMenu');
+	genMenu('#tableaux', '#tableauxMenu');
+    genMenu('#murales', '#muralesMenu');
 });
 
 function genMenu (link, id) {
@@ -8,7 +8,7 @@ function genMenu (link, id) {
 	var isOnId = false;
     var done = true;
 
-	link = "a[href$='"+link+"']";
+	link = $(link);
 	$(id).menu();
     $(id).css("left",$(link).position().left+"px");
     $(id).css("top",$(link).position().top +17 + "px");

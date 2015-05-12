@@ -21,16 +21,16 @@
               <a href="index.php">Accueil</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'murales.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-              <a href="murales.php">Murales</a>
+              <a id="murales">Murales</a>
               <ul id="muralesMenu">
                 <?php $types = CommonAction::getTypes();
                       foreach ($types as $t) { ?>
-                        <li><?= $t['NOM'] ?></li>
+                        <li><a href="<?= $t['NOM'] ?>.php"><?= $t['NOM'] ?></a></li>
                 <?php } ?>
               </ul>
             </li>
             <li <?php if(CommonAction::getPage() == 'tableaux.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-              <a href="tableaux.php">Tableaux</a>
+              <a id="tableaux" href="tableaux.php">Tableaux</a>
               <ul id="tableauxMenu">
                 <?php $types = CommonAction::getCategories();
                       foreach ($types as $t) { ?>
