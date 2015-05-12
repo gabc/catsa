@@ -55,12 +55,13 @@
 	    }
 	   	?>
 	   	</ul>
-	   	<link type="text/css" href="css/bootstrap_patch.css" rel="stylesheet">
-		<link type="text/css" href="css/bootstrap-modal.css" rel="stylesheet">
-<script type="text/javascript" src="js/bootstrap-modal.js"></script>
-<script type="text/javascript" src="js/bootstrap-modalmanager.js"></script>
+	
+	<link type="text/css" href="css/bootstrap_patch.css" rel="stylesheet">
+	<link type="text/css" href="css/bootstrap-modal.css" rel="stylesheet">
+	<script type="text/javascript" src="js/bootstrap-modal.js"></script>
+	<script type="text/javascript" src="js/bootstrap-modalmanager.js"></script>
 
-	<!-- Dialog - Ajouter une catégorie -->
+	<!-- Dialog - Modifier une création -->
     <div id="stack1" class="modal fade bs-modal-lg" tabindex="-1" style="display: none;" role="dialog" data-focus-on="input:first" aria-labelledby="creationModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
