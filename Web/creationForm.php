@@ -72,6 +72,7 @@
     </label>
   </div>
 
+<div>
   <!-- Dialog - Ajouter une catégorie -->
     <div id="stack2" class="modal fade bs-modal-lg" tabindex="-1" data-focus-on="input:first" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -86,7 +87,7 @@
                 <div class="form-group">
                   <label class="col-md-2 control-label">Nom *</label>
                   <div class="col-md-4">
-                   <input name="nomCategorie" type="text" placeholder="Nom de la catégorie" class="form-control input-md">
+                   <input name="nomCategorie" type="text" placeholder="Nom de la catégorie" class="form-control input-md" required>
                   </div>
                 </div>
               </div> 
@@ -98,3 +99,4 @@
         </div>
       </div>
     </div>
+  </div>
