@@ -2,6 +2,7 @@
 	require_once("action/CommonAction.php");
 
 	class ContactAction extends CommonAction {
+		public $success;
 
 		public function __construct() {
 			parent::__construct(CommonAction::$VISIBILITY_PUBLIC);
@@ -16,7 +17,7 @@
 				$headers = 	'From: '. $email . "\r\n" .
      					   	'Reply-To: ' . $admin_email . "\r\n" .
     						'X-Mailer: PHP/' . phpversion();
-  				$reponse = mail($admin_email, $sujet, $comment, $headers);
+  				$this->success = mail($admin_email, $sujet, $comment, $headers);
 			}
 		}
 	}

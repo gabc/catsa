@@ -55,6 +55,8 @@ function getPresentationText () {
 function changeCkText(data) {
     data = JSON.parse(data);
     CKEDITOR.instances['editor1'].setData(data);
+    hideSuccess();
+    hideError();
 }
 
 function envoieTexte() {
@@ -69,5 +71,8 @@ function envoieTexte() {
 	}
     }).done(function () {
     	CKEDITOR.instances['editor1'].setData(temp);
+    	showSuccess();
+    }).fail(function () {
+    	showError();
     });
 }

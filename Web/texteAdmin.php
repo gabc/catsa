@@ -8,7 +8,10 @@
 ?>
     <script type="text/javascript" src="./js/adminTexte.js"></script>
     <script src="js/ckeditor/ckeditor.js"></script>
+
     <div id="tabs">
+      <div class="success box">Le texte s'est bien changé</div>
+      <div class="error box">Il y a eu un problème lors du changement</div>
       <ul>
         <li><a href="#tabs-1" id="acceuil">Acceuil</a></li>
         <li><a href="#tabs-2" id="contact">Contact</a></li>

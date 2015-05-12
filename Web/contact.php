@@ -7,6 +7,16 @@
 	require_once("partial/header.php")
 ?>
 	<br />
+	<div class="success box">Le mail s'est bien envoyé</div>
+	<div class="error box">Il y a eu un problème lors de l'envoit</div>
+	
+	<?php if(isset($action->success))
+			if($action->success){ ?>
+				<script>showSuccess();</script>
+	<?php 	}else{ ?>
+				<script>showError();</script>
+	<?php 	}?>
+
 	<form method="post">
   		Adresse Courriel: <input name="email" type="text" /><br />
   		Sujet: <input name="sujet" type="text" /><br />

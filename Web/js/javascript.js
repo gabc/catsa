@@ -50,3 +50,23 @@ function genMenu (link, id) {
     	    	$(id).slideUp(400, function () {$(id).css("visibility", "hidden");});
     });*/
 }
+
+function showError () {
+    $(".box").slideUp();
+    $(".error").slideDown();
+}
+
+function hideError () {
+    $(".box").slideUp();
+    $(".error").slideUp();
+}
+
+function showSuccess () {
+    $(".box").slideUp();
+    $(".success").slideDown();
+}
+
+function hideSuccess () {
+    $(".box").slideUp();
+    $(".success").slideUp();
+}
