@@ -19,6 +19,24 @@
 			return $type;
 		}
 
+		public static function getTypeById($id){
+			$connection = Connection::getConnection();
+			
+			$statement = $connection->prepare("SELECT * FROM CS_TYPE WHERE ID = ?");
+			$statement->bindParam(1, $id);
+
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$statement->execute();
+
+			$type = null;
+
+			if ($row = $statement->fetch()) {
+				$type = $row;
+			}
+
+			return $type["NOM"];
+		}
+
 		public static function getAllTypes(){
 			$connection = Connection::getConnection();
 

@@ -5,7 +5,7 @@
 	class RealisationAdminAction extends CommonAction {
 		public $creations;
 		public $nbPages;
-		public $nbResultPerPage = 1;
+		public $nbResultPerPage = 2;
 		public $nbPagesShow = 5;
 		public $pageDebut, $pageMax;
 

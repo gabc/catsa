@@ -6,6 +6,7 @@
 
 	require_once("partial/header_admin.php")
 ?>
+	<script type="text/javascript" src="js/adminResultRealisation.js"></script>
 	<link type="text/css" href="./css/realisationAdmin.css" rel="stylesheet">
     <div class="row">
     	<a class="btn btn-lg btn-primary col-sm-9 col-right" href="modifRealisationAdmin.php" role="button">Ajouter</a>
@@ -17,15 +18,21 @@
     		<div class="row">
 		    		<div class="panel panel-default col-sm-9 col-right">
 		    		<div class="panel-heading">
-		    			<h2 class="panel-title"><?= $action->creations[$i]["NOM"] ?></h2>
+		    			<h2 class="panel-title nomReal"><?= $action->creations[$i]["NOM"] ?></h2>
 		  			</div>
 		  			<div class="panel-body">
 		  				<div class="container-fluid">
-		  					<img class="col-md-2 img-rounded" src="<?= $action->creations[$i]["IMAGE"] ?>">
-		    				<p class="col-md-7"><?= $action->creations[$i]["DESCRIPTION"] ?></p>
-		    				<span class="col-md-1"><input disabled type="checkbox" name="slideshow" value="slideshow" <?= ($action->creations[$i]["SLIDESHOW"]) ? "checked" : "" ;?> >Dans le slideshow</span>
-		    				<a class="btn col-md-1" data-toggle="modal" href="#stack1" role="button"><span class="glyphicon glyphicon-pencil"></span></a>
-		    				<a class="btn col-md-1" href="#" role="button"><span class="glyphicon glyphicon-remove"></span></a>
+		  					<div class="row">
+			  					<img class="col-md-2 img-rounded imageReal" src="<?= $action->creations[$i]["IMAGE"] ?>">
+			    				<p class="col-md-7 descriptionReal"><?= $action->creations[$i]["DESCRIPTION"] ?></p>
+			    				<span class="col-md-1"><input disabled class="slideshowReal" type="checkbox" name="slideshow" value="slideshow" <?= ($action->creations[$i]["SLIDESHOW"]) ? "checked" : "" ;?> >Dans le slideshow</span>
+			    				<a class="btn col-md-1 modifierReal" data-toggle="modal" href="#stack1" role="button"><span class="glyphicon glyphicon-pencil"></span></a>
+			    				<a class="btn col-md-1" href="#" role="button"><span class="glyphicon glyphicon-remove"></span></a>
+		    				</div>
+		    				<div class="row">
+		    					<p class="col-md-5 categorieReal"><?= $action->creations[$i]["CATEGORIE"] ?></p>
+		    					<p class="col-md-5 typeReal"><?= $action->creations[$i]["TYPE"] ?></p>
+		    				</div>
 		    			</div>
 		    		</div>
 		    	</div>

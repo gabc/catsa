@@ -45,4 +45,22 @@
 
 			return $categorie;
 		}
+
+		public static function getCategorieById($id) {
+			$connection = Connection::getConnection();
+			
+			$statement = $connection->prepare("SELECT * FROM CS_Categorie WHERE id = ?");
+			$statement->bindParam(1, $id);
+
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$statement->execute();
+
+			$categorie = null;
+
+			if ($row = $statement->fetch()) {
+				$categorie = $row;
+			}
+
+			return $categorie["NOM"];
+		}
 	}
