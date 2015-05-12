@@ -89,4 +89,6 @@
 	   </div>
     </div>
 
-<?php require_once("partial/footer_admin.php");
+<?php
+	require_once("categorieModal.php");
+	require_once("partial/footer_admin.php");

@@ -43,8 +43,3 @@ body.modal-open,
   left: 0;
   z-index: 1040;
 }
-
-#stack2{
-  /*TODO: remove:trouver le padding inline*/
-  padding-left:0px !important; 
-}

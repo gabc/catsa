@@ -13,12 +13,15 @@
   <fieldset>
 
   <!-- Form Name -->
-  <legend>Modification d'une réalisation</legend>
+  <legend>Ajout d'une réalisation</legend>
   <!-- Text input-->
   <?php require_once("creationForm.php"); ?>
+  <button type="submit" class="btn btn-default btn-lg btn-block">Ajouter</button>
 
   </fieldset>
 </form>
 </div>
 
-<?php require_once("partial/footer_admin.php");
+<?php
+  require_once("categorieModal.php"); 
+  require_once("partial/footer_admin.php");
