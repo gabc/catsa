@@ -1,5 +1,5 @@
       <!-- Dialog - Ajouter une catégorie -->
-    <div id="stack2" class="modal fade bs-modal-lg" tabindex="-1" data-focus-on="input:first" aria-hidden="true">
+    <div id="stack2" class="modal fade bs-modal-lg" data-replace="true" tabindex="-1" data-focus-on="input:first" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <form class="form-horizontal" action='modifRealisationAdmin.php' method="POST">
