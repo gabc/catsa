@@ -4,7 +4,7 @@ function init () {
     activationMenu();
     try{
 	    var href = window.location.href.match(/.*\/(?!.*admin.php)(.*\.php)/)[1];
-	    $("a[href*='"+ href +"']").css("background-color", "black");
+	    $("a[href*='"+ href +"']").css("background-color", "#FAFFBA");
 	}catch (e){
 		// Gotta catch 'em all!
 	}
