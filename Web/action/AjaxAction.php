@@ -12,7 +12,10 @@
 
 		protected function executeAction() {
 			if ($_POST["action"] === "getRealisation"){
-				CreationDAO::getCreation($_POST["nom"]);
+				$this->result = CreationDAO::getCreation($_POST["image"],$_POST["type"],
+										 $_POST["categorie"],$_POST["nom"],
+										 $_POST["slideshow"],$_POST["desc"]);
+
 			}elseif ($_POST["action"] === "changeTexte") {
 				TexteDAO::nouveauMessage($_POST["text"], $_POST["current"]);
 			} else {

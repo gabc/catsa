@@ -27,34 +27,48 @@
 		public static function getCreation($path, $type, $categorie, $nom, $slideshow, $desc) {
 			$connection = Connection::getConnection();
 
-			$statement = $connection->prepare("SELECT * FROM CS_Creation WHERE idImage= ?, idType = ?, idCategorie = ?, nom = ?, slideshow = ?, description = ?");
-
-			$idImage = ImageDAO::getImage($path);
+			$idImage = ImageDAO::getImage($path)["ID"];
 			$idType = TypeDAO::getType($type)["ID"];
-			$idCategorie = null;
-			if($categorie !== null)
-				$idCategorie = CategorieDAO::getCategorie($categorie)["ID"];
+			
+			if($slideshow === "true")
+				$slideshow = 1;
+			else
+				$slideshow = 0;
 
-			$statement->bindParam(1, $idImage);
-			$statement->bindParam(2, $idType);
-			$statement->bindParam(3, $idCategorie);
-			$statement->bindParam(4, $nom);
-			$statement->bindParam(5, $slideshow);
-			$statement->bindParam(6, $desc);
+			if(!empty($categorie)){
+				$idCategorie = CategorieDAO::getCategorie($categorie)["ID"];
+				$statement = $connection->prepare("SELECT * FROM CS_Creation WHERE idImage= ? AND idType = ? AND
+												 nom = ? AND slideshow = ? AND description = ? AND idCategorie = ?");
+				$statement->bindParam(1, $idImage);
+				$statement->bindParam(2, $idType);
+				$statement->bindParam(3, $nom);
+				$statement->bindParam(4, $slideshow);
+				$statement->bindParam(5, $desc);
+				$statement->bindParam(6, $idCategorie);
+			}else{
+				$statement = $connection->prepare("SELECT * FROM CS_Creation WHERE idImage= ? AND idType = ? AND
+												 nom = ? AND slideshow = ? AND description = ? AND idCategorie IS NULL");
+				$statement->bindParam(1, $idImage);
+				$statement->bindParam(2, $idType);
+				$statement->bindParam(3, $nom);
+				$statement->bindParam(4, $slideshow);
+				$statement->bindParam(5, $desc);
+			}
+			
 
 			$statement->setFetchMode(PDO::FETCH_ASSOC);
 			$statement->execute();
 
-			$creations = [];
+			$creation = null;
 
-			while ($row = $statement->fetch()) {
+			if ($row = $statement->fetch()) {
 				$row["IMAGE"] = ImageDAO::getImageById($row["IDIMAGE"])["PATH"];
 				$row["CATEGORIE"] = CategorieDAO::getCategorieById($row["IDCATEGORIE"]);
 				$row["TYPE"] = TypeDAO::getTypeById($row["IDTYPE"]);
-				$creations[] = $row;
+				$creation = $row;
 			}
 
-			return $creations[0];
+			return $creation;
 		}
 
 

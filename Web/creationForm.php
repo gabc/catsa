@@ -1,4 +1,4 @@
-<script type="text/javascript" src="js/modal.js"></script>
+<!-- <script type="text/javascript" src="js/modal.js"></script> -->
 
   <div class="form-group">
     <label class="col-md-2 control-label">Nom</label>

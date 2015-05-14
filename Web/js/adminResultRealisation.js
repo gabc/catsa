@@ -11,14 +11,22 @@ function getRealisation (event) {
 	var categorie = $(divPrinc).find(".categorieReal").text();
 	var image = $(divPrinc).find(".imageReal").attr('src');
 	var slideshow = $(divPrinc).find(".slideshowReal").is(':checked')
-
- //    $.ajax({
-	// url: "ajax.php",
-	// type: "POST",
-	// data: {
-	//     action: "getRealisation",
-	//     idImage: 
-	//     nom: "value",
-	// }
- //    }).done(changeCkText);
+	console.log(categorie);
+    $.ajax({
+	url: "ajax.php",
+	type: "POST",
+	data: {
+	    action: "getRealisation",
+	    image: image,
+	    nom: nom,
+	    type: type,
+	    categorie: categorie,
+	    desc: desc,
+	    slideshow: slideshow
+	}
+    }).done(function(data) {
+    	data = JSON.parse(data);
+    	console.log(data);
+    	
+    });
 }
