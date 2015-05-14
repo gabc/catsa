@@ -29,8 +29,8 @@
                 <?php } ?>
               </ul>
             </li>
-            <li <?php if(CommonAction::getPage() == 'tableaux.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-              <a id="tableaux" href="tableaux.php">Tableaux</a>
+            <li <?php if(CommonAction::getPage() == 'menuTableaux.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+              <a id="tableaux" href="menuTableaux.php">Tableaux</a>
               <ul id="tableauxMenu">
                 <?php $types = CommonAction::getCategories();
                       foreach ($types as $t) { ?>
