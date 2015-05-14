@@ -3,6 +3,7 @@
 	require_once("action/constant.php");
 	require_once("action/DAO/Connection.php");
 	require_once("action/DAO/CategorieDAO.php");
+	require_once("action/DAO/CreationDAO.php");
 	require_once("action/DAO/TypeDAO.php");
 
 	abstract class CommonAction {
@@ -79,5 +80,9 @@
 
 		public static function getCategories() {
 				return CategorieDAO::getAllCategories();
+		}
+
+		public static function getSlideShows() {
+			return CreationDAO::getSlideShows();
 		}
 	}

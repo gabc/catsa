@@ -6,10 +6,5 @@
 
 	require_once("partial/header.php")
 ?>
-	<ul>
-		<?php foreach ($action->getMess() as $text) { ?>
-			<li><?= $text ?></li>
-		<?php } ?>
-	</ul>
 	<p><?= $action->getTexte("acceuil") ?></p>
 <?php require_once("partial/footer.php");

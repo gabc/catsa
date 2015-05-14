@@ -33,4 +33,15 @@
       <div id="ombre">
         <img src="./img/ombre.jpg" width="857">
       </div>
+
+
+    <script>
+      var images = [];
+      <?php foreach(CommonAction::getSlideShows() as $img){ ?>
+        images.push({"image":"<?= $img['IMAGE'] ?>",
+                     "caption":"<?= $img['DESCRIPTION'] ?>",
+                     "link":"javascript:void($(\"#pikame\").data(\"pikachoose\").Next())",
+                     "title":"<?= $img['NOM'] ?>"});
+      <?php } ?>
+    </script>
       

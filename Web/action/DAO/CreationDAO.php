@@ -137,4 +137,23 @@
 			}
 			return $creations;
 		}
+
+		public static function getSlideShows() {
+			$connection = Connection::getConnection();
+
+			$statement = $connection->prepare("SELECT * FROM CS_Creation WHERE slideshow = 1");
+
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$statement->execute();
+
+			$creations = [];
+
+			while ($row = $statement->fetch()) {
+				$row["IMAGE"] = ImageDAO::getImageById($row["IDIMAGE"])["PATH"];
+				$row["TYPE"] = TypeDAO::getTypeById($row["IDTYPE"]);
+				$creations[] = $row;
+			}
+
+			return $creations;
+		}
 	}
