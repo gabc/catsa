@@ -70,3 +70,13 @@ function hideSuccess () {
     $(".box").slideUp();
     $(".success").slideUp();
 }
+
+function showWarning () {
+    $(".box").slideUp();
+    $(".warning").slideDown();
+}
+
+function hideWarning () {
+    $(".box").slideUp();
+    $(".warning").slideUp();
+}
