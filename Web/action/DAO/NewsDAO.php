@@ -33,6 +33,6 @@
 			$statement->bindParam(1, $idTitre);
 			$statement->bindParam(2, $idTexte);
 
-			$statement->execute();
+			return $statement->execute();
 		}
 	}

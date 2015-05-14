@@ -11,7 +11,7 @@
 
 		protected function executeAction() {
 			if (isset($_POST["editor1"])) {
-				$this->success = NewsDAO::insertNews("Titre", $_POST["editor1"]);
+				$this->success = NewsDAO::insertNews($_POST["titre"], $_POST["editor1"]);
 			}
 		}
 	}
