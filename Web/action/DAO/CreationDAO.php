@@ -91,4 +91,30 @@
 				var_dump($e);exit;
 			}
 		}
+
+		public static function getTableauxByType($type){
+			$connection = Connection::getConnection();
+
+			$idType = TypeDAO::getType("Tableau")["ID"];
+			$idCategorie = CategorieDAO::getCategorie($type)["ID"];
+
+			$statement = $connection->prepare("SELECT * FROM CS_Creation WHERE idType = ? and idCategorie = ?");
+
+			$statement->bindParam(1, $idType);
+			$statement->bindParam(2, $idCategorie);
+
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+
+			$statement->execute();
+
+			$creations = [];
+
+			while ($row = $statement->fetch()) {
+				$row["IMAGE"] = ImageDAO::getImageById($row["IDIMAGE"])["PATH"];
+				$row["CATEGORIE"] = CategorieDAO::getCategorieById($row["IDCATEGORIE"]);
+				$row["TYPE"] = TypeDAO::getTypeById($row["IDTYPE"]);
+				$creations[] = $row;
+			}
+			return $creations;
+		}
 	}

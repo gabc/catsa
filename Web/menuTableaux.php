@@ -23,9 +23,13 @@
 	</div>
 
 	<div>
-	    <p>Les tableaux Catsa portent les personnages originaux et caractéristiques de la compagnie qui font la joie des enfants sur les murs de leurs chambres depuis 10 ans. Devenus nomades, ces personnages sont des compagnons de choix qui suiveront leurs propriétaires d’un décor à l’autre!</p>
-
-	    <p>Chaque tableau provient d’un collage confectionné et peint à la main, fait avec une harmonie de papiers fins et de peinture acrylique. Imprimée puis découpée individuellement, l’image est ensuite apposée sur un tableau de bois de 12' par 12' et vernie pour préserver ses propriétées.  Une bande de papier décoratif orne le côté des tableaux de chaque collection. Prenez plaisir à les combiner, nos personnages adorent être bien entourés!</p>
-
+		<?php foreach (CommonAction::getCategories() as $t) { 
+				$crea = $action->getUneImage($t["NOM"]);
+				if(!empty($crea)) {?>
+					<img src="<?= $crea[0]["IMAGE"]?>">
+					<div><?= "Asd" ?></div>
+		<?php 	}
+			} ?>
+		
 	</div>
 <?php require_once("partial/footer.php");
