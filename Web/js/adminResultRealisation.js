@@ -27,6 +27,13 @@ function getRealisation (event) {
     }).done(function(data) {
     	data = JSON.parse(data);
     	console.log(data);
-    	
+    	$("#nomReal").val(nom);
+    	$('#selectType').val(type);
+    	$('#selectType').val(type);
+    	$('#selectCategorie').val(categorie);
+    	$('#descReal').val(desc);
+    	$('#previewImage').attr('src', image);
+    	$('#previewImageSlideshow').attr('src', data["IMAGESLIDESHOW"]);
+    	$('#checkBoxReal').prop('checked', slideshow);
     });
 }

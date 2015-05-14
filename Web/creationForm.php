@@ -3,7 +3,7 @@
   <div class="form-group">
     <label class="col-md-2 control-label">Nom</label>
     <div class="col-md-9">
-     <input name="nomReal" type="text" class="form-control input-md" required>
+     <input id="nomReal" name="nomReal" type="text" class="form-control input-md" required>
     </div>
   </div>
   <div class="form-group">
@@ -46,7 +46,7 @@
   <div class="form-group">
     <label class="col-md-2 control-label">Description</label>
     <div class="col-md-8">
-     <textarea class="form-control" name="desc" maxlength="200" rows="4" cols="50"></textarea>
+     <textarea id="descReal" class="form-control" name="desc" maxlength="200" rows="4" cols="50"></textarea>
     </div>
   </div>
   <div class="form-group">
@@ -70,6 +70,6 @@
 
   <div class="checkbox">
     <label>
-      <input type="checkbox" name="slideshow" value="1">Slideshow
+      <input id="checkBoxReal" type="checkbox" name="slideshow" value="1">Slideshow
     </label>
   </div>

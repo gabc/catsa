@@ -63,6 +63,7 @@
 
 			if ($row = $statement->fetch()) {
 				$row["IMAGE"] = ImageDAO::getImageById($row["IDIMAGE"])["PATH"];
+				$row["IMAGESLIDESHOW"] = ImageDAO::getImageById($row["IDIMAGESLIDESHOW"])["PATH"];
 				$row["CATEGORIE"] = CategorieDAO::getCategorieById($row["IDCATEGORIE"]);
 				$row["TYPE"] = TypeDAO::getTypeById($row["IDTYPE"]);
 				$creation = $row;
