@@ -9,6 +9,7 @@
 		}
 
 		protected function executeAction() {
+			if(isset($_REQUEST['capchat']) && $_REQUEST['capchat'] === '13')
 			if(isset($_REQUEST['email'])) {
 				$admin_email = "address@e3b.org";
   				$email = $_REQUEST['email'];

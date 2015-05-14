@@ -22,7 +22,7 @@
   		Sujet: <input name="sujet" type="text" /><br />
   		Message:<br />
   		<textarea name="texte" rows="15" cols="40"></textarea><br />
-  		Capchatthing: <input name="capchat" type="text" /><br />
+  		Combien fait 9 et 4: <input name="capchat" type="text" /><br />
   		<input type="submit" value="Submit" />
     </form>
 <?php require_once("partial/footer.php");
