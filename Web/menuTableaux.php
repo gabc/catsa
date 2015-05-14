@@ -26,8 +26,10 @@
 		<?php foreach (CommonAction::getCategories() as $t) { 
 				$crea = $action->getUneImage($t["NOM"]);
 				if(!empty($crea)) {?>
-					<img src="<?= $crea[0]["IMAGE"]?>">
-					<div><?= "Asd" ?></div>
+					<a href="tableaux.php?categories=<?= $t["NOM"] ?>">
+						<img src="<?= $crea[0]["IMAGE"]?>">
+						<div><?= "Asd" ?></div>
+					</a>
 		<?php 	}
 			} ?>
 		

@@ -1,6 +1,7 @@
 <?php
 	require_once("action/CommonAction.php");
-
+	require_once("action/DAO/CreationDAO.php");
+	
 	class TableauxAction extends CommonAction {
 
 		public function __construct() {
@@ -8,5 +9,9 @@
 		}
 
 		protected function executeAction() {
+		}
+
+		public function getTableauxByCategorie($cat){
+			return CreationDAO::getTableauxByType($cat);
 		}
 	}
