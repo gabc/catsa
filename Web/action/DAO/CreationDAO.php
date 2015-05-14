@@ -91,6 +91,11 @@
 				var_dump($e);exit;
 			}
 		}
+		
+		private static function getThumbnail($str){
+			$ex = explode(".", $str);
+			return $ex[0] . ".t." . $ex[1];
+		}
 
 		public static function getTableauxByType($type){
 			$connection = Connection::getConnection();
@@ -111,6 +116,7 @@
 
 			while ($row = $statement->fetch()) {
 				$row["IMAGE"] = ImageDAO::getImageById($row["IDIMAGE"])["PATH"];
+				$row["THUMBNAIL"] = CreationDAO::getThumbnail($row["IMAGE"]);
 				$row["CATEGORIE"] = CategorieDAO::getCategorieById($row["IDCATEGORIE"]);
 				$row["TYPE"] = TypeDAO::getTypeById($row["IDTYPE"]);
 				$creations[] = $row;
