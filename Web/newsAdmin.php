@@ -14,6 +14,7 @@
     
     <div id="tabs">
       <form method="post" action="newsAdmin.php">
+        Titre: <input type="text" name="titre">
         <textarea cols="80" id="editor1" name="editor1" rows="10" ></textarea>
         <button id="formTexte">Sauvegarder</button>
       </form>
