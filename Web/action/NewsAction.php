@@ -11,7 +11,7 @@
 		protected function executeAction() {
 		}
 
-		public function getNews(){
-			return NewsDAO::getNews();
+		public function getAllNews(){
+			return NewsDAO::getAllNews();
 		}
 	}

@@ -1,6 +1,6 @@
 <?php
 	require_once("action/CommonAction.php");
-	require_once("action/DAO/TexteDAO.php");
+	require_once("action/DAO/NewsDAO.php");
 	
 	class NewsAdminAction extends CommonAction {
 		public $success;
@@ -11,7 +11,7 @@
 
 		protected function executeAction() {
 			if (isset($_POST["editor1"])) {
-				$this->success = TexteDAO::insertNews($_POST["editor1"]);
+				$this->success = NewsDAO::insertNews("Titre", $_POST["editor1"]);
 			}
 		}
 	}
