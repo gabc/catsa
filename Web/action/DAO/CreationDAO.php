@@ -167,7 +167,7 @@
 
 			$statement = $connection->prepare("SELECT * FROM CS_Creation WHERE idType = ?");
 
-			$idType = TypeDAO::getType("Chambre")["ID"];
+			$idType = TypeDAO::getType("Commerce")["ID"];
 
 			$statement->bindParam(1, $idType);
 
