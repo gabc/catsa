@@ -273,3 +273,36 @@ nav ul li > ul {
 	background-color: #FFBABA;
 	background-image: url('../img/cancel.png');
 }
+
+.news {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.newshead {
+	margin: 0px;
+	border: aliceblue;
+	border-style: groove;
+	border-radius: 12px;
+}
+
+.newstitle {
+	display: inline;
+	float: left;
+}
+
+.newsdate {
+	display: inline;
+	float: right;
+}
+
+.newstexte {
+	margin: 0px;
+	border: aqua;
+	border-style: groove;
+	border-radius: 13px;
+}
+
+.clear {
+	clear: both;
+}

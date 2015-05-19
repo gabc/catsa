@@ -6,14 +6,18 @@
 
 	require_once("partial/header.php")
 ?>
-
-<?php foreach ($action->getAllNews() as $i) { ?>
-		<div>
-			<h2><?= $i["TITRE"] . $i["CREATED"] ?></h2>
-			<p><?= $i["TEXTE"] ?></p>
-		<?php 
-		}
-		?>
+	<?php foreach ($action->getAllNews() as $i) { ?>
+		<div class="news">
+			<div class="newshead">
+				<h2 class="newstitle"><?= $i["TITRE"]?></h2>
+				<h2 class="newsdate"><?= $i["CREATED"] ?></h2>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="newstexte">
+				<?= $i["TEXTE"] ?>
+			</div>
+			<div class="clear"></div>
 		</div>
-
+	<?php } ?>
 <?php require_once("partial/footer.php");

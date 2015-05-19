@@ -113,7 +113,6 @@
 		
 		private static function getThumbnail($str){
 			$ex = explode(".", $str);
-			var_dump($str);
 			return $ex[0] . ".t." . $ex[1];
 		}
 
