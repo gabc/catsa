@@ -72,7 +72,7 @@
     <div id="stack1" class="modal fade bs-modal-lg" style="display: none;" data-replace="true" tabindex="-1" style="display: none;" role="dialog" data-focus-on="input:first" aria-labelledby="creationModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
-        	<form class="form-horizontal" action='realisationAdmin.php' method="POST">
+        	<div class="form-horizontal">
 	   			<fieldset>
 	            	<div class="modal-header">
 	                	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -88,10 +88,10 @@
 							  require_once("creationForm.php");
 							?>
 							
-	   					 <button type="submit" class="btn btn-default btn-lg btn-block">Modifier</button>
+	   					 <button class="btn btn-default btn-lg btn-block updateReal">Modifier</button>
 	   				</div>
             	</fieldset>
-            </form>
+            </div>
 	   	</div>
 	   </div>
     </div>

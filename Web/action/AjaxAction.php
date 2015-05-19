@@ -16,6 +16,11 @@
 										 $_POST["categorie"],$_POST["nom"],
 										 $_POST["slideshow"],$_POST["desc"]);
 
+			}elseif($_POST["action"] === "updateRealisation"){
+				$this->result = CreationDAO::updateCreation($_POST["idCreation"], $_POST["image"],
+										 $_POST["imageSlideshow"], $_POST["type"],
+										 $_POST["categorie"],$_POST["nom"],
+										 $_POST["slideshow"],$_POST["desc"]);
 			}elseif ($_POST["action"] === "changeTexte") {
 				TexteDAO::nouveauMessage($_POST["text"], $_POST["current"]);
 			} else {

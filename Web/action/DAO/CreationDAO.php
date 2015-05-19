@@ -35,6 +35,8 @@
 			else
 				$slideshow = 0;
 
+
+
 			if(!empty($categorie)){
 				$idCategorie = CategorieDAO::getCategorie($categorie)["ID"];
 				$statement = $connection->prepare("SELECT * FROM CS_Creation WHERE idImage= ? AND idType = ? AND
@@ -63,7 +65,9 @@
 
 			if ($row = $statement->fetch()) {
 				$row["IMAGE"] = ImageDAO::getImageById($row["IDIMAGE"])["PATH"];
+
 				$row["IMAGESLIDESHOW"] = ImageDAO::getImageById($row["IDIMAGESLIDESHOW"])["PATH"];
+
 				$row["CATEGORIE"] = CategorieDAO::getCategorieById($row["IDCATEGORIE"]);
 				$row["TYPE"] = TypeDAO::getTypeById($row["IDTYPE"]);
 				$creation = $row;
@@ -182,5 +186,42 @@
 			}
 
 			return $creations;
+		}
+
+		public static function updateCreation($idCreation, $path, $pathSlideshow, $type, $categorie, $nom, $slideshow, $desc){
+			$connection = Connection::getConnection();
+
+			//TODO: UPLOAD l'aimge si n'existe pas (nouveau)
+			$idImage = ImageDAO::getImage($path)["ID"];
+			$idImageSlideshow = ImageDAO::getImage($pathSlideshow)["ID"];
+			$idType = TypeDAO::getType($type)["ID"];
+
+			
+			if($slideshow === "true")
+				$slideshow = 1;
+			else
+				$slideshow = 0;
+
+			$idType = TypeDAO::getType($type)["ID"];
+			$idCategorie = null;
+			if($categorie !== null)
+				$idCategorie = CategorieDAO::getCategorie($categorie)["ID"];
+
+			var_dump ($idCreation);
+
+			$statement = $connection->prepare("UPDATE CS_Creation SET idImage = ?,idImageSlideshow = ?, idType = ?,
+																	idCategorie = ?, nom = ?, slideshow = ?, description = ? 
+																	WHERE ID = ? ");
+
+			$statement->bindParam(1, $idImage);
+			$statement->bindParam(2, $idImageSlideshow);
+			$statement->bindParam(3, $idType);
+			$statement->bindParam(4, $idCategorie);
+			$statement->bindParam(5, $nom);
+			$statement->bindParam(6, $slideshow);
+			$statement->bindParam(7, $desc);
+			$statement->bindParam(8, $idCreation);
+
+			return $statement->execute();
 		}
 	}
