@@ -25,7 +25,7 @@
 				$tempFile = $_FILES['imageReal'];
 				$tempFile['name'] = md5($tempFile['name']) . "." . strtolower(substr(strrchr($tempFile['name'],"."),1));
 				$this->upload($tempFile);
-				PhotoUtils::createThumbnail($tempFile['name'], 50, 50);
+				PhotoUtils::createThumbnail($tempFile['name'], 200, 200);
 			}
 
 			$imageSlideshow = null;
