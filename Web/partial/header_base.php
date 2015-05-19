@@ -31,18 +31,15 @@
             </li>
             <li <?php if(CommonAction::getPage() == 'menuTableaux.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a id="tableaux" href="menuTableaux.php">Tableaux</a>
-              <ul id="tableauxMenu">
-                <?php $types = CommonAction::getCategories();
-                      foreach ($types as $t) { ?>
-                        <li><?= $t['NOM'] ?></li>
-                <?php } ?>
-              </ul>
             </li>
             <li <?php if(CommonAction::getPage() == 'contact.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="contact.php">Contact</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'news.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="news.php">News</a>
+            </li>
+            <li <?php if(CommonAction::getPage() == 'nous.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+              <a href="nous.php">Nous</a>
             </li>
             <?php  
               if(CommonAction::isLoggedIn())

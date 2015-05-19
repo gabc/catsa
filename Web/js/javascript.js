@@ -1,5 +1,4 @@
 $(function (){
-	genMenu('#tableaux', '#tableauxMenu');
     genMenu('#murales', '#muralesMenu');
 });
 

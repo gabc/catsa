@@ -10,8 +10,5 @@
 		}
 
 		protected function executeAction() {
-			if (isset($_POST["editor1"])) {
-				TexteDAO::nouveauMessage($_POST["editor1"]);
-			}
 		}
 	}

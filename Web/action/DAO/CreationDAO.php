@@ -109,6 +109,7 @@
 		
 		private static function getThumbnail($str){
 			$ex = explode(".", $str);
+			var_dump($str);
 			return $ex[0] . ".t." . $ex[1];
 		}
 
@@ -151,6 +152,31 @@
 
 			while ($row = $statement->fetch()) {
 				$row["IMAGE"] = ImageDAO::getImageById($row["IDIMAGE"])["PATH"];
+				$row["TYPE"] = TypeDAO::getTypeById($row["IDTYPE"]);
+				$creations[] = $row;
+			}
+
+			return $creations;
+		}
+
+		public static function getMuralesCommerce() {
+			$connection = Connection::getConnection();
+
+			$statement = $connection->prepare("SELECT * FROM CS_Creation WHERE idType = ?");
+
+			$idType = TypeDAO::getType("Chambre")["ID"];
+
+			$statement->bindParam(1, $idType);
+
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$statement->execute();
+
+			$creations = [];
+
+			while ($row = $statement->fetch()) {
+				$row["IMAGE"] = ImageDAO::getImageById($row["IDIMAGE"])["PATH"];
+				$row["THUMBNAIL"] = CreationDAO::getThumbnail($row["IMAGE"]);
+				$row["CATEGORIE"] = CategorieDAO::getCategorieById($row["IDCATEGORIE"]);
 				$row["TYPE"] = TypeDAO::getTypeById($row["IDTYPE"]);
 				$creations[] = $row;
 			}

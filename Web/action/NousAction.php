@@ -1,8 +1,8 @@
 <?php
 	require_once("action/CommonAction.php");
-	require_once("action/DAO/CreationDAO.php");
-
-	class CommerceAction extends CommonAction {
+	require_once("action/DAO/TexteDAO.php");
+	
+	class NousAction extends CommonAction {
 
 		public function __construct() {
 			parent::__construct(CommonAction::$VISIBILITY_PUBLIC);
@@ -11,7 +11,7 @@
 		protected function executeAction() {
 		}
 
-		public function getMurales(){
-			return CreationDAO::getMuralesCommerce();
+		public function getNousTexte(){
+			return TexteDAO::getTexte("contact");
 		}
 	}
