@@ -81,7 +81,7 @@ nav ul li a {
 	padding-right: 5px;
 }
 
-nav ul li a::after { 
+nav > ul > li > a::after { 
 	color: #000000;
     content: " | ";
 }
