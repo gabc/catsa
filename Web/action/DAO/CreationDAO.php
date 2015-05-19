@@ -187,6 +187,31 @@
 			return $creations;
 		}
 
+		public static function getMuralesChambre() {
+			$connection = Connection::getConnection();
+
+			$statement = $connection->prepare("SELECT * FROM CS_Creation WHERE idType = ?");
+
+			$idType = TypeDAO::getType("Chambre")["ID"];
+
+			$statement->bindParam(1, $idType);
+
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$statement->execute();
+
+			$creations = [];
+
+			while ($row = $statement->fetch()) {
+				$row["IMAGE"] = ImageDAO::getImageById($row["IDIMAGE"])["PATH"];
+				$row["THUMBNAIL"] = CreationDAO::getThumbnail($row["IMAGE"]);
+				$row["CATEGORIE"] = CategorieDAO::getCategorieById($row["IDCATEGORIE"]);
+				$row["TYPE"] = TypeDAO::getTypeById($row["IDTYPE"]);
+				$creations[] = $row;
+			}
+
+			return $creations;
+		}
+
 		public static function updateCreation($idCreation, $path, $pathSlideshow, $type, $categorie, $nom, $slideshow, $desc){
 			$connection = Connection::getConnection();
 
