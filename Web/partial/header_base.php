@@ -21,7 +21,7 @@
               <a href="index.php">Accueil</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'murales.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-              <a id="murales">Murales</a>
+              <a id="murales" href="murales.php">Murales</a>
               <ul id="muralesMenu">
                 <?php $types = CommonAction::getTypes();
                       foreach ($types as $t) { ?>

@@ -7,7 +7,7 @@
 	require_once("partial/header.php")
 ?>
 
-	<div>
+	<div class="margintop">
 		<?php foreach (CommonAction::getCategories() as $t) { 
 				$crea = $action->getUneImage($t["NOM"]);
 				if(!empty($crea)) {?>
