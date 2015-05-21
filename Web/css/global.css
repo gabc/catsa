@@ -339,12 +339,11 @@ nav ul li > ul {
 	}
 
 	.pikachoose-classic {
-		visibility: hidden;
-		height: 0px;
+		display: none;
 	}
 
 	#ombre {
-		visibility: hidden;
+		display: none;
 	}
 
 	.infoBox {
@@ -356,5 +355,13 @@ nav ul li > ul {
 	.infoRangee {
 		margin: auto;
 		width: 200px;
+	}
+
+	.news {
+		margin-top: 100px;
+	}
+
+	h1 {
+		display: none;
 	}
 }
