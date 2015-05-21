@@ -12,6 +12,18 @@ body > div:nth-child(1) {
 	margin:auto;
 }
 
+#divcoc {
+	position:absolute;
+	z-index:-100;
+}
+
+#coc {
+	position: relative;
+	left: 790px;
+	top: -100px;
+	z-index: -10;
+}
+
 .fancyboxGroup{
 	margin-top:40px;
 }
@@ -333,6 +345,14 @@ nav ul li > ul {
 }
 
 @media screen and (max-width: 860px) {
+
+	body {
+		background-image: url("../img/cocinellesalpha.jpg");
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
 	body > div:nth-child(1) {
 		width: 95%;
 		margin: auto;
@@ -361,7 +381,27 @@ nav ul li > ul {
 		margin-top: 100px;
 	}
 
-	h1 {
+	header > h1 {
+		position: absolute;
+		top: 2px;
+		left: 1px;
+		margin: 0px;
+		padding: 0px;
+		margin-top: 0px;
+	}
+
+	.active-image {
 		display: none;
+	}
+
+	#divcoc {
+		display: none;
+	}
+
+	#coc {
+		position: relative;
+		left: 790px;
+		top: -100px;
+		z-index: -10;
 	}
 }

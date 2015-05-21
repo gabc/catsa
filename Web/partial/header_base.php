@@ -58,6 +58,6 @@
         </nav>
         <h1>catsa</h1>
       </header>
-      <div style="position:absolute;z-index:-100;">
-        <img src="./img/cocinelles.jpg" id="coc" style="position:relative;left:790px;top:-100px;z-index:-10;">
+      <div id="divcoc">
+        <img src="./img/cocinelles.jpg" id="coc">
       </div>
