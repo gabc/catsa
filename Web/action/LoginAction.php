@@ -11,7 +11,7 @@
 
 		protected function executeAction() {
 			$this->wrongLogin = false;
-
+			
 			if (isset($_POST["username"])) {
 				$result = UserDAO::authenticate($_POST["username"], $_POST["pwd"]);
 
