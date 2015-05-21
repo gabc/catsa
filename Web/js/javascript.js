@@ -1,5 +1,6 @@
 $(function (){
     genMenu('#murales', '#muralesMenu');
+    $(window).resize(function() {genMenu('#murales', '#muralesMenu')});
 });
 
 function genMenu (link, id) {
