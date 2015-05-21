@@ -85,4 +85,25 @@
 		public static function getSlideShows() {
 			return CreationDAO::getSlideShows();
 		}
+
+		public static function getPages($nbPagesShow,$nbPages,$currentPage){
+			$diff = floor($nbPagesShow/2);
+
+			$pageDebut = $currentPage - $diff;
+			$pageMax = $currentPage + $diff;
+
+			if($pageDebut < 2){
+				$pageDebut = 1;
+
+				$pageMax = $nbPagesShow;
+			}
+			if($pageMax > $nbPages){
+				$pageDebut -= ($pageMax-$nbPages);
+				if($pageDebut < 2){
+					$pageDebut = 1;
+				}				
+				$pageMax = $nbPages;
+			}
+			return array($pageDebut, $pageMax);
+		}
 	}

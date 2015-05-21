@@ -19,5 +19,7 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-	<?php } ?>
+	<?php } 
+		require_once("pagination.php");
+	?>
 <?php require_once("partial/footer.php");

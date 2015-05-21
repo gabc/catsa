@@ -20,23 +20,12 @@
 
 			$currentPage = $_GET["page"];
 
-			$diff = floor($this->nbPagesShow/2);
+			$rep = CommonAction::getPages($this->nbPagesShow,
+										  $this->nbPages,
+										  $currentPage);
 
-			$this->pageDebut = $currentPage - $diff;
-			$this->pageMax = $currentPage + $diff;
-
-			if($this->pageDebut < 2){
-				$this->pageDebut = 1;
-
-				$this->pageMax = $this->nbPagesShow;
-			}
-			if($this->pageMax > $this->nbPages){
-				$this->pageDebut -= ($this->pageMax-$this->nbPages);
-				if($this->pageDebut < 2){
-					$this->pageDebut = 1;
-				}				
-				$this->pageMax = $this->nbPages;
-			}
+			$this->pageDebut = $rep[0];
+			$this->pageMax = $rep[1];
 
 			$this->creations = CreationDAO::getNbCreations(($_GET["page"]-1)*$this->nbResultPerPage,
 															$this->nbResultPerPage);

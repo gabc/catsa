@@ -36,7 +36,7 @@
               <a href="contact.php">Contact</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'news.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-              <a href="news.php">News</a>
+              <a href="news.php?page=1">News</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'nous.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
               <a href="nous.php">Nous</a>
