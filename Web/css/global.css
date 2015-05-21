@@ -3,6 +3,15 @@
 	line-height: normal;
 }
 
+body {
+	margin-right: 0px;
+}
+
+body > div:nth-child(1) {
+	width:850px;
+	margin:auto;
+}
+
 .fancyboxGroup{
 	margin-top:40px;
 }
@@ -321,4 +330,31 @@ nav ul li > ul {
 
 .minimarge {
 	margin-top: 20px;
+}
+
+@media screen and (max-width: 860px) {
+	body > div:nth-child(1) {
+		width: 95%;
+		margin: auto;
+	}
+
+	.pikachoose-classic {
+		visibility: hidden;
+		height: 0px;
+	}
+
+	#ombre {
+		visibility: hidden;
+	}
+
+	.infoBox {
+		clear: both;
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.infoRangee {
+		margin: auto;
+		width: 200px;
+	}
 }

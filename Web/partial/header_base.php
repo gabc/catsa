@@ -11,9 +11,9 @@
     <link type="text/css" href="css/jquery-ui.theme.css" rel="stylesheet">
     <link type="text/css" href="css/jquery-ui.structure.min.css" rel="stylesheet">
   </head>
-  <body class="" style="margin-right: 0px;">
+  <body>
 
-    <div style="width:850px;margin:auto;">
+    <div>
       <header>
         <nav>
           <ul>
