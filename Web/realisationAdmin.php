@@ -26,8 +26,8 @@
 			  					<img class="col-md-2 img-rounded imageReal" src="<?= $action->creations[$i]["IMAGE"] ?>">
 			    				<p class="col-md-7 descriptionReal"><?= $action->creations[$i]["DESCRIPTION"] ?></p>
 			    				<span class="col-md-1"><input disabled class="slideshowReal" type="checkbox" name="slideshow" value="slideshow" <?= ($action->creations[$i]["SLIDESHOW"]) ? "checked" : "" ;?> >Dans le slideshow</span>
-			    				<a class="btn col-md-1 modifierReal" data-toggle="modal" href="#stack1" role="button"><span class="glyphicon glyphicon-pencil"></span></a>
-			    				<a class="btn col-md-1" href="#" role="button"><span class="glyphicon glyphicon-remove"></span></a>
+			    				<a class="btn col-md-1 modifierReal" data-toggle="modal" href="#stack1" role="button"><span class="glyphicon glyphicon-pencil modifierReal"></span></a>
+			    				<a class="btn col-md-1 removeReal" data-toggle="modal" href="#removeRealModal" role="button"><span class="glyphicon glyphicon-remove removeReal"></span></a>
 		    				</div>
 		    				<div class="row">
 		    					<p class="col-md-5 categorieReal"><?= $action->creations[$i]["CATEGORIE"] ?></p>
@@ -69,7 +69,7 @@
 	<script type="text/javascript" src="js/bootstrap-modalmanager.js"></script>
 
 	<!-- Dialog - Modifier une création -->
-    <div id="stack1" class="modal fade bs-modal-lg" style="display: none;" data-replace="true" tabindex="-1" style="display: none;" role="dialog" data-focus-on="input:first" aria-labelledby="creationModalLabel" aria-hidden="true">
+    <div id="stack1" class="modal fade bs-modal-lg" data-replace="true" tabindex="-1" style="display: none;" role="dialog" data-focus-on="input:first" aria-labelledby="creationModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
         	<div class="form-horizontal">
@@ -89,6 +89,26 @@
 							?>
 							
 	   					 <button class="btn btn-default btn-lg btn-block updateReal">Modifier</button>
+	   				</div>
+            	</fieldset>
+            </div>
+	   	</div>
+	   </div>
+    </div>
+
+    <!-- Dialog - Supprimer une création -->
+    <div id="removeRealModal" class="modal fade bs-modal-lg" data-replace="true" tabindex="-1" role="dialog" data-focus-on="input:first" aria-labelledby="creationModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        	<div class="form-horizontal">
+	   			<fieldset>
+	            	<div class="modal-header">
+	                	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	                	<legend class="modal-title">Voulez-vous vraiment supprimer cette réalisation ?</legend>
+	              	</div>
+	              	<div class="modal-body">							
+	   					 <button class="btn btn-default btn-lg removeRealModal">Oui</button>
+	   					 <button class="btn btn-default btn-lg" data-dismiss="modal">Non</button>
 	   				</div>
             	</fieldset>
             </div>

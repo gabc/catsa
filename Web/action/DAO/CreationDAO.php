@@ -35,7 +35,9 @@
 			else
 				$slideshow = 0;
 
-
+			// return !empty($categorie);
+			// var_dump(empty($categorie));
+			// var_dump($categorie === "");
 
 			if(!empty($categorie)){
 				$idCategorie = CategorieDAO::getCategorie($categorie)["ID"];
@@ -109,6 +111,16 @@
 				echo "|". $nom ."|";
 				var_dump($e);exit;
 			}
+		}
+
+		public static function removeCreation($idCreation){
+			$connection = Connection::getConnection();
+
+			$statement = $connection->prepare("DELETE FROM CS_CREATION WHERE ID = ? ");
+				
+			$statement->bindParam(1, $idCreation);
+
+			return $statement->execute();
 		}
 		
 		private static function getThumbnail($str){

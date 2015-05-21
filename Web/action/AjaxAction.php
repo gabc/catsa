@@ -21,6 +21,8 @@
 										 $_POST["imageSlideshow"], $_POST["type"],
 										 $_POST["categorie"],$_POST["nom"],
 										 $_POST["slideshow"],$_POST["desc"]);
+			}elseif($_POST["action"] === "removeRealisation"){
+				$this->result = CreationDAO::removeCreation($_POST["idCreation"]);
 			}elseif ($_POST["action"] === "changeTexte") {
 				TexteDAO::nouveauMessage($_POST["text"], $_POST["current"]);
 			} else {

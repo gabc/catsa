@@ -46,7 +46,7 @@
   <div class="form-group">
     <label class="col-md-2 control-label">Description</label>
     <div class="col-md-8">
-     <textarea id="descReal" class="form-control" name="desc" maxlength="200" rows="4" cols="50"></textarea>
+     <textarea id="descReal" class="form-control" name="desc" maxlength="200" rows="4" cols="50" required></textarea>
     </div>
   </div>
   <div class="form-group">

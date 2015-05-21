@@ -3,7 +3,10 @@ var idCreation;
 $(function () {
 	$(".modifierReal").click(getRealisation);
 	$(".updateReal").click(updateRealisation);
+	$(".removeReal").click(getRealisation);
+	$(".removeRealModal").click(removeRealisation);
 })
+
 
 function getRealisation (event) {
 	var divPrinc = $(event.target).closest('div').parent().parent().parent().parent();
@@ -30,20 +33,37 @@ function getRealisation (event) {
 	}
     }).done(function(data) {
     	data = JSON.parse(data);
-    	console.log(data);
-    	$("#nomReal").val(nom);
-    	$('#selectType').val(type);
     	idCreation = data["ID"];
-    	// $('#selectType').val(type);
-    	$('#selectCategorie').val(categorie);
-    	$('#descReal').val(desc);
-    	$('#previewImage').attr('src', image);
-    	$('#previewImageSlideshow').attr('src', data["IMAGESLIDESHOW"]);
-    	$('#checkBoxReal').prop('checked', slideshow);
+
+    	if($(event.target).hasClass("modifierReal")){//Modifier
+	    	$("#nomReal").val(nom);
+	    	$('#selectType').val(type);
+	    	$('#selectCategorie').val(categorie);
+	    	$('#descReal').val(desc);
+	    	$('#previewImage').attr('src', image);
+	    	$('#previewImageSlideshow').attr('src', data["IMAGESLIDESHOW"]);
+	    	$('#checkBoxReal').prop('checked', slideshow);
+
+		    $("#imageReal").removeAttr('required');
+		    $("#imageSlideshow").removeAttr('required');
+	    }
     });
 
-    $("#imageReal").removeAttr('required');
-    $("#imageSlideshow").removeAttr('required');
+}
+
+function removeRealisation(){
+	 $.ajax({
+	url: "ajax.php",
+	type: "POST",
+	data: {
+	    action: "removeRealisation",
+	    idCreation: idCreation
+	}
+    }).done(function(data) {
+    	$("#removeRealModal").modal("hide");
+    	alert("Réalisation supprimée !");
+    	location.reload();
+    });
 }
 
 function updateRealisation(event){
@@ -89,6 +109,8 @@ function updateRealisation(event){
 	    slideshow: slideshow
 	}
     }).done(function(data) {
-    	alert("Save !");
+    	$("#stack1").modal("hide");
+    	alert("Modification sauvegardée !");
+    	location.reload();
     });
 }
