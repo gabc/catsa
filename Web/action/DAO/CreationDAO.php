@@ -168,6 +168,7 @@
 			while ($row = $statement->fetch()) {
 				$row["IMAGE"] = ImageDAO::getImageById($row["IDIMAGE"])["PATH"];
 				$row["TYPE"] = TypeDAO::getTypeById($row["IDTYPE"]);
+				$row["IMAGESLIDESHOW"] = ImageDAO::getImageById($row["IDIMAGESLIDESHOW"])["PATH"];
 				$creations[] = $row;
 			}
 

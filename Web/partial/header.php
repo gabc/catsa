@@ -38,7 +38,7 @@
     <script>
       var images = [];
       <?php foreach(CommonAction::getSlideShows() as $img){ ?>
-        images.push({"image":"<?= $img['IMAGE'] ?>",
+        images.push({"image":"<?= $img['IMAGESLIDESHOW'] ?>",
                      "caption":"<?= $img['DESCRIPTION'] ?>",
                      "link":"javascript:void($(\"#pikame\").data(\"pikachoose\").Next())",
                      "title":"<?= $img['NOM'] ?>"});
