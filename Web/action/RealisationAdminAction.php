@@ -14,8 +14,9 @@
 		}
 
 		protected function executeAction() {
-			$this->creations = $this->getCreations();
-        	$this->nbPages = ceil(count($this->creations)/$this->nbResultPerPage);
+			$this->nbCreation = CreationDAO::getCountCreation();
+
+        	$this->nbPages = ceil($this->nbCreation/$this->nbResultPerPage);
 
 			$currentPage = $_GET["page"];
 
@@ -36,9 +37,8 @@
 				}				
 				$this->pageMax = $this->nbPages;
 			}
-		}
 
-		public function getCreations() {
-			return CreationDAO::getAllCreations();
+			$this->creations = CreationDAO::getNbCreations(($_GET["page"]-1)*$this->nbResultPerPage,
+															$this->nbResultPerPage);
 		}
 	}

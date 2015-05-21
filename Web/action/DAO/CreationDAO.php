@@ -24,6 +24,30 @@
 			return $creations;
 		}
 
+		public static function getNbCreations($offset, $nbRows){
+			$connection = Connection::getConnection();
+
+			$statement = $connection->prepare("SELECT * FROM CS_Creation
+											OFFSET ? ROWS FETCH NEXT ? ROWS ONLY");
+
+			$statement->bindParam(1, $offset);
+			$statement->bindParam(2, $nbRows);
+
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$statement->execute();
+
+			$creations = [];
+
+			while ($row = $statement->fetch()) {
+				$row["IMAGE"] = ImageDAO::getImageById($row["IDIMAGE"])["PATH"];
+				$row["CATEGORIE"] = CategorieDAO::getCategorieById($row["IDCATEGORIE"]);
+				$row["TYPE"] = TypeDAO::getTypeById($row["IDTYPE"]);
+				$creations[] = $row;
+			}
+
+			return $creations;
+		}
+
 		public static function getCreation($path, $type, $categorie, $nom, $slideshow, $desc) {
 			$connection = Connection::getConnection();
 
@@ -76,6 +100,19 @@
 			}
 
 			return $creation;
+		}
+
+		public static function getCountCreation(){
+			$connection = Connection::getConnection();
+
+			$statement = $connection->prepare("SELECT count(*) FROM CS_Creation");
+
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$statement->execute();
+
+			$nbCreations = $statement->fetch()["COUNT(*)"];
+
+			return $nbCreations;
 		}
 
 

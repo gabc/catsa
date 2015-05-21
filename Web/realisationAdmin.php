@@ -12,26 +12,25 @@
     	<a class="btn btn-lg btn-primary col-sm-9 col-right" href="modifRealisationAdmin.php" role="button">Ajouter</a>
    	</div> 
     	<?php
-    	for($i=($_GET["page"]-1) * $action->nbResultPerPage; 
-    		$i < $_GET["page"] * $action->nbResultPerPage && 
-    		$i < count($action->creations);$i++){ ?>
+    	foreach($action->creations as $creation){ 
+    		?>
     		<div class="row">
 		    		<div class="panel panel-default col-sm-9 col-right">
 		    		<div class="panel-heading">
-		    			<h2 class="panel-title nomReal"><?= $action->creations[$i]["NOM"] ?></h2>
+		    			<h2 class="panel-title nomReal"><?= $creation["NOM"] ?></h2>
 		  			</div>
 		  			<div class="panel-body">
 		  				<div class="container-fluid">
 		  					<div class="row">
-			  					<img class="col-md-2 img-rounded imageReal" src="<?= $action->creations[$i]["IMAGE"] ?>">
-			    				<p class="col-md-7 descriptionReal"><?= $action->creations[$i]["DESCRIPTION"] ?></p>
-			    				<span class="col-md-1"><input disabled class="slideshowReal" type="checkbox" name="slideshow" value="slideshow" <?= ($action->creations[$i]["SLIDESHOW"]) ? "checked" : "" ;?> >Dans le slideshow</span>
+			  					<img class="col-md-2 img-rounded imageReal" src="<?= $creation["IMAGE"] ?>">
+			    				<p class="col-md-7 descriptionReal"><?= $creation["DESCRIPTION"] ?></p>
+			    				<span class="col-md-1"><input disabled class="slideshowReal" type="checkbox" name="slideshow" value="slideshow" <?= ($creation["SLIDESHOW"]) ? "checked" : "" ;?> >Dans le slideshow</span>
 			    				<a class="btn col-md-1 modifierReal" data-toggle="modal" href="#stack1" role="button"><span class="glyphicon glyphicon-pencil modifierReal"></span></a>
 			    				<a class="btn col-md-1 removeReal" data-toggle="modal" href="#removeRealModal" role="button"><span class="glyphicon glyphicon-remove removeReal"></span></a>
 		    				</div>
 		    				<div class="row">
-		    					<p class="col-md-5 categorieReal"><?= $action->creations[$i]["CATEGORIE"] ?></p>
-		    					<p class="col-md-5 typeReal"><?= $action->creations[$i]["TYPE"] ?></p>
+		    					<p class="col-md-5 categorieReal"><?= $creation["CATEGORIE"] ?></p>
+		    					<p class="col-md-5 typeReal"><?= $creation["TYPE"] ?></p>
 		    				</div>
 		    			</div>
 		    		</div>
