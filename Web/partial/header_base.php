@@ -19,7 +19,7 @@
     <link type="text/css" href="css/jquery-ui.theme.css" rel="stylesheet">
     <link type="text/css" href="css/jquery-ui.structure.min.css" rel="stylesheet">
 
-    <meta name="keywords" content="Montreal, Montréal, Murale">
+    <meta name="keywords" content="montreal, montréal, murale, chambre, commerce, tableau">
   </head>
   <body>
 
