@@ -29,26 +29,25 @@
 			    				<a class="btn col-md-1 removeReal" data-toggle="modal" href="#removeRealModal" role="button"><span class="glyphicon glyphicon-remove removeReal"></span></a>
 		    				</div>
 		    				<div class="row">
-		    					<p class="col-md-5 categorieReal"><?= $creation["CATEGORIE"] ?></p>
-		    					<p class="col-md-5 typeReal"><?= $creation["TYPE"] ?></p>
+		    					<p class="col-md-5 categorieReal"><?php if($creation["CATEGORIE"] !== null){ ?>Catégorie: <?= $creation["CATEGORIE"] ?> <?php } ?></p>
+		    					<p class="col-md-5 typeReal">Type: <?= $creation["TYPE"] ?></p>
 		    				</div>
 		    			</div>
 		    		</div>
 		    	</div>
 		    </div>
-	    <!-- http://jschr.github.io/bootstrap-modal/bs3.html -->
+	    
 	    <?php 
 	    }
 	    require_once("pagination.php");
 	    ?>
-	
-	
 
 	<link type="text/css" href="css/bootstrap_patch.css" rel="stylesheet">
 	<link type="text/css" href="css/bootstrap-modal.css" rel="stylesheet">
 	<script type="text/javascript" src="js/bootstrap-modal.js"></script>
 	<script type="text/javascript" src="js/bootstrap-modalmanager.js"></script>
 
+	<!-- Double Modal: http://jschr.github.io/bootstrap-modal/bs3.html -->
 	<!-- Dialog - Modifier une création -->
     <div id="stack1" class="modal fade bs-modal-lg" data-replace="true" tabindex="-1" style="display: none;" role="dialog" data-focus-on="input:first" aria-labelledby="creationModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
