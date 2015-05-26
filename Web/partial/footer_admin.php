@@ -15,8 +15,9 @@
 			<li class="ui-widget-header">Gestionnaire de contenu</li>
 			<a href="texteAdmin.php"><li>Modifier le texte</li></a>
 			<a href="newsAdmin.php"><li>Ajouter une news</li></a>
+			<a href="itemViewAdmin.php?page=1&item=news"><li>Gérer les news</li></a>
 			<a href="modifRealisationAdmin.php"><li>Ajouter une réalisation</li></a>
-			<a href="realisationAdmin.php?page=1"><li>Gérer les réalisations</li></a>
+			<a href="itemViewAdmin.php?page=1&item=real"><li>Gérer les réalisations</li></a>
 			<li class="ui-widget-header">Gestion admin</li>    
 			<a href="passwordAdmin.php"><li>Changement mot de passe</li></a>
 		</ul>

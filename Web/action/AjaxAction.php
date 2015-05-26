@@ -10,6 +10,7 @@
 	require_once("action/CommonAction.php");
 	require_once("action/DAO/TexteDAO.php");
 	require_once("action/DAO/CreationDAO.php");
+	require_once("action/DAO/NewsDAO.php");
 
 	class AjaxAction extends CommonAction {
         public $result;
@@ -31,6 +32,11 @@
 										 $_POST["slideshow"],$_POST["desc"]);
 			}elseif($_POST["action"] === "removeRealisation"){
 				$this->result = CreationDAO::removeCreation($_POST["idCreation"]);
+			}elseif($_POST["action"] === "removeNews"){
+				foreach ($_POST as $key => $value)
+ 					echo "Field ".htmlspecialchars($key)." is ".htmlspecialchars($value)."<br>";
+				// $newsId = NewsDAO::getNews($_POST["nom"], $_POST["texte"]);
+				// $this->result = NewsDAO::removeNews($newsId);
 			}elseif ($_POST["action"] === "changeTexte") {
 				TexteDAO::nouveauMessage($_POST["text"], $_POST["current"]);
 			} else {

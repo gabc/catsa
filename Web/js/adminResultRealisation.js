@@ -1,10 +1,18 @@
 var idCreation;
+var itemType;
+var nomNews;
+var texteNews;
 
 $(function () {
-	$(".modifierReal").click(getRealisation);
-	$(".updateReal").click(updateRealisation);
-	$(".removeReal").click(getRealisation);
-	$(".removeRealModal").click(removeRealisation);
+	if(itemType === "real"){
+		$(".modifierReal").click(getRealisation);
+		$(".updateReal").click(updateRealisation);
+		$(".removeReal").click(getRealisation);
+		$(".removeRealModal").click(removeRealisation);
+	}else{ //news
+		$(".modifierNews").click(getNews);
+		$(".removeNewsModal").click(removeNews);
+	}
 })
 
 
@@ -12,7 +20,7 @@ function getRealisation (event) {
 	var divPrinc = $(event.target).closest('div').parent().parent().parent().parent();
 
 	var desc = $(divPrinc).find(".descriptionReal").text();
-	var nom = $(divPrinc).find(".nomReal").text();
+	var nom = $(divPrinc).find(".nomItem").text();
 	var type = $(divPrinc).find(".typeReal").text();
 	var categorie = $(divPrinc).find(".categorieReal").text();
 	var image = $(divPrinc).find(".imageReal").attr('src');
@@ -112,4 +120,36 @@ function updateRealisation(event){
     	alert("Modification sauvegardée !");
     	location.reload();
     });
+}
+
+//news
+function getNews (event) {	
+	var divPrinc = $(event.target).closest('div').parent().parent().parent().parent();
+	nomNews = $(divPrinc).find(".nomItem").text();
+	texteNews = $(divPrinc).find(".texteNews"); //TODO: GET LA VALEUR !!!
+
+	console.log( $(divPrinc).find(".texteNews").val())
+	console.log( $(divPrinc).find(".texteNews").text())
+	console.log( $(divPrinc).find(".texteNews"))
+	
+	$("#titreNews").val(nomNews);
+	$("#texteNews").val(texteNews);
+}
+
+function removeNews(){
+	$.ajax({
+	url: "ajax.php",
+	type: "POST",
+	data: {
+	    action: "removeNews",
+	    nom: nomNews,
+	    texte: texteNews
+	}
+    }).done(function(data) {
+    	console.log(data)
+    	$("#removeNewsModal").modal("hide");
+    	// alert("News supprimée !");
+    	// location.reload();
+    });
+	
 }

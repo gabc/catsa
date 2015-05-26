@@ -22,7 +22,7 @@
 			$news = [];
 
 			while ($row = $statement->fetch()) {
-				$row["TITRE"] = TexteDAO::getTexteById($row["IDTITRE"])["CONTENU"];
+				$row["NOM"] = TexteDAO::getTexteById($row["IDTITRE"])["CONTENU"];
 				$row["TEXTE"] = TexteDAO::getTexteById($row["IDTEXTE"])["CONTENU"];
 				$news[] = $row;
 			}
@@ -45,7 +45,7 @@
 			$news = [];
 
 			while ($row = $statement->fetch()) {
-				$row["TITRE"] = TexteDAO::getTexteById($row["IDTITRE"])["CONTENU"];
+				$row["NOM"] = TexteDAO::getTexteById($row["IDTITRE"])["CONTENU"];
 				$row["TEXTE"] = TexteDAO::getTexteById($row["IDTEXTE"])["CONTENU"];
 				$news[] = $row;
 			}
@@ -76,6 +76,41 @@
 
 			$statement->bindParam(1, $idTitre);
 			$statement->bindParam(2, $idTexte);
+
+			return $statement->execute();
+		}
+
+		public static function getNews($titre, $texte){
+			$connection = Connection::getConnection();
+
+			$idTitre = TexteDAO::getTexteComplet($titre, "news");
+			$idTexte = TexteDAO::getTexteComplet($texte, "news");
+
+			$statement = $connection->prepare("SELECT * FROM CS_News WHERE idTitre = ? AND idTexte = ?" );
+
+			$statement->bindParam(1, $idTitre);
+			$statement->bindParam(2, $idTexte);
+
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$statement->execute();
+
+			$news = null;
+
+			if ($row = $statement->fetch()) {
+				$row["NOM"] = TexteDAO::getTexteById($row["IDTITRE"])["CONTENU"];
+				$row["TEXTE"] = TexteDAO::getTexteById($row["IDTEXTE"])["CONTENU"];
+				$news[] = $row;
+			}
+
+			return $news;
+		}
+
+		public static function removeNews($idNews){
+			$connection = Connection::getConnection();
+
+			$statement = $connection->prepare("DELETE FROM CS_News WHERE ID = ? ");
+				
+			$statement->bindParam(1, $idNews);
 
 			return $statement->execute();
 		}
