@@ -65,7 +65,7 @@
     </a>
   </div>
   <div>
-    <p>Catherine ou Sarah</p>
+    <p>Catherine</p>
     <p>514·385·3530</p>
   </div>
   <p>À Montréal, Longueuil, Laval  (et quelques fois ailleurs!)</p>
