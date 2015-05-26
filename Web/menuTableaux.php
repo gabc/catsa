@@ -20,7 +20,7 @@
 				$crea = $action->getUneImage($t["NOM"]);
 				if(!empty($crea)) {?>
 					<a href="tableaux.php?categories=<?= $t["NOM"] ?>">
-						<img src="<?= $crea[0]["IMAGE"]?>">
+						<img src="<?= $crea[0]["IMAGE"]?>" alt="<?= $crea[0]["NOM"] ?>">
 						<div><?= $t["NOM"] ?></div>
 					</a>
 		<?php 	}
