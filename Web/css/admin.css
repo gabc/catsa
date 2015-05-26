@@ -38,7 +38,6 @@ div > ul > a {
 	}
 
 	#divContainer{
-	background-color: red;
-	height: 680px;
+		height: 680px;
 	}
 }
