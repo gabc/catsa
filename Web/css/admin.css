@@ -2,8 +2,6 @@
 #sideMenuAdmin{
 	position:absolute;
 	top:170px;
-	min-height: 200px;
-	width:200px;
 	margin-left:-30px;
 	text-align: center;
 }
@@ -24,4 +22,23 @@
 
 div > ul > a {
 	display: block;
+}
+
+@media screen and (max-width: 860px) {
+	#sideMenuAdmin{
+		position:relative;
+		display:block;
+		width: 100%;
+		margin:0px;
+		margin-bottom:20px;
+	}
+
+	.col-sm-9{
+		width:100%;
+	}
+
+	#divContainer{
+	background-color: red;
+	height: 680px;
+	}
 }

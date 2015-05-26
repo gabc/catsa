@@ -19,7 +19,6 @@
 			<a href="realisationAdmin.php?page=1"><li>Gérer les réalisations</li></a>
 			<li class="ui-widget-header">Gestion admin</li>    
 			<a href="passwordAdmin.php"><li>Changement mot de passe</li></a>
-			<li>Création compte</li>
 		</ul>
 	<?php 
 		}

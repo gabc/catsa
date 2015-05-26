@@ -34,4 +34,5 @@
     <?php   }else{ ?>
                 <script>showError();</script>
     <?php   } ?>
+    </div>
 <?php require_once("partial/footer_admin.php");
