@@ -1,3 +1,11 @@
+<?php
+/* -----------------------------------------------------
+ *                                                      *
+ *    Projet synthèse : H2015                           *
+ *    Fait Par : François Genest et Gabriel Beauchamp   *
+ *                                                      *
+ *----------------------------------------------------- */
+?>
       <!-- Dialog - Ajouter une catégorie -->
     <div id="stack2" class="modal fade bs-modal-lg" data-replace="true" tabindex="-1" data-focus-on="input:first" aria-hidden="true">
       <div class="modal-dialog modal-lg">

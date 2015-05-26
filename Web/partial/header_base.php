@@ -1,3 +1,11 @@
+<?php
+/* -----------------------------------------------------
+ *                                                      *
+ *    Projet synthèse : H2015                           *
+ *    Fait Par : François Genest et Gabriel Beauchamp   *
+ *                                                      *
+ *----------------------------------------------------- */
+?>
 <!DOCTYPE html>
 <html class="wf-myriadpro-n3-active wf-myriadpro-n4-active wf-myriadpro-n6-active wf-myriadpro-n7-active wf-myriadpro-n9-active wf-active">
   <head>

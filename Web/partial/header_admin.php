@@ -1,4 +1,12 @@
 <?php
+/* -----------------------------------------------------
+ *					                       				*
+ *    Projet synthèse : H2015	           				*
+ *    Fait Par : François Genest et Gabriel Beauchamp	*
+ *					                       				*
+ *----------------------------------------------------- */
+?>
+<?php
    require_once("partial/header_base.php")
 ?>
 	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->

@@ -1,3 +1,11 @@
+<?php
+/* -----------------------------------------------------
+ *					                       				*
+ *    Projet synthèse : H2015	           				*
+ *    Fait Par : François Genest et Gabriel Beauchamp	*
+ *					                       				*
+ *----------------------------------------------------- */
+?>
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Pour la pagination -->
 <?php
 	require_once("action/NewsAction.php");

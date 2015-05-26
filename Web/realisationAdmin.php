@@ -1,4 +1,12 @@
 <?php
+/* -----------------------------------------------------
+ *					                       				*
+ *    Projet synthèse : H2015	           				*
+ *    Fait Par : François Genest et Gabriel Beauchamp	*
+ *					                       				*
+ *----------------------------------------------------- */
+?>
+<?php
 	require_once("action/RealisationAdminAction.php");
 
 	$action = new RealisationAdminAction();

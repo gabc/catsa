@@ -1,3 +1,11 @@
+<?php
+/* -----------------------------------------------------
+ *					                       				*
+ *    Projet synthèse : H2015	           				*
+ *    Fait Par : François Genest et Gabriel Beauchamp	*
+ *					                       				*
+ *----------------------------------------------------- */
+?>
 <?php 
 	session_start();	
 	require_once("action/constant.php");

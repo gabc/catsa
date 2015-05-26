@@ -1,3 +1,11 @@
+<?php
+/* -----------------------------------------------------
+ *                                                      *
+ *    Projet synthèse : H2015                           *
+ *    Fait Par : François Genest et Gabriel Beauchamp   *
+ *                                                      *
+ *----------------------------------------------------- */
+?>
 <!-- <script type="text/javascript" src="js/modal.js"></script> -->
 
   <div class="form-group">

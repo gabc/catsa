@@ -1,3 +1,11 @@
+<?php
+/* -----------------------------------------------------
+ *                                                      *
+ *    Projet synthèse : H2015                           *
+ *    Fait Par : François Genest et Gabriel Beauchamp   *
+ *                                                      *
+ *----------------------------------------------------- */
+?>
 <div class="infoRangee">
   <p>Points de vente des tableaux</p>
 

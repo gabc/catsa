@@ -1,3 +1,11 @@
+<?php
+/* -----------------------------------------------------
+ *					                       				*
+ *    Projet synthèse : H2015	           				*
+ *    Fait Par : François Genest et Gabriel Beauchamp	*
+ *					                       				*
+ *----------------------------------------------------- */
+?>
 <?php 
 	require_once("lib/password.php");
 
