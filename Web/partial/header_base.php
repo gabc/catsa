@@ -18,6 +18,8 @@
     <link type="text/css" href="css/jquery-ui.css" rel="stylesheet">
     <link type="text/css" href="css/jquery-ui.theme.css" rel="stylesheet">
     <link type="text/css" href="css/jquery-ui.structure.min.css" rel="stylesheet">
+
+    <meta name="keywords" content="Montreal, Montréal, Murale">
   </head>
   <body>
 
