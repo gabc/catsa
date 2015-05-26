@@ -18,7 +18,6 @@ function getRealisation (event) {
 	var image = $(divPrinc).find(".imageReal").attr('src');
 	var slideshow = $(divPrinc).find(".slideshowReal").is(':checked')
 
-	console.log(categorie);
     $.ajax({
 	url: "ajax.php",
 	type: "POST",

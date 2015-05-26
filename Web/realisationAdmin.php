@@ -29,8 +29,8 @@
 			    				<a class="btn col-md-1 removeReal" data-toggle="modal" href="#removeRealModal" role="button"><span class="glyphicon glyphicon-remove removeReal"></span></a>
 		    				</div>
 		    				<div class="row">
-		    					<p class="col-md-5 categorieReal"><?php if($creation["CATEGORIE"] !== null){ ?>Catégorie: <?= $creation["CATEGORIE"] ?> <?php } ?></p>
-		    					<p class="col-md-5 typeReal">Type: <?= $creation["TYPE"] ?></p>
+		    					<p class="col-md-5"><?php if($creation["CATEGORIE"] !== null){ ?>Catégorie: <span class="categorieReal"><?= $creation["CATEGORIE"] ?></span> <?php } ?></p>
+		    					<p class="col-md-5">Type: <span class="typeReal"><?= $creation["TYPE"] ?></span></p>
 		    				</div>
 		    			</div>
 		    		</div>

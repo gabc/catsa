@@ -59,10 +59,6 @@
 			else
 				$slideshow = 0;
 
-			// return !empty($categorie);
-			// var_dump(empty($categorie));
-			// var_dump($categorie === "");
-
 			if(!empty($categorie)){
 				$idCategorie = CategorieDAO::getCategorie($categorie)["ID"];
 				$statement = $connection->prepare("SELECT * FROM CS_Creation WHERE idImage= ? AND idType = ? AND

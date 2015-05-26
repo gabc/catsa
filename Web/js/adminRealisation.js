@@ -2,6 +2,7 @@ $(function () {
 	$("#imageReal").change(loadFile);
 	$("#imageSlideshow").change(loadFile);
 	$("#selectType").change(stateCategorie);
+	stateCategorie();
 })
 
 function loadFile(event){
@@ -19,8 +20,8 @@ function loadFile(event){
 
 function stateCategorie(event){
 	if($( "#selectType option:selected" ).text() === "Tableau"){
-		$("#selectCategorie").removeAttr("disabled");
+		 $("#selectCategorieDiv").css("visibility", "visible");
 	}else{
-		$("#selectCategorie").attr("disabled", "disabled");
+		$("#selectCategorieDiv").css("visibility", "hidden");
 	}
 }
