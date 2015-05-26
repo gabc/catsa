@@ -1,3 +1,4 @@
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Pour la pagination -->
 <?php
 	require_once("action/NewsAction.php");
 
@@ -6,6 +7,7 @@
 
 	require_once("partial/header.php")
 ?>
+
 	<?php foreach ($action->getAllNews() as $i) { ?>
 		<div class="news">
 			<div class="newshead">
@@ -19,7 +21,9 @@
 			</div>
 			<div class="clear"></div>
 		</div>
+	<div class="center">
 	<?php } 
 		require_once("pagination.php");
 	?>
+	</div>
 <?php require_once("partial/footer.php");

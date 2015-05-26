@@ -344,6 +344,10 @@ nav ul li > ul {
 	margin-top: 20px;
 }
 
+.glyphicon{
+	height: 20px; /*Bootstrap Fix*/
+}
+
 @media screen and (max-width: 860px) {
 
 	body {
