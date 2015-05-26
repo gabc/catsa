@@ -302,9 +302,12 @@ nav ul li > ul {
 
 .newshead {
 	margin: 0px;
+	padding:4px;
 	border: aliceblue;
 	border-style: groove;
-	border-radius: 12px;
+	background-color: rgb(255,255,255);
+	border-top-left-radius:12px;
+	border-top-right-radius:12px;
 }
 
 .newstitle {
@@ -319,9 +322,10 @@ nav ul li > ul {
 
 .newstexte {
 	margin: 0px;
-	border: aqua;
-	border-style: groove;
-	border-radius: 13px;
+	padding:10px;
+	background-color: rgba(148,148,148,0.5);
+	border-bottom-left-radius:12px;
+	border-bottom-right-radius:12px;
 }
 
 .clear {

@@ -12,7 +12,7 @@
 		<div class="news">
 			<div class="newshead">
 				<h2 class="newstitle"><?= $i["TITRE"]?></h2>
-				<h2 class="newsdate"><?= $i["CREATED"] ?></h2>
+				<h3 class="newsdate">Date: <?= $i["CREATED"] ?></h3>
 				<div class="clear"></div>
 			</div>
 			
