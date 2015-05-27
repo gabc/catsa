@@ -24,7 +24,7 @@
     		?>
     		<script>itemType = "<?= $action->itemType ?>"</script>
     		<div class="row">
-		    		<div class="panel panel-default col-sm-9 col-right">
+		    	<div class="panel panel-default col-sm-9 col-right">
 		    		<div class="panel-heading">
 		    			<h2 class="panel-title nomItem"><?= $item["NOM"] ?></h2>
 		  			</div>
@@ -42,17 +42,16 @@
 		    				<div class="row">
 		    					<p class="col-md-5"><?php if($item["CATEGORIE"] !== null){ ?>Catégorie: <span class="categorieReal"><?= $item["CATEGORIE"] ?></span> <?php } ?></p>
 		    					<p class="col-md-5">Type: <span class="typeReal"><?= $item["TYPE"] ?></span></p>
-		    				</div>
 		    					<?php 
 				    			}elseif($action->itemType === "news"){
 				    			?>
-				    				<p class="texteNews"><?= $item["TEXTE"] ?></p>
+				    				<span class="texteNews"><?= $item["TEXTE"] ?></span>
 				    				<a class="btn modifierNews" data-toggle="modal" href="#modifyNewsModal" role="button"><span class="glyphicon glyphicon-pencil modifierReal"></span></a>
-				    				<a class="btn removeNews" data-toggle="modal" href="#removeNewsModal" role="button"><span class="glyphicon glyphicon-remove removeReal"></span></a>
-				    				</div>
+				    				<a class="btn removeNews" data-toggle="modal" href="#removeNewsModal" role="button"><span class="glyphicon glyphicon-remove removeReal"></span></a>	
 				    			<?php 
 				    			}
 				    			?>
+				    		</div>
 		    			</div>
 		    		</div>
 		    	</div>
@@ -118,6 +117,7 @@
     </div>
 
     	<!-- Dialog - Modifier une news -->
+    <script src="js/ckeditor/ckeditor.js"></script>
     <div id="modifyNewsModal" class="modal fade bs-modal-lg" data-replace="true" tabindex="-1" style="display: none;" role="dialog" data-focus-on="input:first" aria-labelledby="newsModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -137,7 +137,7 @@
 						 <div class="form-group">
 						    <label class="col-md-2 control-label">Texte</label>
 						    <div class="col-md-8">
-						     <textarea id="texteNews" class="form-control" name="texte" maxlength="200" rows="4" cols="50" required></textarea>
+						     <textarea id="texteNewsModal" class="form-control" cols="80" name="editor1" rows="10" ></textarea>
 						    </div>
 						 </div>
 	   					<button class="btn btn-default btn-lg btn-block updateNews">Modifier</button>

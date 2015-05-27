@@ -12,6 +12,9 @@ $(function () {
 	}else{ //news
 		$(".modifierNews").click(getNews);
 		$(".removeNewsModal").click(removeNews);
+		$(".updateNews").click(updateNews);
+		$(".removeNews").click(getNews);
+		init(); //Ckeditor
 	}
 })
 
@@ -124,19 +127,19 @@ function updateRealisation(event){
 
 //news
 function getNews (event) {	
-	var divPrinc = $(event.target).closest('div').parent().parent().parent().parent();
+	var divPrinc = $(event.target).closest('div').parent().parent().parent();
 	nomNews = $(divPrinc).find(".nomItem").text();
-	texteNews = $(divPrinc).find(".texteNews"); //TODO: GET LA VALEUR !!!
+	texteNews = $(divPrinc).find(".texteNews").html();
 
-	console.log( $(divPrinc).find(".texteNews").val())
-	console.log( $(divPrinc).find(".texteNews").text())
-	console.log( $(divPrinc).find(".texteNews"))
-	
 	$("#titreNews").val(nomNews);
-	$("#texteNews").val(texteNews);
+	CKEDITOR.instances['texteNewsModal'].setData(texteNews);
 }
 
 function removeNews(){
+	console.log(texteNews)
+	
+
+	console.log(nomNews)
 	$.ajax({
 	url: "ajax.php",
 	type: "POST",
@@ -151,5 +154,32 @@ function removeNews(){
     	// alert("News supprimée !");
     	// location.reload();
     });
-	
+}
+
+function updateNews(){
+	var nouveauNom = $("#titreNews").val(); ;
+	var nouveauTexte = CKEDITOR.instances['texteNewsModal'].getData();
+	console.log(nouveauNom, nouveauTexte, nomNews, texteNews)
+    $.ajax({
+	url: "ajax.php",
+	type: "POST",
+	data: {
+	    action: "updateNews",
+	    ancienNom: nomNews,
+	    ancienTexte: texteNews,
+	    nouveauNom: nouveauNom,
+	    nouveauTexte: nouveauTexte
+	}
+    }).done(function(data) {
+    	console.log(data);
+    	$("#modifyNewsModal").modal("hide");
+    	alert("Modification sauvegardée !");
+    	location.reload();
+    });
+}
+
+function init () {
+    CKEDITOR.replace('texteNewsModal', {
+	height: 260
+    });
 }

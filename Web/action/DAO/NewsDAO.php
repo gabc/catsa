@@ -83,9 +83,9 @@
 		public static function getNews($titre, $texte){
 			$connection = Connection::getConnection();
 
-			$idTitre = TexteDAO::getTexteComplet($titre, "news");
-			$idTexte = TexteDAO::getTexteComplet($texte, "news");
-
+			$idTitre = TexteDAO::getTexteComplet($titre, "news")["ID"];
+			$idTexte = TexteDAO::getTexteComplet($texte, "news")["ID"];
+			
 			$statement = $connection->prepare("SELECT * FROM CS_News WHERE idTitre = ? AND idTexte = ?" );
 
 			$statement->bindParam(1, $idTitre);
@@ -99,6 +99,7 @@
 			if ($row = $statement->fetch()) {
 				$row["NOM"] = TexteDAO::getTexteById($row["IDTITRE"])["CONTENU"];
 				$row["TEXTE"] = TexteDAO::getTexteById($row["IDTEXTE"])["CONTENU"];
+
 				$news[] = $row;
 			}
 
@@ -111,6 +112,22 @@
 			$statement = $connection->prepare("DELETE FROM CS_News WHERE ID = ? ");
 				
 			$statement->bindParam(1, $idNews);
+
+			return $statement->execute();
+		}
+
+		public static function updateNews($idNews, $idTitre, $idTexte, $titre, $texte){
+			$connection = Connection::getConnection();
+
+			$idTitre = TexteDAO::updateTexte($idTitre,$titre);
+			$idTexte = TexteDAO::updateTexte($idTexte,$texte);
+
+			//Pour le last modified
+			$statement = $connection->prepare("UPDATE CS_News SET idTitre = ?, idTexte = ? WHERE id = ?");
+				
+			$statement->bindParam(1, $idTitre);
+			$statement->bindParam(2, $idTexte);
+			$statement->bindParam(3, $idNews);
 
 			return $statement->execute();
 		}

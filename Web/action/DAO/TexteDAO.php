@@ -87,4 +87,15 @@
 
 			return $texte;
 		}
+
+		public static function updateTexte($idTexte, $contenu){
+			$connection = Connection::getConnection();
+
+			$statement = $connection->prepare("UPDATE CS_TEXTE SET contenu = ? WHERE ID = ? ");
+				
+			$statement->bindParam(1, $contenu);
+			$statement->bindParam(2, $idNews);
+
+			return $statement->execute();
+		}
 	}
