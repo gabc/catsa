@@ -21,7 +21,7 @@
 
 		protected function executeAction() {
 			foreach ($_POST as $key => $value)
- 					echo "Field ".htmlspecialchars($key)." is ".htmlspecialchars($value)."<br>";
+ 					echo "Field ".htmlspecialchars($key)." is ".htmlspecialchars($value)."<br>" . $value;
 			if ($_POST["action"] === "getRealisation"){
 				$this->result = CreationDAO::getCreation($_POST["image"],$_POST["type"],
 										 $_POST["categorie"],$_POST["nom"],
@@ -41,8 +41,9 @@
 			}elseif($_POST["action"] === "removeRealisation"){
 				$this->result = CreationDAO::removeCreation($_POST["idCreation"]);
 			}elseif($_POST["action"] === "removeNews"){
-				$news = NewsDAO::getNews($_POST["nom"], $_POST["texte"]);
-				$this->result = $news;
+				$this->result = TexteDAO::getTexteComplet($_POST["texte"],"news");
+				// $news = NewsDAO::getNews($_POST["nom"], $_POST["texte"]);
+				// $this->result = $news;
 				// $this->result = NewsDAO::removeNews($news["ID"]);
 			}elseif ($_POST["action"] === "changeTexte") {
 				TexteDAO::nouveauMessage($_POST["text"], $_POST["current"]);

@@ -35,18 +35,32 @@
 
 		public static function getTexteComplet($contenu, $emplacement){
 			$connection = Connection::getConnection();
-			
-			$statement = $connection->prepare("SELECT * FROM CS_TEXTE WHERE EMPLACEMENT = ? AND CONTENU = ?");
-			$statement->bindParam(1, $emplacement);
-			$statement->bindParam(2, $contenu);
+			// echo "avant" . $contenu;
+			// echo strrpos( $contenu , ">");
+			//echo substr($contenu, 0, -1);
+			// echo $contenu[0];
+			// if($contenu[0] === "<"){
+			// 	$contenu =substr($contenu, 0, -1);
+			// 	echo "replace" . $contenu . "fin";
+			// }
+			$contenu = $contenu .'%';
+			//$contenu = $contenu . "%";
+			 // echo "apres" . substr($contenu, -1);
+			$statement = $connection->prepare("SELECT * FROM CS_TEXTE WHERE EMPLACEMENT = :emplacement AND CONTENU LIKE :contenu");
+			$statement->bindParam(':emplacement', $emplacement);
+			$statement->bindParam(':contenu', $contenu);
 
 			$statement->setFetchMode(PDO::FETCH_ASSOC);
 			$statement->execute();
+			echo $contenu;
+			$statement->debugDumpParams();
+			print $statement->errorCode();
 
 			$texte = null;
 
 			if ($row = $statement->fetch()) {
 				$texte = $row;
+				echo "TROUVE";
 			}
 
 			return $texte;
