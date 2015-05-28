@@ -1,7 +1,7 @@
 var idCreation;
 var itemType;
-var nomNews;
-var texteNews;
+var nomNews, idNomNews;
+var texteNews, idTexteNews;
 
 $(function () {
 	if(itemType === "real"){
@@ -102,7 +102,6 @@ function updateRealisation(event){
 		imageSlideshow = $('#previewImageSlideshow').attr('src');
 	}
     
-	console.log(imageSlideshow);
 
     $.ajax({
 	url: "ajax.php",
@@ -129,37 +128,34 @@ function updateRealisation(event){
 function getNews (event) {	
 	var divPrinc = $(event.target).closest('div').parent().parent().parent();
 	nomNews = $(divPrinc).find(".nomItem").text();
+	idNomNews = $(divPrinc).find(".nomItem").attr('id').substring(1);
 	texteNews = $(divPrinc).find(".texteNews").html();
+	idTexteNews = $(divPrinc).find(".texteNews").attr('id').substring(1);
 
 	$("#titreNews").val(nomNews);
 	CKEDITOR.instances['texteNewsModal'].setData(texteNews);
 }
 
 function removeNews(){
-	console.log(texteNews)
-	
-
-	console.log(nomNews)
 	$.ajax({
 	url: "ajax.php",
 	type: "POST",
 	data: {
 	    action: "removeNews",
-	    nom: nomNews,
-	    texte: texteNews
+	    idNom: idNomNews,
+	    idTexte: idTexteNews
 	}
     }).done(function(data) {
-    	console.log(data)
     	$("#removeNewsModal").modal("hide");
-    	// alert("News supprimée !");
-    	// location.reload();
+    	alert("News supprimée !");
+    	location.reload();
     });
 }
 
 function updateNews(){
 	var nouveauNom = $("#titreNews").val(); ;
 	var nouveauTexte = CKEDITOR.instances['texteNewsModal'].getData();
-	console.log(nouveauNom, nouveauTexte, nomNews, texteNews)
+
     $.ajax({
 	url: "ajax.php",
 	type: "POST",
@@ -168,7 +164,9 @@ function updateNews(){
 	    ancienNom: nomNews,
 	    ancienTexte: texteNews,
 	    nouveauNom: nouveauNom,
-	    nouveauTexte: nouveauTexte
+	    idAncienNom: idNomNews,
+	    nouveauTexte: nouveauTexte,
+	    idAncienTexte: idTexteNews
 	}
     }).done(function(data) {
     	console.log(data);

@@ -26,7 +26,7 @@
     		<div class="row">
 		    	<div class="panel panel-default col-sm-9 col-right">
 		    		<div class="panel-heading">
-		    			<h2 class="panel-title nomItem"><?= $item["NOM"] ?></h2>
+		    			<h2 id="t<?= $item["IDTITRE"] ?>" class="panel-title nomItem"><?= $item["NOM"] ?></h2>
 		  			</div>
 		  			<div class="panel-body">
 		  				<div class="container-fluid">
@@ -45,7 +45,7 @@
 		    					<?php 
 				    			}elseif($action->itemType === "news"){
 				    			?>
-				    				<span class="texteNews"><?= $item["TEXTE"] ?></span>
+				    				<span id="c<?= $item["IDTEXTE"] ?>" class="texteNews"><?= $item["TEXTE"] ?></span>
 				    				<a class="btn modifierNews" data-toggle="modal" href="#modifyNewsModal" role="button"><span class="glyphicon glyphicon-pencil modifierReal"></span></a>
 				    				<a class="btn removeNews" data-toggle="modal" href="#removeNewsModal" role="button"><span class="glyphicon glyphicon-remove removeReal"></span></a>	
 				    			<?php 

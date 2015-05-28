@@ -22,8 +22,8 @@
         <div class="error box">Il y a eu un problème lors de l'ajout de la news</div>
   
         <form method="post" action="newsAdmin.php">
-            Titre: <input type="text" name="titre">
-            <textarea cols="80" id="editor1" name="editor1" rows="10" ></textarea>
+            Titre: <input type="text" name="titre" required>
+            <textarea cols="80" id="editor1" name="editor1" rows="10" required></textarea>
             <button id="formTexte">Sauvegarder</button>
         </form>
     </div>

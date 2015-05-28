@@ -52,15 +52,11 @@
 
 			$statement->setFetchMode(PDO::FETCH_ASSOC);
 			$statement->execute();
-			echo $contenu;
-			$statement->debugDumpParams();
-			print $statement->errorCode();
 
 			$texte = null;
 
 			if ($row = $statement->fetch()) {
 				$texte = $row;
-				echo "TROUVE";
 			}
 
 			return $texte;
@@ -108,7 +104,7 @@
 			$statement = $connection->prepare("UPDATE CS_TEXTE SET contenu = ? WHERE ID = ? ");
 				
 			$statement->bindParam(1, $contenu);
-			$statement->bindParam(2, $idNews);
+			$statement->bindParam(2, $idTexte);
 
 			return $statement->execute();
 		}

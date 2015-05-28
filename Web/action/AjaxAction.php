@@ -33,18 +33,15 @@
 										 $_POST["categorie"],$_POST["nom"],
 										 $_POST["slideshow"],$_POST["desc"]);
 			}elseif($_POST["action"] === "updateNews"){
-				$this->result = array($_POST["ancienNom"], $_POST["ancienTexte"]);
-				$news = NewsDAO::getNews($_POST["ancienNom"], $_POST["ancienTexte"]);
-
-				// $this->result = NewsDAO::updateNews($news["ID"],$news["IDTITRE"],$news["IDTEXTE"],
-													// $_POST["nouveauNom"], $_POST["nouveauTexte"]);
+				$news = NewsDAO::getNews($_POST["idAncienNom"], $_POST["idAncienTexte"])[0];
+				$this->result = NewsDAO::updateNews($news["ID"],$news["IDTITRE"],$news["IDTEXTE"],
+													$_POST["nouveauNom"], $_POST["nouveauTexte"]);
 			}elseif($_POST["action"] === "removeRealisation"){
 				$this->result = CreationDAO::removeCreation($_POST["idCreation"]);
 			}elseif($_POST["action"] === "removeNews"){
-				$this->result = TexteDAO::getTexteComplet($_POST["texte"],"news");
-				// $news = NewsDAO::getNews($_POST["nom"], $_POST["texte"]);
-				// $this->result = $news;
-				// $this->result = NewsDAO::removeNews($news["ID"]);
+				$news = NewsDAO::getNews($_POST["idNom"], $_POST["idTexte"])[0];
+				
+				$this->result = NewsDAO::removeNews($news["ID"]);
 			}elseif ($_POST["action"] === "changeTexte") {
 				TexteDAO::nouveauMessage($_POST["text"], $_POST["current"]);
 			} else {
