@@ -26,7 +26,7 @@
     		<div class="row">
 		    	<div class="panel panel-default col-sm-9 col-right">
 		    		<div class="panel-heading">
-		    			<h2 id="t<?= $item["IDTITRE"] ?>" class="panel-title nomItem"><?= $item["NOM"] ?></h2>
+		    			<h2 <?php if($action->itemType === "news"){?>id="t<?= $item["IDTITRE"] ?>"<?php } ?> class="panel-title nomItem"><?= $item["NOM"] ?></h2>
 		  			</div>
 		  			<div class="panel-body">
 		  				<div class="container-fluid">
