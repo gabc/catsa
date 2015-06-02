@@ -20,8 +20,6 @@
 		}
 
 		protected function executeAction() {
-			foreach ($_POST as $key => $value)
- 					echo "Field ".htmlspecialchars($key)." is ".htmlspecialchars($value)."<br>" . $value;
 			if ($_POST["action"] === "getRealisation"){
 				$this->result = CreationDAO::getCreation($_POST["image"],$_POST["type"],
 										 $_POST["categorie"],$_POST["nom"],
