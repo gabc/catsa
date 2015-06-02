@@ -412,4 +412,9 @@ nav ul li > ul {
 		top: -100px;
 		z-index: -10;
 	}
+
+	.contenu{
+		width:700px;
+		margin:auto;
+	}
 }

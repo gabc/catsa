@@ -14,8 +14,7 @@
 
 	require_once("partial/header.php")
 ?>
-
-	<div>
-	<p><?= $action->getNousTexte() ?></p>
+	<div class="clear contenu">
+		<p><?=$action->getNousTexte() ?></p>
 	</div>
 <?php require_once("partial/footer.php");

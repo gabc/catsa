@@ -14,5 +14,8 @@
 
 	require_once("partial/header.php")
 ?>
-	<p><?= $action->getTexte("acceuil") ?></p>
+<?= var_dump($_GET); ?>
+	<div class="clear contenu">
+		<p><?= $action->getTexte("acceuil") ?></p>
+	</div>
 <?php require_once("partial/footer.php");
