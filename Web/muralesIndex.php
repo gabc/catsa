@@ -11,16 +11,15 @@
 
 	$action = new MuralesAction();
 	$action->execute();
-
-	require_once("partial/header.php")
 ?>
-<?php 
-	if(!empty($_GET["query"])){
-		if($_GET["query"] === "chambre"){
-			require_once("Chambre.php");
-		}
-	}else{
-		require_once("muralesIndex.php");
-	}
- ?>
-<?php require_once("partial/footer.php");
+<div class="margintop text-center">
+	<?php foreach($action->getDeuxMurales() as $ts){ ?>
+		<div class="left text-center">
+			<a class="fancybox" rel="gallery1" href="<?= $ts["LINK"].".php" ?>" title="<?= $ts["DESCRIPTION"]?>">
+		       	<img src="<?= $ts["IMAGE"]?>" alt="<?= $ts["NOM"]?>">
+		       	<div><?= $ts["LINK"] ?></div>
+		    </a>
+	    </div>
+	<?php } ?>
+</div>
+<div class="clear"></div>
