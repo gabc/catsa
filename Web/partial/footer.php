@@ -7,7 +7,7 @@
  *----------------------------------------------------- */
 ?>
 <div class="infoRangee">
-  <p>Points de vente des tableaux</p>
+  <p>Points de <strong>vente</strong> des tableaux</p>
 
   <div class="infoBox">
     <p>Boutique Ciconia</p>
@@ -68,7 +68,7 @@
     <p>Catherine</p>
     <p>514·385·3530</p>
   </div>
-  <p>À Montréal, Longueuil, Laval  (et quelques fois ailleurs!)</p>
+  <p>À <strong>Montréal</strong>, et aux alentours!</p>
 </div>
 <div id="menuAdmin">
   <a href="admin.php">Admin</a>
