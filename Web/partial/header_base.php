@@ -13,12 +13,12 @@
     <!-- <link rel="stylesheet" type="text/css" href="./css/catsa-screen.css"> -->
     <link rel="shortcut icon" href="http://muralecatsa.com/favicon.png">
     <meta property="og:image" content="/tableaux/survol/noir_et_blanc.jpg">
-    <title>Murales Catsa, Chambres et commerces à Montréal, Laval, Rive-Sud et les environs</title>
 
     <link type="text/css" href="css/jquery-ui.css" rel="stylesheet">
     <link type="text/css" href="css/jquery-ui.theme.css" rel="stylesheet">
     <link type="text/css" href="css/jquery-ui.structure.min.css" rel="stylesheet">
-
+    <title><?= CommonAction::getTitle(); ?></title>
+    
     <meta name="keywords" content="montreal, montréal, murale, chambre, commerce, tableau">
   </head>
   <body>
