@@ -14,7 +14,7 @@
 
 	require_once("partial/header.php")
 ?>
-
+<?= var_dump($_GET); ?>
 <div class="margintop text-center">
 	<?php foreach($action->getDeuxMurales() as $ts){ ?>
 		<div class="left text-center">

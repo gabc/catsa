@@ -8,11 +8,12 @@ ErrorDocument 500 http://localhost/catsa-web/Web/error.php?code=500
 Options +FollowSymlinks
 RewriteEngine on
 
+# [L] = break... donc fin de htaccess
+RewriteRule ^murales/(.*)$ ./murales.php?query=$1 [L]
+RewriteRule ^tableaux/(.*)$ ./menuTableaux.php?query=$1 [L]
+
+
 # Si le nom du fichier + ".php" est un fichier (-f)
 RewriteCond  %{REQUEST_FILENAME}.php -f
-
-# Alors, modifié le fichier par fichier.php.  [L] = break... donc fin de htaccess
+# Alors, modifié le fichier par fichier.php
 RewriteRule ^(.*)$ $1.php
-
-#RewriteRule ^([^/\\.]+)*[/]*([^/\\.]+)*[/]*([^/\\.]+)*[/]*$ index.php?dir1=$1&dir2=$2 [L]
-RewriteRule ^tableaux.php[/]*([^/\\.]+)*$ tableaux.php?categories=$1 [L]

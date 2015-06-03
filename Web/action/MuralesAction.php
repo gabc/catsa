@@ -17,6 +17,10 @@
 		}
 
 		protected function executeAction() {
+			if(!empty($_GET["query"]) && $_GET["query"] === "chambre"){
+				header("location:../Chambre.php");
+				exit;
+			}
 		}
 
 		public function getDeuxMurales(){

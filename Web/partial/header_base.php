@@ -7,7 +7,7 @@
  *----------------------------------------------------- */
 ?>
 <!DOCTYPE html>
-<html class="wf-myriadpro-n3-active wf-myriadpro-n4-active wf-myriadpro-n6-active wf-myriadpro-n7-active wf-myriadpro-n9-active wf-active">
+<html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- <link rel="stylesheet" type="text/css" href="./css/catsa-screen.css"> -->
@@ -69,5 +69,5 @@
         <h1>catsa</h1>
       </header>
       <div id="divcoc">
-        <img src="./img/cocinelles.jpg" id="coc">
+        <img src="./img/cocinelles.jpg" id="coc" alt="Cocinelle">
       </div>
