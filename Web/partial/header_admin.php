@@ -7,7 +7,7 @@
  *----------------------------------------------------- */
 ?>
 <?php
-   require_once("partial/header_base.php")
+   require_once("partial/head_base.php")
 ?>
 	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
@@ -21,5 +21,8 @@
 	<link type="text/css" href="./css/admin.css" rel="stylesheet">
 </head>
 <body>
+	<?php
+	   require_once("partial/header_base.php")
+	?>
   <div class="center container-fluid">
   	<div id="divContainer">

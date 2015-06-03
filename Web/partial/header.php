@@ -7,7 +7,7 @@
  *----------------------------------------------------- */
 ?>
 <?php
-   require_once("partial/header_base.php")
+   require_once("partial/head_base.php");
 ?>
   	<link type="text/css" href="/Web/css/pikachoose-classic-theme.css" rel="stylesheet">
    
@@ -33,22 +33,26 @@
 
     <link rel="stylesheet" href="/Web/js/fancyBox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen">
     <script type="text/javascript" src="/Web/js/fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script>
-      
-      <div class = "pikachoose-classic">
+  </head>
+     
+    <body>
+
+      <?php
+        require_once("partial/header_base.php");
+      ?>
+       <div class = "pikachoose-classic">
         <ul id="pikame"></ul>
       </div>
       <div id="ombre">
-        <img src="/Web/img/ombre.jpg" width="857">
+        <img src="/Web/img/ombre.jpg" width="857" alt="ombre">
       </div>
 
-
-    <script>
-      var images = [];
-      <?php foreach(CommonAction::getSlideShows() as $img){ ?>
-        images.push({"image":"<?= $img['IMAGESLIDESHOW'] ?>",
-                     "caption":"<?= $img['DESCRIPTION'] ?>",
-                     "link":"javascript:void($(\"#pikame\").data(\"pikachoose\").Next())",
-                     "title":"<?= $img['NOM'] ?>"});
-      <?php } ?>
-    </script>
-      
+      <script>
+        var images = [];
+        <?php foreach(CommonAction::getSlideShows() as $img){ ?>
+          images.push({"image":"<?= $img['IMAGESLIDESHOW'] ?>",
+                       "caption":"<?= $img['DESCRIPTION'] ?>",
+                       "link":"javascript:void($(\"#pikame\").data(\"pikachoose\").Next())",
+                       "title":"<?= $img['NOM'] ?>"});
+        <?php } ?>
+      </script>      

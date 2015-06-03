@@ -7,14 +7,13 @@
  *----------------------------------------------------- */
 ?>
 <?php
-	require_once("action/TableauxAction.php");
+	require_once("action/TableauxItemAction.php");
 
-	$action = new TableauxAction();
+	$action = new TableauxItemAction();
 	$action->execute();
 
 	require_once("partial/header.php")
 ?>
-	<?= var_dump($_GET); ?>
 	<div class="fancyboxGroup">
 	<?php foreach($action->getTableauxByCategorie($_GET["categories"]) as $ts){ ?>
 		<a class="fancybox" rel="gallery1" href="<?= $ts["THUMBNAIL"]?>" title="<?= $ts["DESCRIPTION"]?>">

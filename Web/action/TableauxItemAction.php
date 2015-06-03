@@ -10,7 +10,7 @@
 	require_once("action/CommonAction.php");
 	require_once("action/DAO/CreationDAO.php");
 	
-	class TableauxAction extends CommonAction {
+	class TableauxItemAction extends CommonAction {
 
 		public function __construct() {
 			parent::__construct(CommonAction::$VISIBILITY_PUBLIC);
