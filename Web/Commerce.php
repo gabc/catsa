@@ -11,8 +11,6 @@
 
 	$action = new CommerceAction();
 	$action->execute();
-
-	require_once("partial/header.php")
 ?>
 	<div class="fancyboxGroup">
 		<?php foreach($action->getMurales() as $ts){ ?>
@@ -21,5 +19,3 @@
 	        </a>
 		<?php } ?>
 	</div>
-	
-<?php require_once("partial/footer.php");

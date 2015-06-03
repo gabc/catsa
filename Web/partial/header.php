@@ -11,12 +11,11 @@
 ?>
   	<link type="text/css" href="./css/pikachoose-classic-theme.css" rel="stylesheet">
    
-
-  	<script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="./js/jquery.pikachoose.full.js"></script>
-   	<script type="text/javascript" src="js/javascript.js"></script>
-   	<script type="text/javascript" src="js/client.js"></script>
+  	<script type="text/javascript" src="/Web/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Web/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/Web/js/jquery.pikachoose.full.js"></script>
+   	<script type="text/javascript" src="/Web/js/javascript.js"></script>
+   	<script type="text/javascript" src="/Web/js/client.js"></script>
 
     <link type="text/css" href="./css/global.css" rel="stylesheet">
     

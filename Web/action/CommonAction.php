@@ -119,6 +119,9 @@
 			$page = CommonAction::getPage();
 			$page = explode(".", $page)[0];
 			$page = ucwords($page);
-			return "Murale-Catsa Page " . $page;
+			if($page == "Index"){
+				$page = "Accueil";
+			}
+			return "Murale-Catsa - " . $page;
 		}
 	}
