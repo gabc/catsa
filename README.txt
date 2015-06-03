@@ -15,6 +15,7 @@ Il possèdera les informations de connexion (nom de la page Web/nom usager/mot d
 * Des coc.
 * Liens vers facebook.
 * Plus de texte.
+* Beauty Links
 
 login: admin
 mot de passe: a

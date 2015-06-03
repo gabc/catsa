@@ -22,14 +22,14 @@
                 <?php } ?>
               </ul>
             </li>
-            <li <?php if(CommonAction::getPage() == 'menuTableaux.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
+            <li <?php if(CommonAction::getPage() == 'tableaux.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
               <a id="tableaux" href="/Web/tableaux">Tableaux</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'contact.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
               <a href="/Web/contact">Contact</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'news.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
-              <a href="/Web/news?page=1">News</a>
+              <a href="/Web/news/1">News</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'nous.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
               <a href="/Web/nous">Nous</a>
