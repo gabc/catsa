@@ -16,10 +16,14 @@
 ?>
 <?php 
 	if(!empty($_GET["query"])){
-		if($_GET["query"] === "chambre"){
+		if(strtolower($_GET["query"]) == "chambre"){
 			require_once("Chambre.php");
-		}else if($_GET["query"] === "commerce"){
+		}else if(strtolower($_GET["query"]) == "commerce"){
 			require_once("Commerce.php");
+		}else{
+		?>
+			<script>window.location.href = "/Web/error/404";</script>
+		<?php
 		}
 	}else{
 		require_once("muralesIndex.php");

@@ -23,7 +23,7 @@
               </ul>
             </li>
             <li <?php if(CommonAction::getPage() == 'menuTableaux.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
-              <a id="tableaux" href="/Web/menuTableaux">Tableaux</a>
+              <a id="tableaux" href="/Web/tableaux">Tableaux</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'contact.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
               <a href="/Web/contact">Contact</a>

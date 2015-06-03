@@ -7,19 +7,23 @@
  *----------------------------------------------------- */
 ?>
 <?php
-	// require_once("action/MuralesAction.php");
+	require_once("action/TableauxAction.php");
 
-	// $action = new MuralesAction();
-	// $action->execute();
+	$action = new TableauxAction();
+	$action->execute();
+
+	require_once("partial/header.php")
 ?>
-<div class="margintop text-center">
-	<?php foreach($action->getDeuxMurales() as $ts){ ?>
-		<div class="left text-center">
-			<a class="fancybox" rel="gallery1" href="murales/<?= $ts["LINK"].".php" ?>" title="<?= $ts["DESCRIPTION"]?>">
-		       	<img src="<?= $ts["IMAGE"]?>" alt="<?= $ts["NOM"]?>">
-		       	<div><?= $ts["LINK"] ?></div>
-		    </a>
-	    </div>
-	<?php } ?>
-</div>
-<div class="clear"></div>
+	<div class="margintop">
+		<?php foreach (CommonAction::getCategories() as $t) { 
+				$crea = $action->getUneImage($t["NOM"]);
+				if(!empty($crea)) {?>
+					<a href="tableaux/<?= $t["NOM"] ?>">
+						<img src="<?= $crea[0]["IMAGE"]?>" alt="<?= $crea[0]["NOM"] ?>">
+						<div><?= $t["NOM"] ?></div>
+					</a>
+		<?php 	}
+			} ?>
+		
+	</div>
+<?php require_once("partial/footer.php");

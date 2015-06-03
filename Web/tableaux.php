@@ -7,14 +7,18 @@
  *----------------------------------------------------- */
 ?>
 <?php
-	require_once("action/IndexAction.php");
+	require_once("action/TableauxAction.php");
 
-	$action = new IndexAction();
+	$action = new TableauxAction();
 	$action->execute();
 
-	require_once("partial/header.php")
+	require_once("partial/header.php");
 ?>
-	<div class="clear contenu">
-		<p><?= $action->getTexte("acceuil") ?></p>
-	</div>
+<?php 
+	if(!empty($_GET["categorie"])){
+		require_once("tableauxItem.php");
+	}else{
+		require_once("tableauxIndex.php");
+	}
+ ?>
 <?php require_once("partial/footer.php");

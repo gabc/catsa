@@ -15,7 +15,7 @@
 <div class="margintop text-center">
 	<?php foreach($action->getDeuxMurales() as $ts){ ?>
 		<div class="left text-center">
-			<a class="fancybox" rel="gallery1" href="murales/<?= $ts["LINK"].".php" ?>" title="<?= $ts["DESCRIPTION"]?>">
+			<a class="fancybox" rel="gallery1" href="murales/<?= $ts["LINK"]?>" title="<?= $ts["DESCRIPTION"]?>">
 		       	<img src="<?= $ts["IMAGE"]?>" alt="<?= $ts["NOM"]?>">
 		       	<div><?= $ts["LINK"] ?></div>
 		    </a>

@@ -49,7 +49,7 @@
 <div class = "ligneBox">
   <div id="facebookBox">
     <a href="http://www.facebook.com/pages/Murale-Catsa/142348105922701" target="_blank"> Suivez-nous!
-      <img src="./img/fb.png" style="width:40px;"> 
+      <img src="/Web/img/fb.png" style="width:40px;"> 
       <?php 
         $fb_likes = CommonAction::getFacebookLikes();
         echo $fb_likes;

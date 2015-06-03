@@ -1,8 +1,8 @@
 # Page inexistante
-ErrorDocument 404 http://localhost/Web/error?code=404
+ErrorDocument 404 http://localhost/Web/error/404
 
 # erreur interne
-ErrorDocument 500 http://localhost/Web/error?code=500
+ErrorDocument 500 http://localhost/Web/error/500
 
 # Peut ne pas être nécessaire.
 Options +FollowSymlinks
@@ -10,8 +10,8 @@ RewriteEngine on
 
 # [L] = break... donc fin de htaccess
 RewriteRule ^murales/(.*)$ ./murales.php?query=$1 [L]
-RewriteRule ^tableaux/(.*)$ ./menuTableaux.php?query=$1 [L]
-
+RewriteRule ^tableaux/(.*)$ ./tableaux.php?categorie=$1 [L]
+RewriteRule ^error/(.*)$ ./error.php?code=$1 [L]
 
 # Si le nom du fichier + ".php" est un fichier (-f)
 RewriteCond  %{REQUEST_FILENAME}.php -f

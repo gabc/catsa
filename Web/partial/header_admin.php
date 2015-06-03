@@ -10,15 +10,15 @@
    require_once("partial/head_base.php")
 ?>
 	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
-	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/javascript.js"></script>
-	<script type="text/javascript" src="./js/admin.js"></script>
+	<script type="text/javascript" src="/Web/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="/Web/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/Web/js/javascript.js"></script>
+	<script type="text/javascript" src="/Web/js/admin.js"></script>
 
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link type="text/css" href="./css/ckedit.css" rel="stylesheet">
-	<link type="text/css" href="./css/global.css" rel="stylesheet">
-	<link type="text/css" href="./css/admin.css" rel="stylesheet">
+	<link type="text/css" href="/Web/css/ckedit.css" rel="stylesheet">
+	<link type="text/css" href="/Web/css/global.css" rel="stylesheet">
+	<link type="text/css" href="/Web/css/admin.css" rel="stylesheet">
 </head>
 <body>
 	<?php
