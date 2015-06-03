@@ -14,9 +14,9 @@
     <link rel="shortcut icon" href="http://muralecatsa.com/favicon.png">
     <meta property="og:image" content="/tableaux/survol/noir_et_blanc.jpg">
 
-    <link type="text/css" href="css/jquery-ui.css" rel="stylesheet">
-    <link type="text/css" href="css/jquery-ui.theme.css" rel="stylesheet">
-    <link type="text/css" href="css/jquery-ui.structure.min.css" rel="stylesheet">
+    <link type="text/css" href="/Web/css/jquery-ui.css" rel="stylesheet">
+    <link type="text/css" href="/Web/css/jquery-ui.theme.css" rel="stylesheet">
+    <link type="text/css" href="/Web/css/jquery-ui.structure.min.css" rel="stylesheet">
     <title><?= CommonAction::getTitle(); ?></title>
     
     <meta name="keywords" content="montreal, montréal, murale, chambre, commerce, tableau">
@@ -27,36 +27,36 @@
       <header>
         <nav>
           <ul>
-            <li <?php if(CommonAction::getPage() == 'index.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+            <li <?php if(CommonAction::getPage() == 'index.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
               <a href="index.php">Accueil</a>
             </li>
-            <li <?php if(CommonAction::getPage() == 'murales.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-              <a id="murales" href="murales.php">Murales</a>
+            <li <?php if(CommonAction::getPage() == 'murales.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
+              <a id="murales" href="murales">Murales</a>
               <ul id="muralesMenu">
                 <?php $types = CommonAction::getTypes();
                       foreach ($types as $t) { ?>
-                        <li><a href="<?= $t['NOM'] ?>.php"><?= $t['NOM'] ?></a></li>
+                        <li><a href="/Web/murales/<?= $t['NOM'] ?>"><?= $t['NOM'] ?></a></li>
                 <?php } ?>
               </ul>
             </li>
-            <li <?php if(CommonAction::getPage() == 'menuTableaux.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
+            <li <?php if(CommonAction::getPage() == 'menuTableaux.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
               <a id="tableaux" href="menuTableaux.php">Tableaux</a>
             </li>
-            <li <?php if(CommonAction::getPage() == 'contact.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-              <a href="contact.php">Contact</a>
+            <li <?php if(CommonAction::getPage() == 'contact.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
+              <a href="contact">Contact</a>
             </li>
-            <li <?php if(CommonAction::getPage() == 'news.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-              <a href="news.php?page=1">News</a>
+            <li <?php if(CommonAction::getPage() == 'news.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
+              <a href="news?page=1">News</a>
             </li>
-            <li <?php if(CommonAction::getPage() == 'nous.php'){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-              <a href="nous.php">Nous</a>
+            <li <?php if(CommonAction::getPage() == 'nous.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
+              <a href="nous">Nous</a>
             </li>
             <?php  
               if(CommonAction::isLoggedIn())
               {
             ?>
-              <li <?php if(preg_match('/admin/i', CommonAction::getPage())){echo 'class ="active"> <img class="active-image" src="./img/coc1.jpg"';} ?> >
-                <a href="admin.php">Admin</a>
+              <li <?php if(preg_match('/admin/i', CommonAction::getPage())){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
+                <a href="admin">Admin</a>
               </li>
               <li>
                 <a href="?logout=true">Déconnexion</a>
