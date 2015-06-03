@@ -1,8 +1,8 @@
 # Page inexistante
-ErrorDocument 404 http://localhost/Web/error/404
+ErrorDocument 404 http://localhost/Web/error?code=404
 
 # erreur interne
-ErrorDocument 500 http://localhost/Web/error/500
+ErrorDocument 500 http://localhost/Web/error?code=500
 
 # Peut ne pas être nécessaire.
 Options +FollowSymlinks

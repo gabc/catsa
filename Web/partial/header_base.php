@@ -28,10 +28,10 @@
         <nav>
           <ul>
             <li <?php if(CommonAction::getPage() == 'index.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
-              <a href="index.php">Accueil</a>
+              <a href="/Web/index">Accueil</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'murales.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
-              <a id="murales" href="murales">Murales</a>
+              <a id="murales" href="/Web/murales">Murales</a>
               <ul id="muralesMenu">
                 <?php $types = CommonAction::getTypes();
                       foreach ($types as $t) { ?>
@@ -40,16 +40,16 @@
               </ul>
             </li>
             <li <?php if(CommonAction::getPage() == 'menuTableaux.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
-              <a id="tableaux" href="menuTableaux.php">Tableaux</a>
+              <a id="tableaux" href="/Web/menuTableaux">Tableaux</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'contact.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
-              <a href="contact">Contact</a>
+              <a href="/Web/contact">Contact</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'news.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
-              <a href="news?page=1">News</a>
+              <a href="/Web/news?page=1">News</a>
             </li>
             <li <?php if(CommonAction::getPage() == 'nous.php'){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
-              <a href="nous">Nous</a>
+              <a href="/Web/nous">Nous</a>
             </li>
             <?php  
               if(CommonAction::isLoggedIn())
@@ -69,5 +69,5 @@
         <h1>catsa</h1>
       </header>
       <div id="divcoc">
-        <img src="./img/cocinelles.jpg" id="coc" alt="Cocinelle">
+        <img src="/Web/img/cocinelles.jpg" id="coc" alt="Cocinelle">
       </div>
