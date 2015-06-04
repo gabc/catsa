@@ -71,7 +71,7 @@
   <p>À <strong>Montréal</strong>, et aux alentours!</p>
 </div>
 <div id="menuAdmin">
-  <a href="admin.php">Admin</a>
+  <a href="/Web/admin">Admin</a>
 </div>
 <div class="blankSpace"></div>
 

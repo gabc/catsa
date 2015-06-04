@@ -14,8 +14,8 @@
 
 	require_once("partial/header_admin.php")
 ?>
-	<script type="text/javascript" src="js/adminResultRealisation.js"></script>
-	<link type="text/css" href="./css/realisationAdmin.css" rel="stylesheet">
+	<script type="text/javascript" src="/Web/js/adminResultRealisation.js"></script>
+	<link type="text/css" href="/Web/css/realisationAdmin.css" rel="stylesheet">
     <div class="row">
     	<a class="btn btn-lg btn-primary col-sm-9 col-right" href="<?= $action->linkAjout ?>" role="button">Ajouter</a>
    	</div> 
@@ -59,13 +59,14 @@
 	    
 	    <?php 
 	    }
+	    $page = "itemViewAdmin";
 	    require_once("pagination.php");
 	    ?>
 
-	<link type="text/css" href="css/bootstrap_patch.css" rel="stylesheet">
-	<link type="text/css" href="css/bootstrap-modal.css" rel="stylesheet">
-	<script type="text/javascript" src="js/bootstrap-modal.js"></script>
-	<script type="text/javascript" src="js/bootstrap-modalmanager.js"></script>
+	<link type="text/css" href="/Web/css/bootstrap_patch.css" rel="stylesheet">
+	<link type="text/css" href="/Web/css/bootstrap-modal.css" rel="stylesheet">
+	<script type="text/javascript" src="/Web/js/bootstrap-modal.js"></script>
+	<script type="text/javascript" src="/Web/js/bootstrap-modalmanager.js"></script>
 
 	<!-- Double Modal: http://jschr.github.io/bootstrap-modal/bs3.html -->
 	<!-- Dialog - Modifier une création -->
@@ -79,7 +80,7 @@
 	                	<legend class="modal-title">Modifier une création</legend>
 	              	</div>
 	              	<div class="modal-body">
-	              	<script type="text/javascript" src="js/adminRealisation.js"></script>
+	              	<script type="text/javascript" src="/Web/js/adminRealisation.js"></script>
 	              		 <?php
 							  require_once("action/ModifRealisationAdminAction.php");
 								
@@ -117,7 +118,7 @@
     </div>
 
     	<!-- Dialog - Modifier une news -->
-    <script src="js/ckeditor/ckeditor.js"></script>
+    <!-- <script src="js/ckeditor/ckeditor.js"></script> -->
     <div id="modifyNewsModal" class="modal fade bs-modal-lg" data-replace="true" tabindex="-1" style="display: none;" role="dialog" data-focus-on="input:first" aria-labelledby="newsModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">

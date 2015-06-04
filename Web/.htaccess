@@ -13,6 +13,8 @@ RewriteRule ^murales/(.*)$ ./murales.php?query=$1 [L]
 RewriteRule ^tableaux/(.*)$ ./tableaux.php?categorie=$1 [L]
 RewriteRule ^error/(.*)$ ./error.php?code=$1 [L]
 RewriteRule ^news/(.*)$ ./news.php?page=$1 [L]
+RewriteRule ^itemViewAdmin/real/(.*)$ ./itemViewAdmin.php?item=real&page=$1 [L]
+RewriteRule ^itemViewAdmin/news/(.*)$ ./itemViewAdmin.php?item=news&page=$1 [L]
 
 # Si le nom du fichier + ".php" est un fichier (-f)
 RewriteCond  %{REQUEST_FILENAME}.php -f

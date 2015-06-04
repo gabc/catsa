@@ -31,6 +31,7 @@
 		</div>
 	<div class="center">
 	<?php } 
+		$page = "news";
 		require_once("pagination.php");
 	?>
 	</div>
