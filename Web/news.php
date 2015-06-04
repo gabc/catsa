@@ -6,7 +6,7 @@
  *					                       				*
  *----------------------------------------------------- */
 ?>
-	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Pour la pagination -->
+	<link href="/Web/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Pour la pagination -->
 <?php
 	require_once("action/NewsAction.php");
 
