@@ -41,14 +41,6 @@ function genMenu (link, id) {
     $( id ).menu({
     focus: function( event, ui ) {}
     });
-    /*$(link).mouseleave(function () {
-    	if (!isOnLink && !isOnId)
-    	    	$(id).slideUp(400, function () {$(id).css("visibility", "hidden");});
-    });
-    $(id).mouseleave(function () {
-    	if (!isOnLink && !isOnId)
-    	    	$(id).slideUp(400, function () {$(id).css("visibility", "hidden");});
-    });*/
 }
 
 function showError () {

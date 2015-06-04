@@ -1,8 +1,4 @@
 $(function (){
-	// var images = [{"image":"./img/grenouilles.jpg","caption":"Murale des Grenouilles - Chambre de Louis","link":"javascript:void($(\"#pikame\").data(\"pikachoose\").Next())","title":"Grenouille"},
-					// {"image":"./img/marin.jpg","caption":"Murale du Fond Marin","link":"javascript:void($(\"#pikame\").data(\"pikachoose\").Next())","title":"Marin"},
-					// {"image":"./img/terre.jpg","caption":"Murale Autour de la Terre - Garderie","link":"javascript:void($(\"#pikame\").data(\"pikachoose\").Next())","title":"Terre"}];
-
 	$("#pikame").PikaChoose({bindsFinished: preventStageHoverEffect, data:images, carousel:true});
 	
 	$(".fancybox").fancybox({

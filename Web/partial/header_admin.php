@@ -9,7 +9,6 @@
 <?php
    require_once("partial/head_base.php")
 ?>
-	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
 	<script type="text/javascript" src="/Web/js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="/Web/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="/Web/js/javascript.js"></script>
