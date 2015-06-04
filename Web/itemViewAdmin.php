@@ -118,7 +118,6 @@
     </div>
 
     	<!-- Dialog - Modifier une news -->
-    <!-- <script src="js/ckeditor/ckeditor.js"></script> -->
     <div id="modifyNewsModal" class="modal fade bs-modal-lg" data-replace="true" tabindex="-1" style="display: none;" role="dialog" data-focus-on="input:first" aria-labelledby="newsModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
