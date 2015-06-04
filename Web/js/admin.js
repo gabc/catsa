@@ -2,13 +2,18 @@ $(init);
 
 function init () {
     activationMenu();
-    try{
-    	var reg = window.location.href.match(/.*\/(?!.*admin.php)(.*\.php)(?:.*item=(real|news))?/);
+    try{ //   /.*\/(?!.*admin)(?:\/(real|news))?/
+    	var reg = window.location.href.match(/Web\/((?:.*)admin)(?:\/(real|news))?/i);
 	    // var href = window.location.href.match(/.*\/(?!.*admin.php)(.*\.php)item=(.*)/)[1];
 	    if(reg[2] === undefined) {
 	    	$("a[href*='"+ reg[1] +"']").css("background-color", "#FAFFBA");
 	    } else {
-	    	$("a[href*='"+ reg[1] + "?page=1&item=" + reg[2] +"']").css("background-color", "#FAFFBA");
+	    	var a = $("a[href*='"+ reg[1] + "/" + reg[2] +"/1']");
+	    	for(var i = 0; i < a.length; i++){
+	    		if(a[i].className.match(/adminLink/)){
+	    			a[i].style.backgroundColor = "#FAFFBA"
+	    		}
+	    	}
 	    }
 	}catch (e){
 		// Gotta catch 'em all!

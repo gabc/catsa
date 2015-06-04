@@ -32,7 +32,7 @@
 		  				<div class="container-fluid">
 		  					<div class="row">
 		  						<?php if($action->itemType === "real"){ ?>
-				  					<img class="col-md-2 img-rounded imageReal" src="<?= $item["IMAGE"] ?>">
+				  					<img class="col-md-2 img-rounded imageReal" src="/Web/<?= $item["IMAGE"] ?>">
 				    				<p class="col-md-7 descriptionReal"><?= $item["DESCRIPTION"] ?></p>
 				    				<span class="col-md-1"><input disabled class="slideshowReal" type="checkbox" name="slideshow" value="slideshow" <?= ($item["SLIDESHOW"]) ? "checked" : "" ;?> >Dans le slideshow</span>
 				    				<a class="btn col-md-1 modifierReal" data-toggle="modal" href="#stack1" role="button"><span class="glyphicon glyphicon-pencil modifierReal"></span></a>

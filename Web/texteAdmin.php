@@ -14,8 +14,8 @@
 
 	require_once("partial/header_admin.php")
 ?>
-    <script type="text/javascript" src="./js/adminTexte.js"></script>
-    <script src="js/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="/Web/js/adminTexte.js"></script>
+    <script src="/Web/js/ckeditor/ckeditor.js"></script>
 
     <div id="tabs">
       <div class="success box">Le texte s'est bien changé</div>

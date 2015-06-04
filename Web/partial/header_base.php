@@ -39,7 +39,7 @@
               {
             ?>
               <li <?php if(preg_match('/admin/i', CommonAction::getPage())){echo 'class ="active"> <img class="active-image" src="/Web/img/coc1.jpg"';} ?> >
-                <a href="admin">Admin</a>
+                <a href="/Web/admin">Admin</a>
               </li>
               <li>
                 <a href="?logout=true">Déconnexion</a>

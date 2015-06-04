@@ -13,13 +13,13 @@
   	?>
   		<ul id="sideMenuAdmin">
 			<li class="ui-widget-header">Gestionnaire de contenu</li>
-			<a href="/Web/texteAdmin"><li>Modifier le texte</li></a>
-			<a href="/Web/newsAdmin"><li>Ajouter une news</li></a>
-			<a href="/Web/itemViewAdmin/news/1"><li>Gérer les news</li></a>
-			<a href="/Web/modifRealisationAdmin"><li>Ajouter une réalisation</li></a>
-			<a href="/Web/itemViewAdmin/real/1"><li>Gérer les réalisations</li></a>
+			<a class="adminLink" href="/Web/texteAdmin"><li>Modifier le texte</li></a>
+			<a class="adminLink" href="/Web/newsAdmin"><li>Ajouter une news</li></a>
+			<a class="adminLink" href="/Web/itemViewAdmin/news/1"><li>Gérer les news</li></a>
+			<a class="adminLink" href="/Web/modifRealisationAdmin"><li>Ajouter une réalisation</li></a>
+			<a class="adminLink" href="/Web/itemViewAdmin/real/1"><li>Gérer les réalisations</li></a>
 			<li class="ui-widget-header">Gestion admin</li>    
-			<a href="/Web/passwordAdmin"><li>Changement mot de passe</li></a>
+			<a class="adminLink" href="/Web/passwordAdmin"><li>Changement mot de passe</li></a>
 		</ul>
 	<?php 
 		}

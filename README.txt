@@ -4,17 +4,15 @@
 Il possèdera les informations de connexion (nom de la page Web/nom usager/mot de passe) permettant d’accéder au gestionnaire de contenu du site Web. Finalement, le fichier devra contenir un court texte explicatif de ce que vous avez fait pour optimiser le référencement du site Web (environ 250 mots). Spécifier vos sources (URL).
 
 * Utilisation inteligente/strategique des balises
- - h1
+ - H1
    Pas plus d'un par page.
    Assez haut dans la page
- - h2
+ - Hiérarchie de balise Hn
 * Utilisation des meta-balises.
 * Utilisation des balises <strong>
-* Texte interessant.
-* Titre de chaque page different
-* Des coc.
+* Titre de chaque page different et concis
 * Liens vers facebook.
-* Plus de texte.
+* Plus de texte (nouvelles, accueil...)
 * Beauty Links
 
 login: admin
