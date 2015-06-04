@@ -29,7 +29,7 @@
 				<script>showWarning();</script>
 	<?php 	}?>
 	
-	<form method="post" action="concact.php">
+	<form method="post" action="/Web/contact">
   		Adresse Courriel: <input name="email" type="text" /><br />
   		Sujet: <input name="sujet" type="text" /><br />
   		Message:<br />
